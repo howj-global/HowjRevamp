@@ -7,13 +7,20 @@
 # React Router owns /about, /expression/brazil, etc. Those paths don't exist as
 # files on disk, so without this Apache 404s on any deep link or page refresh.
 # ---------------------------------------------------------------------------
+# Don't 301 /about -> /about/. public/ ships asset folders whose names collide
+# with real routes (about, expressions, gallery), and that redirect fires before
+# the rewrite below, landing on a directory Apache then refuses to list (403).
+DirectorySlash Off
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Never rewrite real files or directories (assets, images, favicon…)
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # Only real FILES bypass the app (assets, images, favicon…).
+  # Deliberately NOT matching directories: /about, /expressions and /gallery all
+  # exist as asset folders AND as React routes, and the route has to win. No
+  # directory here holds an index.html, so nothing is shadowed by this.
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
   # Everything else hands off to the app
