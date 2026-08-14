@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import PlaneIcon from './PlaneIcon.jsx'
 import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
+import jamaicaPoster from '../assets/boarding/jamaica-poster.webp'
 
 const MS_DAY = 86_400_000
 const MS_HOUR = 3_600_000
@@ -61,8 +62,8 @@ export default function BoardingPassCard({
   titlePhrases = ['NEXT STOP', 'JAMAICA', 'HOWJ JAMAICA'],
   airportCode = 'MBJ',
   location = 'MONTEGO BAY, JAMAICA',
-  dateLabel = '12 DECEMBER, 2026',
-  targetDate = '2026-12-12T00:00:00',
+  dateLabel = '26 DECEMBER, 2026',
+  targetDate = '2026-12-26T00:00:00',
   // Unicode flag emoji for the destination (derived build-time from the
   // expression's Country Code in Notion — see scripts/fetch-expressions.mjs).
   // Falls back to the Jamaica SVG only when nothing dynamic was passed at all.
@@ -70,6 +71,10 @@ export default function BoardingPassCard({
   // Dismiss handler for the top-right close button; button only renders when
   // a handler is passed (Hero.jsx owns the shown/hidden state).
   onClose,
+  // Promo flyer for the revival, sits between the stub and the airport code
+  // (Figma 41:378). Square crop. Defaults to the Jamaica poster; pass null to
+  // hide the slot entirely for a destination that has no artwork yet.
+  poster = jamaicaPoster,
 }) {
   const { days, hours, mins, secs } = useCountdown(targetDate)
 
@@ -83,7 +88,7 @@ export default function BoardingPassCard({
   const units = [
     [days, 'DAYS'],
     [String(hours).padStart(2, '0'), 'HOURS'],
-    [String(mins).padStart(2, '0'), 'MINUTES'],
+    [String(mins).padStart(2, '0'), 'MIN'],
     [String(secs).padStart(2, '0'), 'SECONDS'],
   ]
 
@@ -123,8 +128,18 @@ export default function BoardingPassCard({
 
       {/* Ticket body */}
       <div className="flex flex-col items-center bg-neutral-white px-lg pb-md pt-sm">
+        {poster && (
+          <div className="w-full pb-sm pt-xs">
+            <img
+              src={poster}
+              alt=""
+              className="aspect-square w-full rounded-sm object-cover"
+            />
+          </div>
+        )}
+
         {/* leading-[1] not leading-none: --spacing-none shadows it to line-height 0 */}
-        <p className="font-heading text-[9.4rem] font-bold leading-[1] text-brand-primary-900">
+        <p className="font-heading text-7xl font-bold leading-[1] text-brand-primary-900">
           {airportCode}
         </p>
 
