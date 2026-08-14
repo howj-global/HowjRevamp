@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import jamaica from '../../assets/hero/montegobay.png'
+import { REGISTER_URL, externalLinkProps } from '../../lib/links.js'
 
 const TITLE = 'Join us in Jamaica'
 
@@ -51,12 +51,13 @@ export default function JoinUsCta() {
             </span>
           ))}
         </h2>
-        <Link
-          to="/register"
+        <a
+          href={REGISTER_URL}
+          {...externalLinkProps}
           className="flex h-[5.5rem] w-full max-w-[26rem] items-center justify-center rounded-sm bg-brand-secondary font-body text-3xl font-bold uppercase text-neutral-black transition hover:brightness-95 sm:text-4xl"
         >
           Register
-        </Link>
+        </a>
       </div>
     </section>
   )

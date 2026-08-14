@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import PlaneIcon from './PlaneIcon.jsx'
+import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
 
 function MarqueeItem({ text }) {
   return (
@@ -8,12 +8,13 @@ function MarqueeItem({ text }) {
         {text}
       </p>
       <PlaneIcon className="w-12 shrink-0 text-brand-secondary sm:w-16" />
-      <Link
-        to="/register"
+      <a
+        href={REGISTER_URL}
+        {...externalLinkProps}
         className="flex shrink-0 items-center justify-center rounded-sm bg-brand-secondary px-xl py-1 font-heading text-lg text-neutral-black transition hover:brightness-95 sm:px-2xl sm:py-1.5 sm:text-xl"
       >
         REGISTER
-      </Link>
+      </a>
     </div>
   )
 }

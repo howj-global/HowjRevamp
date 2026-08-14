@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import PlaneIcon from './PlaneIcon.jsx'
+import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
 
 const MS_DAY = 86_400_000
 const MS_HOUR = 3_600_000
@@ -63,6 +63,13 @@ export default function BoardingPassCard({
   location = 'MONTEGO BAY, JAMAICA',
   dateLabel = '12 DECEMBER, 2026',
   targetDate = '2026-12-12T00:00:00',
+  // Unicode flag emoji for the destination (derived build-time from the
+  // expression's Country Code in Notion — see scripts/fetch-expressions.mjs).
+  // Falls back to the Jamaica SVG only when nothing dynamic was passed at all.
+  flag,
+  // Dismiss handler for the top-right close button; button only renders when
+  // a handler is passed (Hero.jsx owns the shown/hidden state).
+  onClose,
 }) {
   const { days, hours, mins, secs } = useCountdown(targetDate)
 
@@ -84,7 +91,20 @@ export default function BoardingPassCard({
   // px-lg on the body/countdown is the shared content inset — route icons, countdown
   // numbers, and labels all sit flush to it (the "red line" alignment from the reference).
   return (
-    <div className="flex w-full max-w-[22.4rem] flex-col bg-brand-primary-900 p-sm">
+    <div className="relative flex w-full max-w-[22.4rem] flex-col bg-brand-primary-900 p-sm">
+      {onClose && (
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Dismiss"
+          className="absolute -right-3 -top-3 z-10 flex size-8 items-center justify-center rounded-full border border-neutral-gray-300 bg-neutral-white text-brand-primary-900 shadow-md transition hover:scale-105"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="size-3.5" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      )}
+
       {/* Ticket stub — dashed border is the boarding-pass perforation, plane sits on it */}
       <div className="relative">
         <div className="flex items-center justify-center rounded-t-sm border-b-[3px] border-dashed border-neutral-gray-500 bg-neutral-white px-md py-md">
@@ -113,7 +133,17 @@ export default function BoardingPassCard({
             <PlaneIcon className="w-7" />
           </span>
           <span className="h-0 flex-1 border-t-2 border-neutral-gray-700" />
-          <JamaicaFlagIcon className="h-9 w-13 shrink-0 rounded-[4px]" />
+          {flag ? (
+            <span
+              role="img"
+              aria-label="Destination flag"
+              className="flex h-9 w-13 shrink-0 items-center justify-center rounded-[4px] bg-neutral-gray-100 text-3xl leading-none"
+            >
+              {flag}
+            </span>
+          ) : (
+            <JamaicaFlagIcon className="h-9 w-13 shrink-0 rounded-[4px]" />
+          )}
         </div>
 
         <p className="mt-sm font-condensed text-lg tracking-wide text-text-muted">{location}</p>
@@ -138,12 +168,13 @@ export default function BoardingPassCard({
         ))}
       </div>
 
-      <Link
-        to="/register"
+      <a
+        href={REGISTER_URL}
+        {...externalLinkProps}
         className="mt-sm flex items-center justify-center rounded-sm bg-brand-secondary py-3 font-heading text-2xl font-bold text-neutral-black transition hover:brightness-95 sm:text-3xl"
       >
         REGISTER
-      </Link>
+      </a>
     </div>
   )
 }

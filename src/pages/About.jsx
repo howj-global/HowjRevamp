@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import site from '../content/site.json'
+import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
 
 const base = import.meta.env.BASE_URL
 const src = (p) => base + String(p).replace(/^\//, '')
@@ -202,12 +202,13 @@ export default function About() {
             {a.inspired.body}
           </Reveal>
           <Reveal delay={140}>
-            <Link
-              to="/register"
+            <a
+              href={REGISTER_URL}
+              {...externalLinkProps}
               className="inline-flex rounded-full bg-brand-secondary px-xl py-sm font-heading text-base font-bold uppercase tracking-wide text-neutral-black transition hover:brightness-95"
             >
               {a.inspired.ctaLabel}
-            </Link>
+            </a>
           </Reveal>
         </div>
       </section>

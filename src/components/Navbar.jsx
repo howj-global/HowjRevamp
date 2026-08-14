@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import site from '../content/site.json'
-import logo from '../assets/brand/howj-logo-green.svg'
+import logo from '../assets/brand/howj-logo-white.svg'
+import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
 
 // Figma: Navigation/Sticky (node 86:4096) — floating three-segment mint bar
 // (logo | links | Register CTA), 96px tall on desktop spanning the full viewport
 // width, rounded-md (16px) segments on brand-primary-800, white text. Center
 // links collapse into a hamburger dropdown below lg, per the design dev note.
+// Bar height reduced 20% from the original spec (48px -> 38.4px mobile,
+// 96px -> 76.8px desktop) per request.
 const links = (site.nav ?? []).filter((item) => item.path !== '/register')
 
 export default function Navbar() {
@@ -20,9 +23,9 @@ export default function Navbar() {
         <NavLink
           to="/"
           onClick={close}
-          className="flex h-12 shrink-0 items-center justify-center rounded-md bg-brand-primary-800 px-5 lg:h-24 lg:w-[205px] lg:px-0"
+          className="flex h-[38.4px] shrink-0 items-center justify-center rounded-md bg-brand-primary-800 px-5 lg:h-[76.8px] lg:w-[205px] lg:px-0"
         >
-          <img src={logo} alt="HOWJ — Hang Out With Jesus" className="h-8 w-auto lg:h-12" />
+          <img src={logo} alt="HOWJ — Hang Out With Jesus" className="h-[26px] w-auto lg:h-[38px]" />
         </NavLink>
 
         {/* center links segment (desktop only) */}
@@ -41,22 +44,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Register CTA segment (holds the hamburger on mobile) */}
-        <div className="flex h-12 flex-1 items-center justify-between rounded-md bg-brand-primary-800 px-6 lg:h-24 lg:w-[180px] lg:flex-none lg:justify-center lg:px-0">
-          <NavLink
-            to="/register"
+        {/* Register CTA segment (holds the hamburger on mobile; Register itself
+            moves into the mobile dropdown below lg, per request) */}
+        <div className="flex h-[38.4px] flex-1 items-center justify-between rounded-md bg-brand-primary-800 px-6 lg:h-[76.8px] lg:w-[180px] lg:flex-none lg:justify-center lg:px-0">
+          <a
+            href={REGISTER_URL}
+            {...externalLinkProps}
             onClick={close}
-            className="font-heading text-xl font-semibold text-neutral-white transition hover:opacity-60"
+            className="hidden font-heading text-xl font-semibold text-neutral-white transition hover:opacity-60 lg:block"
           >
             Register
-          </NavLink>
+          </a>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="text-neutral-white lg:hidden"
+            className="ml-auto text-neutral-white lg:hidden"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-7 w-7" aria-hidden="true">
               {open ? (
@@ -88,6 +93,16 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <a
+              href={REGISTER_URL}
+              {...externalLinkProps}
+              onClick={close}
+              className="block rounded-sm px-4 py-3 font-semibold transition hover:bg-neutral-white/10"
+            >
+              Register
+            </a>
+          </li>
         </ul>
       )}
     </header>

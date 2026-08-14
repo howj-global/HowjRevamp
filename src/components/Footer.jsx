@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/brand/howj-logo-grey.svg'
+import { socialLinks } from '../lib/social.js'
 
 const columns = [
   {
@@ -19,12 +20,7 @@ const columns = [
   },
   {
     heading: 'Social',
-    links: [
-      { label: 'Twitter', href: 'https://x.com/howj_global' },
-      { label: 'Instagram', href: 'https://www.instagram.com/howj_global/' },
-      { label: 'Facebook', href: 'https://www.facebook.com/howj_global' },
-      { label: 'YouTube', href: 'https://www.youtube.com/@HOWJ_Global' },
-    ],
+    links: socialLinks.map(({ label, href }) => ({ label, href })),
   },
 ]
 
