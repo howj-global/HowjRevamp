@@ -3,7 +3,7 @@ export default function CharitySection({ charity }) {
   return (
     <section className="mx-auto max-w-[90rem] px-6 py-2xl lg:px-4xl">
       <div className="flex flex-col gap-lg lg:flex-row lg:items-end lg:justify-between">
-        <h2 className="font-condensed text-6xl font-bold uppercase leading-[0.95] text-neutral-black lg:w-1/2 lg:text-8xl">
+        <h2 className="font-condensed text-5xl font-bold uppercase leading-[0.95] text-neutral-black lg:w-1/2 lg:text-7xl">
           {charity.title}
         </h2>
         <p className="font-body text-lg leading-relaxed text-neutral-black lg:w-1/2">

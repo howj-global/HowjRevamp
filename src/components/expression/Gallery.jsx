@@ -27,7 +27,7 @@ export default function Gallery({ title, images = [] }) {
   return (
     <section className="bg-surface-page py-3xl">
       <div className="mx-auto flex max-w-[90rem] flex-col items-center gap-xs px-6 text-center lg:px-4xl">
-        <h2 className="font-condensed text-6xl font-bold uppercase text-neutral-black lg:text-8xl">
+        <h2 className="font-condensed text-5xl font-bold uppercase text-neutral-black lg:text-7xl">
           {title}
         </h2>
         <p className="font-body text-sm font-light text-neutral-black">Click to view some Highlights</p>

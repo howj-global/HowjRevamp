@@ -9,7 +9,7 @@ export default function ExpressionOverview({ theme, verse, overview, featureStat
           leaving generous breathing room above (matches node 175:5510). */}
       <div className="flex flex-col gap-2xl lg:min-h-[37.5rem] lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-[30rem]">
-          <h2 className="font-condensed text-6xl font-bold uppercase leading-[0.95] text-neutral-black sm:text-7xl lg:text-8xl">
+          <h2 className="font-condensed text-5xl font-bold uppercase leading-[0.95] text-neutral-black sm:text-6xl lg:text-7xl">
             {theme}
           </h2>
           <p className="mt-md font-body text-lg font-light text-neutral-black">{verse}</p>
