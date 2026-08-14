@@ -1,74 +1,142 @@
 [
   {
-    "name": "Chevelle Franklyn",
-    "role": "Guest Minister",
-    "country": "Jamaica",
-    "photo": "/ministers/chevelle-franklyn-jamaica.png"
+    "name": "Folu Adeboye",
+    "role": "Pastor",
+    "photo": "/ministers/folu-adeboye.png"
   },
   {
-    "name": "Davidfrolu",
-    "role": "Guest Minister",
-    "country": "Cameroon",
-    "photo": "/ministers/davidfrolu-cameroon.avif"
+    "name": "EA Adeboye",
+    "role": "Pastor",
+    "photo": "/ministers/ea-adeboye.png"
   },
   {
-    "name": "Ebukasongs",
+    "name": "Colby Maier",
     "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/ebukasongs-nigeria.jpg"
+    "photo": "/ministers/colby-maier.jpeg"
   },
   {
-    "name": "Israel Salazar",
-    "role": "Guest Minister",
-    "country": "Brazil",
-    "photo": "/ministers/israel-salazar-brazil.jpg"
+    "name": "John Santiago",
+    "role": "Minister",
+    "photo": "/ministers/john-santiago.jpeg"
   },
   {
-    "name": "Lopez",
-    "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/lopez-nigeria.png"
+    "name": "Kingsley Manuel",
+    "role": "Minister",
+    "photo": "/ministers/kingsley-manuel.png"
   },
   {
-    "name": "Mog",
-    "role": "Guest Minister",
-    "country": "Ghana",
-    "photo": "/ministers/mog-ghana.webp"
+    "name": "Healing Couple",
+    "role": "Minister",
+    "photo": "/ministers/healing-couple.jpeg"
   },
   {
-    "name": "Nosa",
-    "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/nosa-nigeria.jpg"
+    "name": "Frank Imani",
+    "role": "Minister",
+    "photo": "/ministers/frank-imani.jpeg"
   },
   {
-    "name": "Ohemmamercy",
-    "role": "Guest Minister",
-    "country": "Ghana",
-    "photo": "/ministers/ohemmamercy-ghana.jpg"
-  },
-  {
-    "name": "Paul Tomisin",
-    "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/paul-tomisin-nigeria.jpg"
-  },
-  {
-    "name": "Tia",
-    "role": "Guest Minister",
-    "country": "Korea",
-    "photo": "/ministers/tia-korea.jpg"
-  },
-  {
-    "name": "Tomifsvoured",
-    "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/tomifsvoured-nigeria.png"
+    "name": "Jumbo aniebiet",
+    "role": "Minister",
+    "photo": "/ministers/jumbo-aniebiet.jpeg"
   },
   {
     "name": "Victoria Orenze",
     "role": "Guest Minister",
-    "country": "Nigeria",
-    "photo": "/ministers/victoria-orenze-nigeria.webp"
+    "photo": "/ministers/victoria-orenze.jpeg"
+  },
+  {
+    "name": "Freke Umoh",
+    "role": "Minister",
+    "photo": "/ministers/freke-umoh.jpeg"
+  },
+  {
+    "name": "kingsley okonkwo",
+    "role": "Minister",
+    "photo": "/ministers/kingsley-okonkwo.jpeg"
+  },
+  {
+    "name": "Tomi Favored",
+    "role": "Minister",
+    "photo": "/ministers/tomi-favored.jpeg"
+  },
+  {
+    "name": "Paul Tomisin",
+    "role": "Minister",
+    "photo": "/ministers/paul-tomisin.jpeg"
+  },
+  {
+    "name": "Ohemaa Mercy",
+    "role": "Minister",
+    "photo": "/ministers/ohemaa-mercy.jpeg"
+  },
+  {
+    "name": "Nosa",
+    "role": "Minister",
+    "photo": "/ministers/nosa.jpeg"
+  },
+  {
+    "name": "Ebuka Songz",
+    "role": "Guest Minister",
+    "photo": "/ministers/ebuka-songz.jpeg"
+  },
+  {
+    "name": "Tia",
+    "role": "Minister",
+    "photo": "/ministers/tia.jpeg"
+  },
+  {
+    "name": "MOG",
+    "role": "Minister",
+    "photo": "/ministers/mog.jpeg"
+  },
+  {
+    "name": "Blessing Lopez",
+    "role": "Minister",
+    "photo": "/ministers/blessing-lopez.png"
+  },
+  {
+    "name": "kunle ajayi",
+    "role": "Minister",
+    "photo": "/ministers/kunle-ajayi.png"
+  },
+  {
+    "name": "Dolapo Lawal",
+    "role": "Minister",
+    "photo": "/ministers/dolapo-lawal.png"
+  },
+  {
+    "name": "Abbey Ojomu",
+    "role": "Minister",
+    "photo": "/ministers/abbey-ojomu.png"
+  },
+  {
+    "name": "Theophilus Sunday",
+    "role": "Minister",
+    "photo": "/ministers/theophilus-sunday.png"
+  },
+  {
+    "name": "Pastor Abiodun Opeyemi Ojesina",
+    "role": "Minister",
+    "photo": "/ministers/pastor-abiodun-opeyemi-ojesina.jpeg"
+  },
+  {
+    "name": "Chevelle franklyn",
+    "role": "Minister",
+    "photo": "/ministers/chevelle-franklyn.png"
+  },
+  {
+    "name": "Bishop Mauricio",
+    "role": "Minister",
+    "photo": "/ministers/bishop-mauricio.jpeg"
+  },
+  {
+    "name": "Israel Salazar",
+    "role": "Minister",
+    "photo": "/ministers/israel-salazar.jpeg"
+  },
+  {
+    "name": "Jhonas Serra",
+    "role": "Minister",
+    "photo": "/ministers/jhonas-serra.jpeg"
   }
 ]

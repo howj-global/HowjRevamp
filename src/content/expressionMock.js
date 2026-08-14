@@ -69,9 +69,9 @@ export const expressionMock = {
     logos: [{ name: 'Partner One' }, { name: 'Partner Two' }],
   },
 
-  // charity highlight carousel
-  charityHighlight: {
-    title: 'Charity Highlight',
+  // gallery carousel — all photos for this expression
+  gallery: {
+    title: 'Gallery',
     images: [
       g('brazil-charity-01.jpg'),
       g('brazil-charity-02.jpg'),

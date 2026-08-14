@@ -62,11 +62,15 @@ function httpFetch(url, options = {}, redirects = 5) {
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
 const OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'expressions.json')
+const UPCOMING_OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'upcoming.json')
+const MINISTERS_OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'ministers.json')
+const MINISTERS_IMAGE_DIR = path.join(ROOT, 'public', 'ministers')
 const IMAGE_DIR = path.join(ROOT, 'public', 'expressions')
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN
-const GLOBAL_DB = process.env.HOWJ_GLOBAL_DB_ID || '38122766-9e5a-8070-9529-dc983312f28f'
-const MINISTERS_DB = process.env.HOWJ_MINISTERS_DB_ID || '08933c065e38462bbebb5dbbac06bc03'
+// HOWJ official workspace (moved off the personal workspace; integration "HowjMedia").
+const GLOBAL_DB = process.env.HOWJ_GLOBAL_DB_ID || 'b0dbad17-61fc-8220-968f-012c4b5220cf'
+const MINISTERS_DB = process.env.HOWJ_MINISTERS_DB_ID || '1e3bad17-61fc-820d-833c-8164b5b0aa54'
 const NOTION_VERSION = '2022-06-28'
 
 // hero-timeline tag -> section anchor id (matches Expression.jsx)
@@ -159,10 +163,54 @@ function ytVideoId(url) {
   return m ? m[1] : null
 }
 
-// download a signed Notion URL into public/expressions/<slug>/ and return the
-// site-root path. Rejects non-image responses (e.g. a video/link pasted into an
-// image field downloads the page HTML, not a picture) so we never ship garbage.
-async function downloadImage(url, slug, seen) {
+// ISO 3166-1 alpha-2 -> Unicode flag emoji (each letter maps to a regional
+// indicator symbol). Returns null for anything that isn't exactly 2 letters,
+// so the boarding pass can fall back cleanly when a row has no code yet.
+function flagEmoji(countryCode) {
+  if (!/^[a-zA-Z]{2}$/.test(countryCode || '')) return null
+  const points = [...countryCode.toUpperCase()].map((c) => 127397 + c.charCodeAt(0))
+  return String.fromCodePoint(...points)
+}
+
+// "2026-12-12" -> "12 DECEMBER, 2026" (boarding pass date line)
+function formatDateLabel(isoDate) {
+  const d = new Date(isoDate)
+  const day = d.getUTCDate()
+  const month = d.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' }).toUpperCase()
+  return `${day} ${month}, ${d.getUTCFullYear()}`
+}
+
+// Homepage "upcoming expression" — the soonest Published row with a future
+// Event Date. Feeds the hero boarding pass + top marquee (see Hero.jsx).
+// Returns null when nothing is upcoming; callers keep their own static
+// fallback for that case rather than showing stale/empty content.
+function buildUpcoming(expressions) {
+  const now = Date.now()
+  const next = Object.values(expressions)
+    .filter((e) => e.date && new Date(e.date).getTime() >= now)
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())[0]
+  if (!next) return null
+
+  const city = next.city?.toUpperCase() || ''
+  const country = next.country?.toUpperCase() || ''
+  return {
+    slug: next.slug,
+    titlePhrases: ['NEXT STOP', city, country && `HOWJ ${country}`].filter(Boolean),
+    airportCode: next.airportCode?.toUpperCase() || city.slice(0, 3) || '???',
+    location: [next.city, next.country].filter(Boolean).join(', ').toUpperCase(),
+    dateLabel: formatDateLabel(next.date),
+    targetDate: next.date,
+    flag: flagEmoji(next.countryCode),
+    marqueeText: ['HANGOUT WITH JESUS', country, city].filter(Boolean).join(' '),
+  }
+}
+
+// download a signed Notion URL into `destDir` and return the site-root path.
+// Rejects non-image responses (e.g. a video/link pasted into an image field
+// downloads the page HTML, not a picture) so we never ship garbage.
+// `preferredName` (optional, extension-less) names the file instead of deriving
+// it from the URL — used for ministers so photos land as readable slugs.
+async function downloadTo(url, destDir, publicPrefix, seen, preferredName) {
   if (!url) return null
   const res = await httpFetch(url)
   if (!res.ok) throw new Error(`download ${res.status} for ${url}`)
@@ -171,8 +219,9 @@ async function downloadImage(url, slug, seen) {
     console.warn(`[expressions:fetch] ⚠ skipped non-image field (got ${type || 'unknown'})`)
     return null
   }
-  const dir = path.join(IMAGE_DIR, slug)
-  const raw = decodeURIComponent(new URL(url).pathname.split('/').pop() || 'image')
+  const raw = preferredName
+    ? preferredName
+    : decodeURIComponent(new URL(url).pathname.split('/').pop() || 'image')
   let name = raw.replace(/[^a-zA-Z0-9._-]/g, '-').toLowerCase()
   if (!path.extname(name)) name += '.' + (type.split('/')[1] || 'jpg') // ext from content-type
   for (let i = 1; seen.has(name); i++) {
@@ -180,10 +229,13 @@ async function downloadImage(url, slug, seen) {
     name = `${path.basename(name, ext)}-${i}${ext}`
   }
   seen.add(name)
-  await mkdir(dir, { recursive: true })
-  await writeFile(path.join(dir, name), Buffer.from(await res.arrayBuffer()))
-  return `/expressions/${slug}/${name}`
+  await mkdir(destDir, { recursive: true })
+  await writeFile(path.join(destDir, name), Buffer.from(await res.arrayBuffer()))
+  return `${publicPrefix}/${name}`
 }
+
+const downloadImage = (url, slug, seen) =>
+  downloadTo(url, path.join(IMAGE_DIR, slug), `/expressions/${slug}`, seen)
 
 // ---- mapping -----------------------------------------------------------------
 async function buildExpression(page, ministersByExpr, slug) {
@@ -195,7 +247,7 @@ async function buildExpression(page, ministersByExpr, slug) {
   const country = readText(page, 'Country')
   const plus = (n) => (n == null ? '' : `${n}+`)
 
-  const [logo, heroImage, featureImage1, featureImage2, docImage, charityImages, partnerLogos, highlightImages] =
+  const [logo, heroImage, featureImage1, featureImage2, docImage, charityImages, partnerLogos, galleryImages] =
     await Promise.all([
       firstFile('Logo'),
       firstFile('Hero Image'),
@@ -204,7 +256,9 @@ async function buildExpression(page, ministersByExpr, slug) {
       firstFile('Documentary Image'),
       allFiles('Charity Images'),
       allFiles('Partner Logos'),
-      allFiles('Charity Highlight Images'),
+      // pre-existing "Images" field (predates this template) — every photo
+      // Notion has for this expression, not just the charity subset.
+      allFiles('Images'),
     ])
 
   // documentary thumbnail: a real uploaded image, else the YouTube thumbnail
@@ -231,6 +285,10 @@ async function buildExpression(page, ministersByExpr, slug) {
     city: readText(page, 'City'),
     venue: readText(page, 'Venue'),
     date: readDate(page, 'Event Date'),
+    // Optional — used only by the homepage "upcoming expression" feature
+    // (boarding pass + marquee). Blank is fine; buildUpcoming() falls back.
+    airportCode: readText(page, 'Airport Code'),
+    countryCode: readText(page, 'Country Code'),
     tags: readMultiSelect(page, 'Sections')
       .filter((t) => TAG_TARGETS[t])
       .map((t) => ({ label: t, target: TAG_TARGETS[t] })),
@@ -257,7 +315,7 @@ async function buildExpression(page, ministersByExpr, slug) {
       label: readText(page, 'Partners Label') || (country ? `Our Partners in ${country}` : 'Our Partners'),
       logos: partnerLogos.map((image) => ({ image })),
     },
-    charityHighlight: { title: 'Charity Highlight', images: highlightImages },
+    gallery: { title: 'Gallery', images: galleryImages },
   }
 }
 
@@ -286,8 +344,34 @@ async function main() {
     }
   }
 
-  // fresh image dir each run so removed images don't linger
+  // fresh image dirs each run so removed images don't linger
   await rm(IMAGE_DIR, { recursive: true, force: true })
+  await rm(MINISTERS_IMAGE_DIR, { recursive: true, force: true })
+
+  // Homepage "Guest Ministers" marquee — every row in HOWJ Ministers, not just
+  // the ones related to an expression. Photos download to public/ministers/
+  // named after the minister so the manifest stays readable.
+  const ministersSeen = new Set()
+  const ministersOut = []
+  for (const m of [...ministers].sort((a, b) => (readNumber(a, 'Order') ?? 99) - (readNumber(b, 'Order') ?? 99))) {
+    const name = readText(m, 'Name')
+    const photoUrl = readFileUrls(m, 'Photo')[0]
+    if (!name || !photoUrl) {
+      console.warn(`[expressions:fetch] ⚠ minister "${name || 'untitled'}" skipped — needs a Name and a Photo.`)
+      continue
+    }
+    const photo = await downloadTo(
+      photoUrl,
+      MINISTERS_IMAGE_DIR,
+      '/ministers',
+      ministersSeen,
+      name.toLowerCase().replace(/\s+/g, '-'),
+    )
+    if (!photo) continue
+    ministersOut.push({ name, role: readText(m, 'Role') || 'Guest Minister', photo })
+  }
+  await writeFile(MINISTERS_OUTPUT_PATH, JSON.stringify(ministersOut, null, 2) + '\n')
+  console.log(`[expressions:fetch] Wrote ${ministersOut.length} minister(s) to src/content/ministers.json`)
 
   const out = {}
   for (const page of expressions) {
@@ -303,6 +387,14 @@ async function main() {
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
   await writeFile(OUTPUT_PATH, JSON.stringify(out, null, 2) + '\n')
   console.log(`[expressions:fetch] Wrote ${Object.keys(out).length} expression(s) to src/content/expressions.json`)
+
+  const upcoming = buildUpcoming(out)
+  await writeFile(UPCOMING_OUTPUT_PATH, JSON.stringify(upcoming, null, 2) + '\n')
+  console.log(
+    upcoming
+      ? `[expressions:fetch] Upcoming: ${upcoming.slug} (${upcoming.dateLabel})`
+      : '[expressions:fetch] Upcoming: none (no future-dated Published row) — homepage keeps its static fallback.',
+  )
 }
 
 main().catch((err) => {

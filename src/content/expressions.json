@@ -1,91 +1,14 @@
 {
-  "india": {
-    "slug": "india",
-    "logo": "/expressions/india/india-logo.png",
-    "heroImage": "/expressions/india/india-revival-04.jpg",
-    "country": "India",
-    "city": "Kerala",
-    "venue": "TBD",
-    "date": "2026-03-26",
-    "tags": [],
-    "theme": "Jesus Christ the Kings of Kings",
-    "verse": "Revelation 19:16",
-    "overview": "Stepping into the world's most populous nation, HOWJ Global launched its most ambitious activation to date, serving communities across multiple Indian cities with targeted relief, outreach programs, and a unifying community celebration. From urban slums to rural villages, our teams carried the HOWJ heartbeat into places where hope is desperately needed and profoundly felt. India 2026 is the culmination of four years of global momentum — and the beginning of our deepest impact yet.",
-    "featureStats": [
-      {
-        "value": "700+",
-        "label": "Total souls impacted",
-        "image": "/expressions/india/india-charity-15.jpg"
-      },
-      {
-        "value": "700+",
-        "label": "In attendance",
-        "image": "/expressions/india/india-charity-08.jpg"
-      }
-    ],
-    "numbers": [
-      {
-        "value": "30+",
-        "label": "miracles documented"
-      },
-      {
-        "value": "200+",
-        "label": "Impacted charity"
-      },
-      {
-        "value": "230+",
-        "label": "Souls impacted through charity"
-      }
-    ],
-    "documentary": {
-      "image": "/expressions/india/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=JML2kI0Vqto"
-    },
-    "ministers": [
-      {
-        "name": "Pastor Abiodun Opeyemi Ojesina",
-        "image": "/expressions/india/pastor_abidoun-bangladesh.jpg"
-      },
-      {
-        "name": "Chevelle franklyn",
-        "image": "/expressions/india/chevelle-franklyn-jamaica.png"
-      }
-    ],
-    "charity": {
-      "title": "Tabor Hill Conference Hall",
-      "overview": "The HOWJ team extended God’s love to the needy, the old and young in the heart of Kerala",
-      "images": [
-        "/expressions/india/india-charity-10.jpg"
-      ]
-    },
-    "partners": {
-      "label": "Our Partners in India",
-      "logos": [
-        {
-          "image": "/expressions/india/pbc.png"
-        },
-        {
-          "image": "/expressions/india/rccg.png"
-        }
-      ]
-    },
-    "charityHighlight": {
-      "title": "Charity Highlight",
-      "images": [
-        "/expressions/india/india-charity-12.jpg",
-        "/expressions/india/india-charity-13.jpg",
-        "/expressions/india/india-charity-08-1.jpg"
-      ]
-    }
-  },
-  "south-korea": {
-    "slug": "south-korea",
-    "logo": "/expressions/south-korea/howj_korea_logo.png",
-    "heroImage": "/expressions/south-korea/kore-charity.jpg",
-    "country": "South Korea",
-    "city": "Seoul",
-    "venue": "",
-    "date": "2024-04-06",
+  "atlanta": {
+    "slug": "atlanta",
+    "logo": "/expressions/atlanta/atlanta-logo.png",
+    "heroImage": "/expressions/atlanta/atl_hero.jpg",
+    "country": "USA",
+    "city": "Atlanta",
+    "venue": "The Coca-Cola Roxy\n800 Battery Ave SE",
+    "date": "2025-06-22",
+    "airportCode": "",
+    "countryCode": "",
     "tags": [
       {
         "label": "Revival",
@@ -108,227 +31,28 @@
         "target": "gallery"
       }
     ],
-    "theme": "Jesus Christ - The Lord is That Spirit",
-    "verse": "2 Corinthians 3:17",
-    "overview": "Crossing into East Asia for the first time, HOWJ Global brought its message of hope and community transformation to the streets of South Korea, engaging with both local residents and underserved migrant communities. Our Seoul-based activation combined structured outreach with a landmark gathering that bridged cultural divides through shared generosity. South Korea 2025 marked a bold new frontier in HOWJ's global story.",
+    "theme": "Jesus Christ - Name Above All Names",
+    "verse": "Philippians 2:9-11",
+    "overview": "In the heart of Atlanta, the 10th Edition of the Hangout with Jesus experience",
     "featureStats": [
       {
-        "value": "20+",
+        "value": "4000+",
         "label": "Total souls impacted",
-        "image": "/expressions/south-korea/korea-orphanagentrance.jpg"
+        "image": "/expressions/atlanta/atl_f1.jpg"
+      },
+      {
+        "value": "3000+",
+        "label": "In attendance",
+        "image": "/expressions/atlanta/charity_atl-1.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "5+",
+        "label": "miracles documented"
       },
       {
         "value": "",
-        "label": "In attendance",
-        "image": "/expressions/south-korea/korea-1.jpg"
-      }
-    ],
-    "numbers": [
-      {
-        "value": "0+",
-        "label": "miracles documented"
-      },
-      {
-        "value": "20+",
-        "label": "Impacted charity"
-      },
-      {
-        "value": "50+",
-        "label": "Souls impacted through charity"
-      }
-    ],
-    "documentary": {
-      "image": "/expressions/south-korea/kore-charity.jpg",
-      "videoUrl": "#"
-    },
-    "ministers": [
-      {
-        "name": "Healing Couple",
-        "image": "/expressions/south-korea/healingcouple01.jpg"
-      },
-      {
-        "name": "Frank Imani",
-        "image": "/expressions/south-korea/fran_imani.jpg"
-      },
-      {
-        "name": "Tia",
-        "image": "/expressions/south-korea/tia-korea.jpg"
-      }
-    ],
-    "charity": {
-      "title": "Orphanage",
-      "overview": "At Hang Out With Jesus (HOWJ), our mission is simple yet profound: to follow Jesus out of the four walls of the church and into the heart of the community, no matter where that community is located. Recently, the HOWJ team traveled over 6,000 miles to share the transformative love of Christ in Seoul, South Korea.",
-      "images": [
-        "/expressions/south-korea/korea.jpg",
-        "/expressions/south-korea/kores3.jpg",
-        "/expressions/south-korea/korea-busking.jpg"
-      ]
-    },
-    "partners": {
-      "label": "Our Partners in South Korea",
-      "logos": []
-    },
-    "charityHighlight": {
-      "title": "Charity Highlight",
-      "images": [
-        "/expressions/south-korea/kore-charity-07.jpg"
-      ]
-    }
-  },
-  "kenya": {
-    "slug": "kenya",
-    "logo": "/expressions/kenya/howj_logo-kenya.png",
-    "heroImage": "/expressions/kenya/kenya_hero.png",
-    "country": "Kenya",
-    "city": "Nakuru",
-    "venue": "",
-    "date": "2023-04-28",
-    "tags": [
-      {
-        "label": "Revival",
-        "target": "revival"
-      },
-      {
-        "label": "Documentary",
-        "target": "documentary"
-      },
-      {
-        "label": "Minister",
-        "target": "minister"
-      },
-      {
-        "label": "Charity",
-        "target": "charity"
-      },
-      {
-        "label": "Gallery",
-        "target": "gallery"
-      }
-    ],
-    "theme": "Jesus Christ - The Same Yesterday, Today and Forever",
-    "verse": "Hebrews 13:8",
-    "overview": "The power of God penetrated the streets of Nakuru, Kenya, even into the market places and thousands of lives were impacted.\n\nFrom the outreach at Kambi Turkana village to the revival night with Ministers Theophilus Sunday and Abbey Ojomu, the presence of God was heavy and palpable!  HOWJ Global brought hope and practical support to thousands of Kenyan families facing daily hardship. Our 2024 Kenya activation combined wide-scale food relief with a high-energy community event that drew participants from across the region. This chapter reinforced our belief that transformed communities begin with people who dare to show up.",
-    "featureStats": [
-      {
-        "value": "10000+",
-        "label": "Total souls impacted",
-        "image": "/expressions/kenya/kenya-featured2-1.png"
-      },
-      {
-        "value": "10000+",
-        "label": "In attendance",
-        "image": "/expressions/kenya/kenya-featured-charity3.png"
-      }
-    ],
-    "numbers": [
-      {
-        "value": "20+",
-        "label": "miracles documented"
-      },
-      {
-        "value": "10000+",
-        "label": "Impacted charity"
-      },
-      {
-        "value": "200+",
-        "label": "Souls impacted through charity"
-      }
-    ],
-    "documentary": {
-      "image": "/expressions/kenya/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=kaKo1rjDji0"
-    },
-    "ministers": [
-      {
-        "name": "Paul Tomisin",
-        "image": "/expressions/kenya/paul-tomisin-nigeria.jpg"
-      },
-      {
-        "name": "Abbey Ojomu",
-        "image": "/expressions/kenya/abbey.png"
-      },
-      {
-        "name": "Theophilus Sunday",
-        "image": "/expressions/kenya/theophilus_sundayy.png"
-      }
-    ],
-    "charity": {
-      "title": "",
-      "overview": "",
-      "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg",
-        "/expressions/kenya/kenya-charity.png",
-        "/expressions/kenya/kenya-featured2.png",
-        "/expressions/kenya/kenyagallery03.png"
-      ]
-    },
-    "partners": {
-      "label": "Our Partners in Kenya",
-      "logos": []
-    },
-    "charityHighlight": {
-      "title": "Charity Highlight",
-      "images": [
-        "/expressions/kenya/kenya-arrival-01.png",
-        "/expressions/kenya/kenya-featured-charity3-1.png",
-        "/expressions/kenya/kenya-ministration-05.jpg",
-        "/expressions/kenya/kenyagallery03-1.png",
-        "/expressions/kenya/kenyagallery02.png"
-      ]
-    }
-  },
-  "brazil": {
-    "slug": "brazil",
-    "logo": "/expressions/brazil/jamaicahowj_brazil.png",
-    "heroImage": "/expressions/brazil/brazil-ministration-02.jpg",
-    "country": "Brazil",
-    "city": "Brasília",
-    "venue": "Igreja Sara Nossa Terra\nCeilândia Norte, QNM 28 B",
-    "date": "2025-03-29",
-    "tags": [
-      {
-        "label": "Revival",
-        "target": "revival"
-      },
-      {
-        "label": "Documentary",
-        "target": "documentary"
-      },
-      {
-        "label": "Minister",
-        "target": "minister"
-      },
-      {
-        "label": "Charity",
-        "target": "charity"
-      },
-      {
-        "label": "Gallery",
-        "target": "gallery"
-      }
-    ],
-    "theme": "Jesus Christ - The Reedemer",
-    "verse": "Galatians 3:13-14: But Christ has rescued us from the curse pronounced by the law. When he was hung on the cross, he took upon himself the curse for our wrongdoing. For it is written in the Scriptures, “Cursed is everyone who is hung on a tree",
-    "overview": "HOWJ Global brought its passion for community transformation to South America for the first time, landing in Brazil with a mission to serve the vulnerable in one of the continent's most densely populated nations. Across favela communities and city centers, our teams distributed essential relief while our signature event gathered thousands in a powerful demonstration of unity and faith. Brazil 2026 opens an entirely new chapter in HOWJ's global impact story.",
-    "featureStats": [
-      {
-        "value": "200+",
-        "label": "Total souls impacted",
-        "image": "/expressions/brazil/brazil-charity-04.jpg"
-      },
-      {
-        "value": "200+",
-        "label": "In attendance",
-        "image": "/expressions/brazil/brazil-charity-02.jpg"
-      }
-    ],
-    "numbers": [
-      {
-        "value": "2+",
-        "label": "miracles documented"
-      },
-      {
-        "value": "10+",
         "label": "Impacted charity"
       },
       {
@@ -337,56 +61,274 @@
       }
     ],
     "documentary": {
-      "image": "/expressions/brazil/maxresdefault.jpg",
-      "videoUrl": "https://youtu.be/Q-ohhuFptrY?si=JdkcZexQKljNks5A"
+      "image": "/expressions/atlanta/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=vkObtd3M9NE&t=34s"
     },
     "ministers": [
       {
-        "name": "Bishop Mauricio",
-        "image": "/expressions/brazil/bishop-mauricio-brazil.jpg"
+        "name": "Folu Adeboye",
+        "image": "/expressions/atlanta/folu_adeboye.png"
       },
       {
-        "name": "Israel Salazar",
-        "image": "/expressions/brazil/israel-salazar-brazil.jpg"
+        "name": "EA Adeboye",
+        "image": "/expressions/atlanta/e_a_adeboye.png"
       },
       {
-        "name": "Jhonas Serra",
-        "image": "/expressions/brazil/jhonas-serra-brazil.jpg"
+        "name": "Colby Maier",
+        "image": "/expressions/atlanta/colby-maier.jpg"
+      },
+      {
+        "name": "John Santiago",
+        "image": "/expressions/atlanta/john_santiago.jpeg"
+      },
+      {
+        "name": "Tomi Favored",
+        "image": "/expressions/atlanta/tomi_favored_aleshinloye.jpg"
+      },
+      {
+        "name": "Ebuka Songz",
+        "image": "/expressions/atlanta/ebukasongs-nigeria.jpg"
+      },
+      {
+        "name": "kunle ajayi",
+        "image": "/expressions/atlanta/kunle_ajayi.png"
+      },
+      {
+        "name": "Dolapo Lawal",
+        "image": "/expressions/atlanta/dolapo_lawal.png"
       }
     ],
     "charity": {
-      "title": "Abrigo Evangélico orphanage",
-      "overview": "The Howj team's visit to the Abrigo Evangélico orphanage in Rio de Janeiro was a profoundly moving highlight of our time in Brazil. Volunteers experienced a poignant mix of joy and heartache, deeply touched by the children and moved to support those facing difficult health challenges.Guided by the belief that every child is an \"inheritance from the Lord,\" the team centered their visit around spiritual intercession. They dedicated time to heartfelt prayer over the children and the facility, asking for God's protection, healing, and a beautiful future.",
+      "title": "",
+      "overview": "",
       "images": [
-        "/expressions/brazil/brazil-charity-03.jpg"
+        "/expressions/atlanta/charity_atl.jpg",
+        "/expressions/atlanta/charity-atl-3.jpg"
       ]
     },
     "partners": {
-      "label": "Pbc",
+      "label": "Our Partners in USA",
       "logos": [
         {
-          "image": "/expressions/brazil/rccg.png"
-        },
-        {
-          "image": "/expressions/brazil/pbc.png"
+          "image": "/expressions/atlanta/images.jpeg"
         }
       ]
     },
-    "charityHighlight": {
-      "title": "Charity Highlight",
+    "gallery": {
+      "title": "Gallery",
+      "images": []
+    }
+  },
+  "dubai": {
+    "slug": "dubai",
+    "logo": "/expressions/dubai/screenshot_2026-07-24_at_5.18.23_pm.png",
+    "heroImage": "/expressions/dubai/uaecover.jpg",
+    "country": "United Arab Emirates",
+    "city": "Dubai",
+    "venue": "—-",
+    "date": "2021-12-30",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Answer",
+    "verse": "Romans 7:25",
+    "overview": "In the heart of one of the world's most dynamic cities, HOWJ Global extended compassion beyond the skyline by reaching migrant workers and low-income communities often invisible to the public eye. Through targeted distribution drives and an uplifting gathering, we provided critical daily provisions alongside a message of dignity and worth. Dubai 2022 proved that genuine transformation has no address.",
+    "featureStats": [
+      {
+        "value": "3+",
+        "label": "Total souls impacted",
+        "image": "/expressions/dubai/dubai-06.jpg"
+      },
+      {
+        "value": "20+",
+        "label": "In attendance",
+        "image": "/expressions/dubai/dubai-05-1.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "0+",
+        "label": "miracles documented"
+      },
+      {
+        "value": "10+",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "5+",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/dubai/uaecover.jpg",
+      "videoUrl": "#"
+    },
+    "ministers": [],
+    "charity": {
+      "title": "Street Giving",
+      "overview": "In the Heart of an Islamic nation, we spread the love of Christ to workers and those in need in the heart of the UAE",
       "images": [
-        "/expressions/brazil/brazil-charity05.jpg"
+        "/expressions/dubai/dubai-02.jpg",
+        "/expressions/dubai/dubai-03.jpg",
+        "/expressions/dubai/dubai-04.jpg",
+        "/expressions/dubai/dubai-05.jpg",
+        "/expressions/dubai/dubai-06-1.jpg"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in United Arab Emirates",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/dubai/dubairevival.jpg"
+      ]
+    }
+  },
+  "ghana": {
+    "slug": "ghana",
+    "logo": "/expressions/ghana/howj-6-ghana_logo.jpg",
+    "heroImage": "/expressions/ghana/ghana_charity-07.jpg",
+    "country": "Ghana",
+    "city": "Accra. Agbogba",
+    "venue": "Oil Dome Royal House Chapel",
+    "date": "2023-11-24",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Lion of the Tribe of Judah",
+    "verse": "Revelation 5:5",
+    "overview": "HOWJ Global arrived in Ghana with a mandate to serve and a heart to connect, and the nation responded with extraordinary warmth and unity. Outreach teams fanned out across communities to deliver essential resources while our flagship event brought thousands together in a celebration of hope and collective purpose. Ghana 2024 stands as a landmark moment in HOWJ's growing African legacy.",
+    "featureStats": [
+      {
+        "value": "500+",
+        "label": "Total souls impacted",
+        "image": "/expressions/ghana/ghana_charity-05.jpg"
+      },
+      {
+        "value": "1000+",
+        "label": "In attendance",
+        "image": "/expressions/ghana/ghana_charity-.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "0+",
+        "label": "miracles documented"
+      },
+      {
+        "value": "200+",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "700+",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/ghana/ghana_charity-07.jpg",
+      "videoUrl": "#"
+    },
+    "ministers": [
+      {
+        "name": "Kingsley Manuel",
+        "image": "/expressions/ghana/kingsley_manuel.png"
+      },
+      {
+        "name": "Ohemaa Mercy",
+        "image": "/expressions/ghana/ohemmamercy-ghana.jpg"
+      },
+      {
+        "name": "MOG",
+        "image": "/expressions/ghana/mog-ghana.jpg"
+      }
+    ],
+    "charity": {
+      "title": "St. Joseph Anglican Church, New Life Nungua Orphanage, and Nsawam Female Prison.",
+      "overview": "Hangout with Jesus Ghana – Outreach Overview\nIn alignment with our mission to demonstrate Christ’s love through action, the Hangout with Jesus team recently completed outreach visits to St. Joseph Anglican School, New Life Nungua Orphanage, and Nsawam Female Prison.\nLiving out the scripture's call to care for the vulnerable, our team provided practical support through donations while offering spiritual encouragement to individuals who often feel overlooked by society. Through these visits, we sought to restore hope, foster a spirit of reformation, and reflect the tangible grace and compassion of Jesus Christ.",
+      "images": [
+        "/expressions/ghana/ghana-outreach-01.jpg",
+        "/expressions/ghana/ghana-charity-08.jpg",
+        "/expressions/ghana/ghana-charity-07.jpg",
+        "/expressions/ghana/ghana-charity-05.jpg",
+        "/expressions/ghana/ghana-charity-06.jpg",
+        "/expressions/ghana/ghana-charity-01.jpg",
+        "/expressions/ghana/ghana-charity-06-1.jpg",
+        "/expressions/ghana/ghana-charity-07-1.jpg",
+        "/expressions/ghana/ghana_charity--1.jpg",
+        "/expressions/ghana/ghana_charity-05-1.jpg",
+        "/expressions/ghana/ghana_charity-08.jpg",
+        "/expressions/ghana/ghana-charity-prison.jpg"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in Ghana",
+      "logos": [
+        {
+          "image": "/expressions/ghana/new-life-png-1-768x405.png"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/ghana/ghana-ministration-revival.jpg"
       ]
     }
   },
   "new-york": {
     "slug": "new-york",
     "logo": "/expressions/new-york/newyork-logo-.png",
-    "heroImage": "/expressions/new-york/herorevival-1.jpg",
+    "heroImage": "/expressions/new-york/herorevival.jpg",
     "country": "United States",
     "city": "New York",
     "venue": "Times Square",
     "date": "2024-09-14",
+    "airportCode": "",
+    "countryCode": "",
     "tags": [
       {
         "label": "Revival",
@@ -416,10 +358,10 @@
       {
         "value": "51+",
         "label": "Total souls impacted",
-        "image": "/expressions/new-york/herorevival.jpg"
+        "image": "/expressions/new-york/herorevival-1.jpg"
       },
       {
-        "value": "500+",
+        "value": "1500+",
         "label": "In attendance",
         "image": "/expressions/new-york/dsc04134.png"
       }
@@ -484,22 +426,23 @@
         }
       ]
     },
-    "charityHighlight": {
-      "title": "Charity Highlight",
+    "gallery": {
+      "title": "Gallery",
       "images": [
-        "/expressions/new-york/cityharvest-featured.jpg",
-        "/expressions/new-york/2a1a8633-1.jpg"
+        "/expressions/new-york/newyork-ministration-04.jpg"
       ]
     }
   },
-  "ghana": {
-    "slug": "ghana",
-    "logo": "/expressions/ghana/howj-6-ghana_logo.jpg",
-    "heroImage": "/expressions/ghana/ghana_charity-07.jpg",
-    "country": "Ghana",
-    "city": "Accra. Agbogba",
-    "venue": "Oil Dome Royal House Chapel",
-    "date": "2023-11-24",
+  "brazil": {
+    "slug": "brazil",
+    "logo": "/expressions/brazil/jamaicahowj_brazil.png",
+    "heroImage": "/expressions/brazil/brazil-ministration-02.jpg",
+    "country": "Brazil",
+    "city": "Brasília",
+    "venue": "Igreja Sara Nossa Terra\nCeilândia Norte, QNM 28 B",
+    "date": "2025-03-29",
+    "airportCode": "",
+    "countryCode": "",
     "tags": [
       {
         "label": "Revival",
@@ -522,91 +465,90 @@
         "target": "gallery"
       }
     ],
-    "theme": "Jesus Christ - The Lion of the Tribe of Judah",
-    "verse": "Revelation 5:5",
-    "overview": "HOWJ Global arrived in Ghana with a mandate to serve and a heart to connect, and the nation responded with extraordinary warmth and unity. Outreach teams fanned out across communities to deliver essential resources while our flagship event brought thousands together in a celebration of hope and collective purpose. Ghana 2024 stands as a landmark moment in HOWJ's growing African legacy.",
+    "theme": "Jesus Christ - The Reedemer",
+    "verse": "Galatians 3:13-14: But Christ has rescued us from the curse pronounced by the law. When he was hung on the cross, he took upon himself the curse for our wrongdoing. For it is written in the Scriptures, “Cursed is everyone who is hung on a tree",
+    "overview": "HOWJ Global brought its passion for community transformation to South America for the first time, landing in Brazil with a mission to serve the vulnerable in one of the continent's most densely populated nations. Across favela communities and city centers, our teams distributed essential relief while our signature event gathered thousands in a powerful demonstration of unity and faith. Brazil 2026 opens an entirely new chapter in HOWJ's global impact story.",
     "featureStats": [
       {
-        "value": "500+",
+        "value": "200+",
         "label": "Total souls impacted",
-        "image": "/expressions/ghana/ghana_charity-05-1.jpg"
+        "image": "/expressions/brazil/brazil-charity-04.jpg"
       },
       {
-        "value": "300+",
+        "value": "4000+",
         "label": "In attendance",
-        "image": "/expressions/ghana/ghana_charity--1.jpg"
+        "image": "/expressions/brazil/brazil-charity-02.jpg"
       }
     ],
     "numbers": [
       {
-        "value": "",
+        "value": "2+",
         "label": "miracles documented"
       },
       {
-        "value": "200+",
+        "value": "10+",
         "label": "Impacted charity"
       },
       {
-        "value": "700+",
+        "value": "100+",
         "label": "Souls impacted through charity"
       }
     ],
     "documentary": {
-      "image": "/expressions/ghana/ghana_charity-07.jpg",
-      "videoUrl": "#"
+      "image": "/expressions/brazil/maxresdefault.jpg",
+      "videoUrl": "https://youtu.be/Q-ohhuFptrY?si=JdkcZexQKljNks5A"
     },
     "ministers": [
       {
-        "name": "Kingsley Manuel",
-        "image": "/expressions/ghana/kingsley_manuel.png"
+        "name": "Bishop Mauricio",
+        "image": "/expressions/brazil/bishop-mauricio-brazil.jpg"
       },
       {
-        "name": "Ohemaa Mercy",
-        "image": "/expressions/ghana/ohemmamercy-ghana.jpg"
+        "name": "Israel Salazar",
+        "image": "/expressions/brazil/israel-salazar-brazil.jpg"
       },
       {
-        "name": "MOG",
-        "image": "/expressions/ghana/mog-ghana.jpg"
+        "name": "Jhonas Serra",
+        "image": "/expressions/brazil/jhonas-serra-brazil.jpg"
       }
     ],
     "charity": {
-      "title": "St. Joseph Anglican Church, New Life Nungua Orphanage, and Nsawam Female Prison.",
-      "overview": "Hangout with Jesus Ghana – Outreach Overview\nIn alignment with our mission to demonstrate Christ’s love through action, the Hangout with Jesus team recently completed outreach visits to St. Joseph Anglican School, New Life Nungua Orphanage, and Nsawam Female Prison.\nLiving out the scripture's call to care for the vulnerable, our team provided practical support through donations while offering spiritual encouragement to individuals who often feel overlooked by society. Through these visits, we sought to restore hope, foster a spirit of reformation, and reflect the tangible grace and compassion of Jesus Christ.",
+      "title": "Abrigo Evangélico orphanage",
+      "overview": "The Howj team's visit to the Abrigo Evangélico orphanage in Rio de Janeiro was a profoundly moving highlight of our time in Brazil. Volunteers experienced a poignant mix of joy and heartache, deeply touched by the children and moved to support those facing difficult health challenges.Guided by the belief that every child is an \"inheritance from the Lord,\" the team centered their visit around spiritual intercession. They dedicated time to heartfelt prayer over the children and the facility, asking for God's protection, healing, and a beautiful future.",
       "images": [
-        "/expressions/ghana/ghana-outreach-01.jpg",
-        "/expressions/ghana/ghana-charity-08.jpg",
-        "/expressions/ghana/ghana-charity-07.jpg",
-        "/expressions/ghana/ghana-charity-05.jpg",
-        "/expressions/ghana/ghana-charity-06-1.jpg",
-        "/expressions/ghana/ghana-charity-01.jpg",
-        "/expressions/ghana/ghana-charity-06.jpg",
-        "/expressions/ghana/ghana-charity-07-1.jpg",
-        "/expressions/ghana/ghana_charity-.jpg",
-        "/expressions/ghana/ghana_charity-05.jpg",
-        "/expressions/ghana/ghana_charity-08.jpg",
-        "/expressions/ghana/ghana-charity-prison.jpg"
+        "/expressions/brazil/brazil-charity-03.jpg"
       ]
     },
     "partners": {
-      "label": "Our Partners in Ghana",
-      "logos": []
+      "label": "Pbc",
+      "logos": [
+        {
+          "image": "/expressions/brazil/rccg.png"
+        },
+        {
+          "image": "/expressions/brazil/pbc.png"
+        }
+      ]
     },
-    "charityHighlight": {
-      "title": "Charity Highlight",
+    "gallery": {
+      "title": "Gallery",
       "images": [
-        "/expressions/ghana/ghana-charity-05-1.jpg",
-        "/expressions/ghana/ghana-charity-02.jpg"
+        "/expressions/brazil/brazil-charity-01.jpg",
+        "/expressions/brazil/brazil-charity05.jpg",
+        "/expressions/brazil/brazil-ministration-06.jpg"
       ]
     }
   },
-  "dubai": {
-    "slug": "dubai",
-    "logo": "/expressions/dubai/screenshot_2026-07-24_at_5.18.23_pm.png",
-    "heroImage": "/expressions/dubai/uaecover.jpg",
-    "country": "United Arab Emirates",
-    "city": "Dubai",
-    "venue": "TBH",
-    "date": "2021-12-30",
+  "kenya": {
+    "slug": "kenya",
+    "logo": "/expressions/kenya/howj_logo-kenya.png",
+    "heroImage": "/expressions/kenya/kenya_hero.png",
+    "country": "Kenya",
+    "city": "Nakuru",
+    "venue": "",
+    "date": "2023-04-28",
+    "airportCode": "",
+    "countryCode": "",
     "tags": [
       {
         "label": "Revival",
@@ -629,19 +571,119 @@
         "target": "gallery"
       }
     ],
-    "theme": "Jesus Christ - The Answer",
-    "verse": "Romans 7:25",
-    "overview": "In the heart of one of the world's most dynamic cities, HOWJ Global extended compassion beyond the skyline by reaching migrant workers and low-income communities often invisible to the public eye. Through targeted distribution drives and an uplifting gathering, we provided critical daily provisions alongside a message of dignity and worth. Dubai 2022 proved that genuine transformation has no address.",
+    "theme": "Jesus Christ - The Same Yesterday, Today and Forever",
+    "verse": "Hebrews 13:8",
+    "overview": "The power of God penetrated the streets of Nakuru, Kenya, even into the market places and thousands of lives were impacted.\n\nFrom the outreach at Kambi Turkana village to the revival night with Ministers Theophilus Sunday and Abbey Ojomu, the presence of God was heavy and palpable!  HOWJ Global brought hope and practical support to thousands of Kenyan families facing daily hardship. Our 2024 Kenya activation combined wide-scale food relief with a high-energy community event that drew participants from across the region. This chapter reinforced our belief that transformed communities begin with people who dare to show up.",
     "featureStats": [
       {
-        "value": "3+",
+        "value": "10000+",
         "label": "Total souls impacted",
-        "image": "/expressions/dubai/dubai-06-1.jpg"
+        "image": "/expressions/kenya/kenya-featured2-1.png"
       },
       {
-        "value": "20+",
+        "value": "12000+",
         "label": "In attendance",
-        "image": "/expressions/dubai/dubai-05.jpg"
+        "image": "/expressions/kenya/kenya-featured-charity3.png"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "20+",
+        "label": "miracles documented"
+      },
+      {
+        "value": "10000+",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "200+",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/kenya/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=kaKo1rjDji0"
+    },
+    "ministers": [
+      {
+        "name": "Paul Tomisin",
+        "image": "/expressions/kenya/paul-tomisin-nigeria.jpg"
+      },
+      {
+        "name": "Abbey Ojomu",
+        "image": "/expressions/kenya/abbey.png"
+      },
+      {
+        "name": "Theophilus Sunday",
+        "image": "/expressions/kenya/theophilus_sundayy.png"
+      }
+    ],
+    "charity": {
+      "title": "",
+      "overview": "",
+      "images": [
+        "/expressions/kenya/kenya-arrival-02.jpg",
+        "/expressions/kenya/kenya-charity.png",
+        "/expressions/kenya/kenya-featured2.png",
+        "/expressions/kenya/kenyagallery03.png"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in Kenya",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/kenya/kenya-arrival-02-1.jpg"
+      ]
+    }
+  },
+  "south-korea": {
+    "slug": "south-korea",
+    "logo": "/expressions/south-korea/howj_korea_logo.png",
+    "heroImage": "/expressions/south-korea/kore-charity.jpg",
+    "country": "South Korea",
+    "city": "Seoul",
+    "venue": "",
+    "date": "2024-04-06",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Lord is That Spirit",
+    "verse": "2 Corinthians 3:17",
+    "overview": "Crossing into East Asia for the first time, HOWJ Global brought its message of hope and community transformation to the streets of South Korea, engaging with both local residents and underserved migrant communities. Our Seoul-based activation combined structured outreach with a landmark gathering that bridged cultural divides through shared generosity. South Korea 2025 marked a bold new frontier in HOWJ's global story.",
+    "featureStats": [
+      {
+        "value": "20+",
+        "label": "Total souls impacted",
+        "image": "/expressions/south-korea/korea-orphanagentrance.jpg"
+      },
+      {
+        "value": "2000+",
+        "label": "In attendance",
+        "image": "/expressions/south-korea/korea-1.jpg"
       }
     ],
     "numbers": [
@@ -650,43 +692,126 @@
         "label": "miracles documented"
       },
       {
-        "value": "10+",
+        "value": "20+",
         "label": "Impacted charity"
       },
       {
-        "value": "5+",
+        "value": "50+",
         "label": "Souls impacted through charity"
       }
     ],
     "documentary": {
-      "image": "/expressions/dubai/uaecover.jpg",
+      "image": "/expressions/south-korea/kore-charity.jpg",
       "videoUrl": "#"
     },
-    "ministers": [],
+    "ministers": [
+      {
+        "name": "Healing Couple",
+        "image": "/expressions/south-korea/healingcouple01.jpg"
+      },
+      {
+        "name": "Frank Imani",
+        "image": "/expressions/south-korea/fran_imani.jpg"
+      },
+      {
+        "name": "Tia",
+        "image": "/expressions/south-korea/tia-korea.jpg"
+      }
+    ],
     "charity": {
-      "title": "Street Giving",
-      "overview": "In the Heart of an Islamic nation, we spread the love of Christ to workers and those in need in the heart of the UAE",
+      "title": "Orphanage",
+      "overview": "At Hang Out With Jesus (HOWJ), our mission is simple yet profound: to follow Jesus out of the four walls of the church and into the heart of the community, no matter where that community is located. Recently, the HOWJ team traveled over 6,000 miles to share the transformative love of Christ in Seoul, South Korea.",
       "images": [
-        "/expressions/dubai/dubai-02-1.jpg",
-        "/expressions/dubai/dubai-03-1.jpg",
-        "/expressions/dubai/dubai-04-1.jpg",
-        "/expressions/dubai/dubai-05-1.jpg",
-        "/expressions/dubai/dubai-06-1-2.jpg"
+        "/expressions/south-korea/korea.jpg",
+        "/expressions/south-korea/kores3.jpg",
+        "/expressions/south-korea/korea-busking.jpg"
       ]
     },
     "partners": {
-      "label": "Our Partners in United Arab Emirates",
+      "label": "Our Partners in South Korea",
       "logos": []
     },
-    "charityHighlight": {
-      "title": "Charity Highlight",
+    "gallery": {
+      "title": "Gallery",
+      "images": []
+    }
+  },
+  "india": {
+    "slug": "india",
+    "logo": "/expressions/india/india-logo.png",
+    "heroImage": "/expressions/india/india-revival-04.jpg",
+    "country": "India",
+    "city": "Kerala",
+    "venue": "TBD",
+    "date": "2026-03-26",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [],
+    "theme": "Jesus Christ the Kings of Kings",
+    "verse": "Revelation 19:16",
+    "overview": "Stepping into the world's most populous nation, HOWJ Global launched its most ambitious activation to date, serving communities across multiple Indian cities with targeted relief, outreach programs, and a unifying community celebration. From urban slums to rural villages, our teams carried the HOWJ heartbeat into places where hope is desperately needed and profoundly felt. India 2026 is the culmination of four years of global momentum — and the beginning of our deepest impact yet.",
+    "featureStats": [
+      {
+        "value": "700+",
+        "label": "Total souls impacted",
+        "image": "/expressions/india/india-charity-15.jpg"
+      },
+      {
+        "value": "2200+",
+        "label": "In attendance",
+        "image": "/expressions/india/india-charity-08.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "30+",
+        "label": "miracles documented"
+      },
+      {
+        "value": "200+",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "230+",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/india/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=JML2kI0Vqto"
+    },
+    "ministers": [
+      {
+        "name": "Pastor Abiodun Opeyemi Ojesina",
+        "image": "/expressions/india/pastor_abidoun-bangladesh.jpg"
+      },
+      {
+        "name": "Chevelle franklyn",
+        "image": "/expressions/india/chevelle-franklyn-jamaica.png"
+      }
+    ],
+    "charity": {
+      "title": "Tabor Hill Conference Hall",
+      "overview": "The HOWJ team extended God’s love to the needy, the old and young in the heart of Kerala",
       "images": [
-        "/expressions/dubai/dubai-charity.jpg",
-        "/expressions/dubai/dubai-06.jpg",
-        "/expressions/dubai/dubai-05-1-2.jpg",
-        "/expressions/dubai/dubai-04.jpg",
-        "/expressions/dubai/dubai-03.jpg",
-        "/expressions/dubai/dubai-02.jpg"
+        "/expressions/india/india-charity-10.jpg"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in India",
+      "logos": [
+        {
+          "image": "/expressions/india/pbc.png"
+        },
+        {
+          "image": "/expressions/india/rccg.png"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/india/india-charity-03.jpg"
       ]
     }
   }

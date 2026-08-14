@@ -8,7 +8,7 @@ import DocumentarySection from '../components/expression/DocumentarySection.jsx'
 import GuestMinisters from '../components/expression/GuestMinisters.jsx'
 import CharitySection from '../components/expression/CharitySection.jsx'
 import PartnersBar from '../components/expression/PartnersBar.jsx'
-import CharityHighlight from '../components/expression/CharityHighlight.jsx'
+import Gallery from '../components/expression/Gallery.jsx'
 import JoinUsCta from '../components/expression/JoinUsCta.jsx'
 import expressions from '../content/expressions.json'
 import { expressionMock } from '../content/expressionMock.js'
@@ -35,7 +35,7 @@ export default function Expression() {
     const root = rootRef.current
     if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    // h2[data-split] (CharityHighlight) and [data-count] (rolling stats) animate themselves
+    // h2[data-split] (JoinUsCta) and [data-count] (rolling stats) animate themselves
     const SEL = 'h1, h2:not([data-split]), h3, p:not([data-count])'
     const io = new IntersectionObserver(
       (entries) => {
@@ -90,7 +90,7 @@ export default function Expression() {
       </div>
 
       <div id="gallery" className={anchor}>
-        <CharityHighlight title={data.charityHighlight.title} images={data.charityHighlight.images} />
+        <Gallery title={data.gallery.title} images={data.gallery.images} />
       </div>
 
       <JoinUsCta />

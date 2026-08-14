@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react'
 
-// Charity Highlight gallery (Figma 203:4413): a light coverflow row of photos.
-// The centered photo sits in a light-gray frame; users drag/swipe right→left (or
+// Expression gallery (Figma 203:4413, was "Charity Highlight"): a light
+// coverflow row of every photo Notion has for this expression (the
+// pre-existing "Images" field — see scripts/fetch-expressions.mjs). The
+// centered photo sits in a light-gray frame; users drag/swipe right→left (or
 // click a side image) to move through them.
-export default function CharityHighlight({ title, images = [] }) {
+export default function Gallery({ title, images = [] }) {
   const n = images.length
   const [active, setActive] = useState(0)
 
