@@ -3,14 +3,21 @@ import gsap from 'gsap'
 import StatBlock from './StatBlock.jsx'
 import { PLANE_PATH, PLANE_CENTER } from './PlaneIcon.jsx'
 import photos from '../content/gallery.json'
+import expressions from '../content/expressions.json'
 import logo from '../assets/brand/howj-logo-white.svg'
 
-// Charity photos drive the background slideshow, pulled from the tagged gallery
-// manifest so new charity images join automatically once synced. BASE_URL prefix
-// keeps the /gallery/ paths correct under the GitHub Pages subpath.
-const charitySlides = photos
-  .filter((p) => p.category === 'charity')
-  .map((p) => import.meta.env.BASE_URL + p.src.replace(/^\//, ''))
+// Charity photos drive the background slideshow. Sourced from BOTH the tagged
+// gallery manifest and every expression's charity set in Notion, so the loop
+// stays long and new charity images join automatically on the next build.
+// BASE_URL prefix keeps the absolute paths correct under the Pages subpath.
+const withBase = (src) => import.meta.env.BASE_URL + src.replace(/^\//, '')
+
+const charitySlides = [
+  ...new Set([
+    ...photos.filter((p) => p.category === 'charity').map((p) => p.src),
+    ...Object.values(expressions).flatMap((e) => e.charity?.images ?? []),
+  ]),
+].map(withBase)
 
 // Symmetric grid from Figma (node 158:5433): left / center-logo / right columns,
 // three rows. The logo sits in the middle cell; "In 4 years" is an eyebrow above.
@@ -50,7 +57,11 @@ const CURVES = [
     start: [493.633, 160.837],
     delay: 1.2,
   },
-  { d: 'M1223.64 893.837C1736.78 820.412 1668.14 221.337 1478.64 95.8368', start: [1223.64, 893.837], delay: 2.4 },
+  // Start pulled left so the trail + its dot begin just outside the right-hand
+  // stat block instead of landing on top of the "1500+" text (measured: the dot
+  // sat ~36px inside the block). Control points are untouched, so the curve
+  // keeps its Figma shape — only the tail near the dot shifts.
+  { d: 'M1145.14 893.837C1736.78 820.412 1668.14 221.337 1478.64 95.8368', start: [1145.14, 893.837], delay: 2.4 },
 ]
 const PLANE_DELAY = 3.6
 
@@ -112,12 +123,18 @@ function OrbitCurves() {
 
 export default function StatsSection() {
   // Slower background pace: 8s per slide with a 2s crossfade (see the img classes).
+  // Any slide whose file 404s is dropped from the rotation rather than left to
+  // show as an empty frame — a stale manifest path used to stall the slideshow.
+  const [slides, setSlides] = useState(charitySlides)
   const [active, setActive] = useState(0)
+  const dropSlide = (src) =>
+    setSlides((list) => (list.length > 1 ? list.filter((s) => s !== src) : list))
+
   useEffect(() => {
-    if (charitySlides.length < 2) return
-    const id = setInterval(() => setActive((i) => (i + 1) % charitySlides.length), 8000)
+    if (slides.length < 2) return
+    const id = setInterval(() => setActive((i) => (i + 1) % slides.length), 8000)
     return () => clearInterval(id)
-  }, [])
+  }, [slides.length])
 
   // GSAP center-logo animation: on scroll-in, the logo eases up from small +
   // faded + tilted, then settles into a gentle, endless float.
@@ -169,14 +186,15 @@ export default function StatsSection() {
     <section ref={sectionRef} className="relative overflow-hidden lg:flex lg:min-h-[140vh] lg:items-center lg:justify-center">
       {/* crossfading slideshow — stacked images fade between each other */}
       <div className="absolute inset-0" aria-hidden="true">
-        {charitySlides.map((src, i) => (
+        {slides.map((src, i) => (
           <img
             key={src}
             src={src}
             alt=""
             loading={i === 0 ? 'eager' : 'lazy'}
+            onError={() => dropSlide(src)}
             className={`absolute inset-0 size-full object-cover transition-opacity duration-[2000ms] ${
-              i === active ? 'opacity-100' : 'opacity-0'
+              i === active % slides.length ? 'opacity-100' : 'opacity-0'
             }`}
           />
         ))}
@@ -224,13 +242,16 @@ export default function StatsSection() {
         </div>
       </div>
 
-      {/* Mobile: centered single-column stack. */}
+      {/* Below lg: centered stack — single column on phones, two columns from
+          md up so tablets/iPads fill the width instead of running one long row. */}
       <div className="relative z-20 flex w-full flex-col items-center gap-2xl px-6 py-2xl lg:hidden">
-        <img src={logo} alt="Hang Out With Jesus" className="w-44" />
+        <img src={logo} alt="Hang Out With Jesus" className="w-44 md:w-52" />
         <p className="text-lg text-text-inverse/80">In 4 years</p>
-        {[...leftColumn, ...rightColumn].map((stat, i) => (
-          <StatItem key={i} stat={stat} />
-        ))}
+        <div className="grid w-full max-w-[44rem] grid-cols-1 justify-items-center gap-2xl md:grid-cols-2">
+          {[...leftColumn, ...rightColumn].map((stat, i) => (
+            <StatItem key={i} stat={stat} />
+          ))}
+        </div>
       </div>
     </section>
   )

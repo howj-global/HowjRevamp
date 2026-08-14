@@ -27,10 +27,12 @@ This site was scaffolded in a prior session (Cowork). Read this before making ch
 
 The `/expression` template (`src/pages/Expression.jsx` + `src/components/expression/*`) currently renders from a **mock** at `src/content/expressionMock.js`. That mock's shape is the contract — the Notion schema below was built to fill it.
 
-**Workspace:** `olalekan aleem's` (`30b22766-9e5a-817e-b6f3-000348fcdf2e`). Both DBs live under the **Getting Started** page (`296227669e5a805781c8cb0ac70952f9`).
+**Workspace:** moved off the personal `olalekan aleem's` workspace onto HOWJ's official Notion account (a genuinely separate workspace — new page/database IDs, not a rename). Both DBs live under a **HOWJ Master** page there. The integration used by the fetch script is named **`HowjMedia`** (created by Onyinye on the HOWJ side) — share both DBs with it via "..." → Connections on each database (or on the parent page, which cascades).
 
-- **`HOWJ Global`** — one row per expression. Database `38122766-9e5a-8070-9529-dc983312f28f`, data source `38122766-9e5a-807e-be49-000be051f589`.
-- **`HOWJ Ministers`** — guest ministers. Database `08933c065e38462bbebb5dbbac06bc03`, data source `d1750d4b-eb9c-468d-a873-2e403dc5b891`. Two-way relation: `Expression` ⇄ `Guest Ministers`.
+- **`HOWJ Global`** — one row per expression. Database `b0dbad17-61fc-8220-968f-012c4b5220cf`.
+- **`HOWJ Ministers`** — guest ministers. Database `1e3bad17-61fc-820d-833c-8164b5b0aa54`. Two-way relation: `Expression` ⇄ `Guest Ministers`.
+
+(The old personal-workspace IDs — `HOWJ Global` `38122766-9e5a-8070-9529-dc983312f28f` / `HOWJ Ministers` `08933c065e38462bbebb5dbbac06bc03` — still exist and are still reachable with the old token, but are no longer the source of truth; don't fetch from them.)
 
 Field → mock mapping (properties carry Notion descriptions explaining each):
 
@@ -48,13 +50,20 @@ Field → mock mapping (properties carry Notion descriptions explaining each):
 | Miracles Documented / Charity Impacted / Souls Through Charity | `numbers[0..2]` | rendered with a `+` suffix appended in code |
 | Documentary Image / Documentary URL | `documentary` | |
 | Charity Title / Charity Overview / Charity Images | `charity` | |
-| Charity Highlight Images | `charityHighlight.images` | title is static |
 | Partners Label / Partner Logos | `partners` | |
 | Guest Ministers (relation) | `ministers` | from HOWJ Ministers (Name, Photo, Role, Order) |
 
-Pre-existing `Country`, `Event Type`, `Year`, `Images` were left untouched (they predate the template).
+**`Images`** (pre-existing field, predates the template) → `gallery.images` — the page-bottom "Gallery" carousel (`src/components/expression/Gallery.jsx`, formerly "Charity Highlight"/`charityHighlight`, renamed per user request) shows every photo Notion has for the expression, not a curated subset. `Charity Highlight Images` is no longer read by the fetch script.
+
+Pre-existing `Country`, `Event Type`, `Year` were left untouched (they predate the template).
 
 **Fetch pipeline (built):** `scripts/fetch-expressions.mjs` (wired into `prebuild`) queries both DBs, downloads Notion file URLs into `public/expressions/<slug>/` and rewrites paths (Notion URLs are signed + expire — never hot-link), and writes `src/content/expressions.json` (keyed by slug, committed like `site.json`/`gallery.json`). `Expression.jsx` reads it via `useParams().slug`, falling back to `expressionMock` when the slug is absent or Notion wasn't fetched. The script **no-ops without `NOTION_TOKEN`**, so builds always succeed. It skips rows without a real `Slug` (or slug `x`) and only builds `Published` rows.
+
+**Homepage Guest Ministers — now Notion-driven (don't hand-edit):** the same script also regenerates `src/content/ministers.json` from **every** row in `HOWJ Ministers` (not just rows related to an expression), downloading each `Photo` into `public/ministers/<name-slug>.<ext>` — that folder is wiped and rebuilt each run. `MinistersSection.jsx` reads the manifest. It replaced a hand-maintained list that had drifted: only 12 of the 24 ministers, and 3 of those pointed at wrong extensions (`.png`/`.webp` for files that were actually `.jpg`) so they rendered as broken images. Rows missing a Name or Photo are skipped with a warning.
+
+**Upcoming expression (homepage boarding pass + marquee), built:** same script also writes `src/content/upcoming.json` (committed, like `expressions.json`) — the soonest `Published` row with a future `Event Date`, or `null` if nothing's upcoming. Selection is fully automatic (no manual "pin" field) per user decision. `Hero.jsx` reads it and feeds `BoardingPassCard`/`MarqueeBanner`; when `null` (or a field is blank) it falls through to each component's hardcoded Jamaica defaults, so the homepage never breaks between revivals. Two **optional** `HOWJ Global` properties feed this and don't exist in the schema yet — add them when there's a real upcoming row to flag:
+- **`Airport Code`** (text, 3 letters, e.g. `ACC`) — falls back to the first 3 letters of `City` if blank.
+- **`Country Code`** (text, 2-letter ISO 3166-1 alpha-2, e.g. `GH`) — converted to a Unicode flag emoji at build time (`flagEmoji()` in the script). If blank, `Hero.jsx` shows a neutral 🌍 placeholder rather than defaulting to the Jamaica flag (which would be wrong for a non-Jamaica destination).
 
 **To go live (user actions):** create a Notion internal integration, share **both** `HOWJ Global` and `HOWJ Ministers` with it, put its token in `.env` as `NOTION_TOKEN`, then `npm run build`. Data caveats seen on the Brazil row: Slug was `x` (must be real), Published unchecked, Partners Label empty, Documentary Image held a video URL not an image (script falls back to hero), Charity Highlight Images empty (that carousel hides). Script strips `*markdown*` and `<br>` from text fields.
 
@@ -62,7 +71,11 @@ Pre-existing `Country`, `Event Type`, `Year`, `Images` were left untouched (they
 
 `src/content/site.json` has placeholder copy everywhere (`content/copy/` source folder is empty — real copy was never written). Don't treat any hero/about/destinations text as final.
 
-`src/content/gallery.json` was generated from `public/gallery/` (34 photos copied from `assets/images/gallery/`). Two files were added to `assets/` after that sync and are **not yet copied over**: `assets/images/gallery/montegobay.png` and `assets/images/team/Victoria_Orenze.jpg`. Also `assets/icons/Howj Logo.png` exists but isn't wired into the Navbar (which currently uses `assets/icons/svg/plane.svg` as the mark).
+`src/content/gallery.json` is generated from `public/gallery/` by `npm run gallery:sync`. **Re-run it after adding/removing/moving anything in `public/gallery/`** — it had gone stale once: 7 `ghana-charity-*.jpg` entries pointed at files that had been moved into a `Ghana/` subfolder, and because those 7 are consecutive, the homepage stats-background slideshow appeared to freeze for ~56s while it cycled through the dead frames. (`StatsSection.jsx` now also drops any slide that 404s at runtime, so a stale path degrades instead of stalling.) Note the sync only walks the top level of `public/gallery/` — images inside per-country subfolders are not picked up.
+
+The stats-background slideshow sources charity photos from **both** `gallery.json` (category `charity`) and every expression's `charity.images` in `expressions.json`, deduped — 39 slides currently.
+
+Also `assets/icons/Howj Logo.png` exists but isn't wired into the Navbar (which currently uses `assets/icons/svg/plane.svg` as the mark).
 
 ## Figma components — hero pulled in, rest pending
 

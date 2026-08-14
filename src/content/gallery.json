@@ -276,40 +276,10 @@
     "alt": "HOWJ charity event in Ghana"
   },
   {
-    "src": "/gallery/ghana-charity-04.jpg",
-    "country": "Ghana",
-    "category": "charity",
-    "alt": "HOWJ charity event in Ghana"
-  },
-  {
     "src": "/gallery/ghana-charity-05.jpg",
     "country": "Ghana",
     "category": "charity",
     "alt": "HOWJ charity event in Ghana"
-  },
-  {
-    "src": "/gallery/ghana-charity-06.jpg",
-    "country": "Ghana",
-    "category": "charity",
-    "alt": "HOWJ charity event in Ghana"
-  },
-  {
-    "src": "/gallery/ghana-charity-07.jpg",
-    "country": "Ghana",
-    "category": "charity",
-    "alt": "HOWJ charity event in Ghana"
-  },
-  {
-    "src": "/gallery/ghana-charity-08.jpg",
-    "country": "Ghana",
-    "category": "charity",
-    "alt": "HOWJ charity event in Ghana"
-  },
-  {
-    "src": "/gallery/ghana-outreach-01.jpg",
-    "country": "Ghana",
-    "category": "outreach",
-    "alt": "HOWJ outreach in Ghana"
   },
   {
     "src": "/gallery/India-charity-01.jpg",
@@ -474,6 +444,12 @@
     "alt": "HOWJ outreach in Newyork"
   },
   {
+    "src": "/gallery/brazil-charity05.jpg",
+    "country": null,
+    "category": null,
+    "alt": "HOWJ — untagged photo (rename to country-category-##.jpg)"
+  },
+  {
     "src": "/gallery/IMG_7373.jpg",
     "country": null,
     "category": null,
@@ -481,6 +457,12 @@
   },
   {
     "src": "/gallery/IMG_7422.jpg",
+    "country": null,
+    "category": null,
+    "alt": "HOWJ — untagged photo (rename to country-category-##.jpg)"
+  },
+  {
+    "src": "/gallery/JAMAICA.png",
     "country": null,
     "category": null,
     "alt": "HOWJ — untagged photo (rename to country-category-##.jpg)"
