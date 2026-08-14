@@ -1,8 +1,7 @@
 import Reveal from './Reveal.jsx'
-import CountryCard from './CountryCard.jsx'
-import watermark from '../assets/brand/howj-logo-grey.svg'
-
-const base = import.meta.env.BASE_URL
+import site from '../content/site.json'
+import mission1 from '../assets/mission/mission-1.webp'
+import mission2 from '../assets/mission/mission-2.webp'
 
 // Cities covered over the past 4 years — scroll left→right in the top marquee.
 const cities = [
@@ -10,17 +9,9 @@ const cities = [
   'SEOUL', 'ACCRA', 'LONDON', 'NAIROBI', 'DHAKA',
 ]
 
-// Mission headline, split into words so each can reveal on a stagger; `c` colours
-// the highlighted word (magenta / green / gold, echoing the floating card accents).
-const lines = [
-  [{ t: 'Jesus' }, { t: 'Christ' }, { t: 'Revealed', c: 'text-accent-magenta-500' }],
-  [{ t: 'Disciples' }, { t: 'Made', c: 'text-brand-primary-700' }],
-  [{ t: 'Souls' }, { t: 'Saved', c: 'text-brand-secondary-500' }],
-]
-
 function CityMarquee() {
   return (
-    <div className="marquee border-y border-neutral-black/10 py-5">
+    <div className="marquee border-y border-neutral-black/10 py-md lg:py-2xl">
       <div className="marquee-track">
         {[false, true].map((clone) => (
           <div key={clone ? 'clone' : 'original'} className="flex" aria-hidden={clone || undefined}>
@@ -39,73 +30,68 @@ function CityMarquee() {
   )
 }
 
+// Shared headline-line styling (Figma 236:4426): Barlow Condensed Bold, 96px
+// on desktop (text-8xl) for all three lines, black, single line — no colour
+// highlights, no left/right edge-justification. Each row is its own
+// tightly-packed, centred flex group, not stretched across a grid.
+const LINE_CLASS = 'font-condensed text-6xl font-bold uppercase leading-[0.95] text-neutral-black sm:text-7xl lg:text-8xl lg:leading-[1] lg:whitespace-nowrap'
+
 export default function MissionSection() {
-  let word = 0 // running index across all words, for the stagger delay
+  const m = site.mission
+
   return (
     <section className="bg-surface-page">
       <CityMarquee />
 
-      <div className="relative overflow-hidden">
-        {/* faint brand watermark bleeding off the bottom-left, behind everything */}
-        <img
-          src={watermark}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-16 -left-16 z-0 w-[34rem] max-w-[70%] opacity-[0.06]"
-        />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-2xl lg:min-h-[46rem] lg:py-3xl">
-          {/* intro + divider */}
-          <Reveal className="max-w-[34rem]">
-            <p className="text-2xl text-neutral-black sm:text-3xl">Our mission is to see</p>
-            <div className="mt-5 h-px w-full bg-neutral-black/25" />
+      <div className="mx-auto max-w-[90rem] px-6 py-2xl lg:py-4xl">
+        {/* Figma 246:4453: eyebrow sits spacing/3xl (96px) above the headline
+            block; the three headline lines themselves are packed with no gap
+            between them. */}
+        <div className="flex flex-col items-center gap-2xl text-center lg:gap-3xl">
+          {/* eyebrow — Barlow Light, 30px on desktop (text-3xl) per Figma */}
+          <Reveal as="p" delay={0} className="font-body text-xl font-light text-neutral-black sm:text-2xl lg:text-3xl">
+            {m.eyebrow}
           </Reveal>
 
-          {/* split-text headline */}
-          <h2 className="mt-2xl max-w-[46rem] font-heading text-6xl font-bold leading-[1.02] text-neutral-black sm:text-7xl lg:max-w-none lg:text-8xl">
-            {lines.map((line, li) => (
-              <span key={li} className="block lg:whitespace-nowrap">
-                {line.map(({ t, c }) => {
-                  const delay = word++ * 90
-                  return (
-                    <Reveal
-                      key={t}
-                      as="span"
-                      delay={delay}
-                      className={`inline-block ${c ?? ''}`}
-                    >
-                      {t}
-                      {' '}
-                    </Reveal>
-                  )
-                })}
-              </span>
-            ))}
-          </h2>
+          {/* Sequential reveal: line 1 -> image 1 -> line 2 -> line 3 -> image 2,
+              each gated behind the previous via a stepped delay so they read as
+              one cascade rather than firing all at once. */}
+          <div className="flex flex-col items-center gap-xs">
+            {/* line 1 — full row, alone */}
+            <Reveal delay={150} as="h2" className={LINE_CLASS}>
+              {m.lines[0]}
+            </Reveal>
 
-          {/* floating destination cards — stacked on mobile, absolute on lg+ */}
-          <div className="mt-2xl flex flex-col items-center gap-10 lg:mt-0 lg:block">
-            <div className="float-y w-[9.5rem] lg:absolute lg:right-0 lg:top-8">
-              <CountryCard
-                compact
-                accent="#d81b60"
-                country="Korea"
-                church="The Amen"
-                city="Seoul"
-                code="ICN"
-                image={`${base}gallery/korea-outreach-01.jpg`}
-              />
+            {/* line 2 — image immediately beside the text, centred as one unit */}
+            <div className="flex flex-col items-center gap-xs lg:flex-row">
+              <Reveal delay={300} className="overflow-hidden rounded-md">
+                {/* object-position pulled up: the 484:130 letterbox only shows ~40%
+                    of this 3:2 photo, and centring it cut the faces off the top. */}
+                <img
+                  src={mission2}
+                  alt=""
+                  loading="lazy"
+                  className="aspect-[484/130] w-[18rem] object-cover object-[50%_20%] sm:w-[24rem] lg:w-[30rem]"
+                />
+              </Reveal>
+              <Reveal delay={450} as="h2" className={LINE_CLASS}>
+                {m.lines[1]}
+              </Reveal>
             </div>
-            <div className="float-y-slow w-[9.5rem] lg:absolute lg:bottom-10 lg:right-24">
-              <CountryCard
-                compact
-                accent="#880e4f"
-                country="Bangladesh"
-                church="The Lord of Lords"
-                city="Bangladesh"
-                code="CGP"
-                image={`${base}gallery/India-charity-02.jpg`}
-              />
+
+            {/* line 3 — text immediately beside the image, centred as one unit */}
+            <div className="flex flex-col items-center gap-xs lg:flex-row">
+              <Reveal delay={600} as="h2" className={LINE_CLASS}>
+                {m.lines[2]}
+              </Reveal>
+              <Reveal delay={750} className="overflow-hidden rounded-md">
+                <img
+                  src={mission1}
+                  alt=""
+                  loading="lazy"
+                  className="aspect-[459/164] w-[18rem] object-cover sm:w-[24rem] lg:w-[30rem]"
+                />
+              </Reveal>
             </div>
           </div>
         </div>

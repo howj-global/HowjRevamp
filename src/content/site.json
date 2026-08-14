@@ -275,5 +275,13 @@
       "heading": "Reach out to us",
       "body": "Have any questions or inquiries?"
     }
+  },
+  "mission": {
+    "eyebrow": "Our mission is to see",
+    "lines": [
+      "Jesus Christ Revealed",
+      "Disciples Made",
+      "Souls Saved"
+    ]
   }
 }
