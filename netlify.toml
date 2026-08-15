@@ -1,0 +1,17 @@
+# Netlify build config.
+#
+# `npm run build` also triggers the `prebuild` script (npm lifecycle), which
+# fetches from Notion and re-syncs the gallery manifest — so a deploy always
+# ships current CMS content. That fetch needs NOTION_TOKEN set as an
+# environment variable in the Netlify UI (Site settings → Environment
+# variables); without it the fetch scripts no-op and the last committed
+# content JSON is used instead, so builds still succeed.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Pinned so CI matches a version this build is known to work on. Vite 7
+  # requires >= 22.12.
+  NODE_VERSION = "22"

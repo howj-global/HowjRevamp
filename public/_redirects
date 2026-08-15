@@ -1,0 +1,10 @@
+# SPA fallback for Netlify — REQUIRED, and the equivalent of the rewrite block
+# in .htaccess (which is Apache-only and ignored by Netlify entirely).
+#
+# React Router owns /about, /expressions, /gallery, /expression/<slug> etc.
+# None exist as files, so without this every deep link and page refresh 404s.
+#
+# Netlify matches real static files BEFORE applying this rule, so assets,
+# images and the favicon still serve normally. The 200 (rather than 301/302)
+# keeps the URL in the address bar while serving index.html.
+/*  /index.html  200
