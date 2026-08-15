@@ -33,7 +33,7 @@
     ],
     "theme": "Jesus Christ - Name Above All Names",
     "verse": "Philippians 2:9-11",
-    "overview": "In the heart of Atlanta, the 10th Edition of the Hangout with Jesus experience",
+    "overview": "HOWJ Atlanta was held in Atlanta as the 10th edition of Jesus Christ — The Name Above All Names. It served as a revival moment for the Church in America, calling believers back to a clear and united focus on Jesus Christ. Ministers gathered from all across America to preach the Gospel and remind the Church that Jesus is the center—our message, our hope, and our pursuit. The gathering also featured charity initiatives, including donations that supported those in need and extended the impact beyond the meetings.",
     "featureStats": [
       {
         "value": "4000+",
@@ -52,7 +52,7 @@
         "label": "miracles documented"
       },
       {
-        "value": "",
+        "value": "2+",
         "label": "Impacted charity"
       },
       {
@@ -65,6 +65,14 @@
       "videoUrl": "https://www.youtube.com/watch?v=vkObtd3M9NE&t=34s"
     },
     "ministers": [
+      {
+        "name": "Fadel James",
+        "image": "/expressions/atlanta/james_fadel2.png"
+      },
+      {
+        "name": "Leke Adeboye",
+        "image": "/expressions/atlanta/leke_adeboye.jpeg"
+      },
       {
         "name": "Folu Adeboye",
         "image": "/expressions/atlanta/folu_adeboye.png"
@@ -158,7 +166,7 @@
       {
         "value": "3+",
         "label": "Total souls impacted",
-        "image": "/expressions/dubai/dubai-06.jpg"
+        "image": "/expressions/dubai/dubai-06-1.jpg"
       },
       {
         "value": "20+",
@@ -193,7 +201,7 @@
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
         "/expressions/dubai/dubai-05.jpg",
-        "/expressions/dubai/dubai-06-1.jpg"
+        "/expressions/dubai/dubai-06.jpg"
       ]
     },
     "partners": {
@@ -204,6 +212,175 @@
       "title": "Gallery",
       "images": [
         "/expressions/dubai/dubairevival.jpg"
+      ]
+    }
+  },
+  "lagos": {
+    "slug": "lagos",
+    "logo": null,
+    "heroImage": null,
+    "country": "Nigeria",
+    "city": "Lagos",
+    "venue": "",
+    "date": "2022-10-22",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Governor Among the Nations",
+    "verse": "Psalm 22:28",
+    "overview": "Returning to our roots on African soil, HOWJ Global ignited a powerful movement of generosity and faith across Lagos, Nigeria's most populous city. Thousands gathered as relief materials, food packages, and life-changing resources were distributed to families across underserved communities. Lagos 2023 became one of our most impactful chapters yet, fueled by the energy of a city ready for change.",
+    "featureStats": [
+      {
+        "value": "",
+        "label": "Total souls impacted",
+        "image": null
+      },
+      {
+        "value": "",
+        "label": "In attendance",
+        "image": null
+      }
+    ],
+    "numbers": [
+      {
+        "value": "",
+        "label": "miracles documented"
+      },
+      {
+        "value": "",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": null,
+      "videoUrl": "#"
+    },
+    "ministers": [
+      {
+        "name": "Nosa",
+        "image": "/expressions/lagos/nosa-nigeria.jpg"
+      }
+    ],
+    "charity": {
+      "title": "",
+      "overview": "",
+      "images": []
+    },
+    "partners": {
+      "label": "Our Partners in Nigeria",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/lagos/lagos-04.jpg"
+      ]
+    }
+  },
+  "chicago": {
+    "slug": "chicago",
+    "logo": null,
+    "heroImage": null,
+    "country": "United States",
+    "city": "Chicago",
+    "venue": "",
+    "date": "2022-05-27",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Light of the World",
+    "verse": "John 8:12",
+    "overview": "Taking our mission to the streets of Chicago, HOWJ Global partnered with local organizations to deliver aid to families navigating poverty on the South and West Sides of the city. Our community event united hundreds around a shared vision of restoration and belonging. Chicago 2023 was a testament to what happens when global passion meets local need.",
+    "featureStats": [
+      {
+        "value": "",
+        "label": "Total souls impacted",
+        "image": null
+      },
+      {
+        "value": "",
+        "label": "In attendance",
+        "image": null
+      }
+    ],
+    "numbers": [
+      {
+        "value": "",
+        "label": "miracles documented"
+      },
+      {
+        "value": "",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": null,
+      "videoUrl": "#"
+    },
+    "ministers": [],
+    "charity": {
+      "title": "",
+      "overview": "",
+      "images": []
+    },
+    "partners": {
+      "label": "Our Partners in United States",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/chicago/chicago-ministration-02.jpg"
       ]
     }
   },
@@ -622,7 +799,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg",
+        "/expressions/kenya/kenya-arrival-02-1.jpg",
         "/expressions/kenya/kenya-charity.png",
         "/expressions/kenya/kenya-featured2.png",
         "/expressions/kenya/kenyagallery03.png"
@@ -635,7 +812,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg"
+        "/expressions/kenya/kenya-arrival-02.jpg"
       ]
     }
   },

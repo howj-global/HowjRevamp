@@ -66,9 +66,27 @@ export default function CountryCard({
     <article
       className={`flex h-full w-full flex-col overflow-hidden rounded-md ${fluid ? '' : s.card} ${className}`}
     >
-      {/* feature image + flag badge */}
+      {/* feature image + flag badge. A published expression can legitimately have
+          no Hero Image yet in Notion, so fall back to a tinted panel with the
+          brand jet rather than rendering <img src={undefined}> and showing the
+          browser's broken-image icon. */}
       <div className="relative aspect-[372/359] w-full bg-neutral-gray-100">
-        <img src={image} alt={imageAlt ?? city ?? country} className="absolute inset-0 size-full object-cover" />
+        {image ? (
+          <img
+            src={image}
+            alt={imageAlt ?? city ?? country}
+            className="absolute inset-0 size-full object-cover"
+          />
+        ) : (
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ backgroundColor: bg, color: fg }}
+            aria-hidden="true"
+          >
+            {/* PlaneIcon tints from currentColor, so the colour is set above */}
+            <PlaneIcon className="w-1/3 opacity-30" />
+          </div>
+        )}
         <div className={`absolute ${s.flag}`}>
           {flag ?? <CircleFlag country={country} className="size-full" />}
         </div>
