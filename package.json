@@ -11,7 +11,8 @@
     "prebuild": "npm run notion:fetch && npm run expressions:fetch && npm run gallery:sync",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "node --env-file=.env scripts/trigger-deploy.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",
