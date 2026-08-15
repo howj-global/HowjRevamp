@@ -66,8 +66,13 @@ export default function Expressions() {
           <p className="mt-2xl text-text-inverse/70">No expressions published yet — check back soon.</p>
         ) : (
           <div className="mt-2xl grid gap-2xl lg:grid-cols-[auto_1fr] lg:gap-xl">
-            {/* year rail — filters the grid on desktop; scrolls as chips on mobile */}
-            <nav aria-label="Filter by year" className="lg:pt-sm">
+            {/* year rail — filters the grid on desktop; scrolls as chips on mobile.
+                min-w-[0px] is load-bearing: as a grid item this defaults to
+                min-width:auto, so it sizes to the full year list (475px at 375px
+                wide) instead of letting overflow-x-auto scroll. That widened the
+                shared column and pushed the cards off-screen. Arbitrary value
+                rather than min-w-0 — the custom --spacing tokens shadow that. */}
+            <nav aria-label="Filter by year" className="min-w-[0px] lg:pt-sm">
               <ol className="relative flex gap-sm overflow-x-auto pb-sm lg:flex-col lg:gap-md lg:overflow-visible lg:pb-0">
                 {/* connector line (desktop only) */}
                 <span
@@ -121,7 +126,7 @@ export default function Expressions() {
 
             {/* cards — auto-rows-fr + items-stretch keeps every card identical in
                 size, even when a venue/city name wraps to more lines */}
-            <div className="grid auto-rows-fr items-stretch gap-lg sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid min-w-[0px] auto-rows-fr items-stretch gap-lg sm:grid-cols-2 xl:grid-cols-3">
               {visible.map((exp, i) => (
                 <Reveal key={exp.slug} delay={i * 70} className="h-full">
                   <Link
