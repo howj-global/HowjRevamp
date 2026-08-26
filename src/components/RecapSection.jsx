@@ -16,7 +16,7 @@ const REVIVALS = [
       ['Attendance', '2,500'],
       ['Souls Saved', '50'],
     ],
-    watchUrl: null,
+    watchUrl: 'https://www.youtube.com/watch?v=YdK6r2_HOFU',
   },
   {
     name: 'India',
