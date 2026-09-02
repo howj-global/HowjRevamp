@@ -49,9 +49,9 @@ export default function MinistersSection() {
           }}
         >
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
-            <MarqueeColumn items={colA} duration="32s" />
+            <MarqueeColumn items={colA} duration="64s" />
             {/* second column offset + slower so the two don't scroll in lockstep */}
-            <MarqueeColumn items={colB} duration="40s" className="-mt-16" />
+            <MarqueeColumn items={colB} duration="80s" className="-mt-16" />
           </div>
         </div>
       </div>
