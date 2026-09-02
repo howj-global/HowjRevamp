@@ -296,7 +296,9 @@ async function buildExpression(page, ministersByExpr, slug) {
     verse: readText(page, 'Bible Verse'),
     overview: readText(page, 'Description'),
     featureStats: [
-      { value: plus(readNumber(page, 'Souls Impacted')), label: 'Total souls impacted', image: featureImage1 },
+      // "Souls Impacted" now holds recorded salvations, not people reached —
+      // the label follows the data rather than the property name.
+      { value: plus(readNumber(page, 'Souls Impacted')), label: 'Souls saved', image: featureImage1 },
       { value: plus(readNumber(page, 'In Attendance')), label: 'In attendance', image: featureImage2 },
     ],
     numbers: [

@@ -36,14 +36,14 @@
     "overview": "HOWJ Atlanta was held in Atlanta as the 10th edition of Jesus Christ — The Name Above All Names. It served as a revival moment for the Church in America, calling believers back to a clear and united focus on Jesus Christ. Ministers gathered from all across America to preach the Gospel and remind the Church that Jesus is the center—our message, our hope, and our pursuit. The gathering also featured charity initiatives, including donations that supported those in need and extended the impact beyond the meetings.",
     "featureStats": [
       {
-        "value": "4000+",
-        "label": "Total souls impacted",
-        "image": "/expressions/atlanta/atl_f1.jpg"
+        "value": "84+",
+        "label": "Souls saved",
+        "image": "/expressions/atlanta/atl_f1-1.jpg"
       },
       {
         "value": "3000+",
         "label": "In attendance",
-        "image": "/expressions/atlanta/charity_atl-1.jpg"
+        "image": "/expressions/atlanta/charity_atl-1-2.jpg"
       }
     ],
     "numbers": [
@@ -110,7 +110,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/atlanta/charity_atl.jpg",
+        "/expressions/atlanta/charity_atl-1.jpg",
         "/expressions/atlanta/charity-atl-3.jpg"
       ]
     },
@@ -124,7 +124,12 @@
     },
     "gallery": {
       "title": "Gallery",
-      "images": []
+      "images": [
+        "/expressions/atlanta/atl_f1.jpg",
+        "/expressions/atlanta/cjarity_atl-1.jpg",
+        "/expressions/atlanta/charity_atl.jpg",
+        "/expressions/atlanta/atl-revival.jpg"
+      ]
     }
   },
   "dubai": {
@@ -164,8 +169,8 @@
     "overview": "In the heart of one of the world's most dynamic cities, HOWJ Global extended compassion beyond the skyline by reaching migrant workers and low-income communities often invisible to the public eye. Through targeted distribution drives and an uplifting gathering, we provided critical daily provisions alongside a message of dignity and worth. Dubai 2022 proved that genuine transformation has no address.",
     "featureStats": [
       {
-        "value": "3+",
-        "label": "Total souls impacted",
+        "value": "7+",
+        "label": "Souls saved",
         "image": "/expressions/dubai/dubai-06-1.jpg"
       },
       {
@@ -217,11 +222,11 @@
   },
   "lagos": {
     "slug": "lagos",
-    "logo": null,
-    "heroImage": null,
+    "logo": "/expressions/lagos/howj-4-lagos.jpg",
+    "heroImage": "/expressions/lagos/lagos-revival2.jpg",
     "country": "Nigeria",
     "city": "Lagos",
-    "venue": "",
+    "venue": "RCCG Israel Assembly",
     "date": "2022-10-22",
     "airportCode": "",
     "countryCode": "",
@@ -252,19 +257,19 @@
     "overview": "Returning to our roots on African soil, HOWJ Global ignited a powerful movement of generosity and faith across Lagos, Nigeria's most populous city. Thousands gathered as relief materials, food packages, and life-changing resources were distributed to families across underserved communities. Lagos 2023 became one of our most impactful chapters yet, fueled by the energy of a city ready for change.",
     "featureStats": [
       {
-        "value": "",
-        "label": "Total souls impacted",
-        "image": null
+        "value": "74+",
+        "label": "Souls saved",
+        "image": "/expressions/lagos/lagos-revival.jpg"
       },
       {
-        "value": "",
+        "value": "100+",
         "label": "In attendance",
-        "image": null
+        "image": "/expressions/lagos/lagos-revival3.jpg"
       }
     ],
     "numbers": [
       {
-        "value": "",
+        "value": "2+",
         "label": "miracles documented"
       },
       {
@@ -272,15 +277,23 @@
         "label": "Impacted charity"
       },
       {
-        "value": "",
+        "value": "5+",
         "label": "Souls impacted through charity"
       }
     ],
     "documentary": {
-      "image": null,
+      "image": "/expressions/lagos/lagos-revival2.jpg",
       "videoUrl": "#"
     },
     "ministers": [
+      {
+        "name": "Daniel",
+        "image": "/expressions/lagos/pdaniel.jpeg"
+      },
+      {
+        "name": "Sinmidele",
+        "image": "/expressions/lagos/sinmidele.jpg"
+      },
       {
         "name": "Nosa",
         "image": "/expressions/lagos/nosa-nigeria.jpg"
@@ -304,11 +317,11 @@
   },
   "chicago": {
     "slug": "chicago",
-    "logo": null,
-    "heroImage": null,
+    "logo": "/expressions/chicago/howj-logo-chicago.png",
+    "heroImage": "/expressions/chicago/chicago-howj.jpg",
     "country": "United States",
     "city": "Chicago",
-    "venue": "",
+    "venue": "Jesus House Chicago",
     "date": "2022-05-27",
     "airportCode": "",
     "countryCode": "",
@@ -339,14 +352,14 @@
     "overview": "Taking our mission to the streets of Chicago, HOWJ Global partnered with local organizations to deliver aid to families navigating poverty on the South and West Sides of the city. Our community event united hundreds around a shared vision of restoration and belonging. Chicago 2023 was a testament to what happens when global passion meets local need.",
     "featureStats": [
       {
-        "value": "",
-        "label": "Total souls impacted",
-        "image": null
+        "value": "1+",
+        "label": "Souls saved",
+        "image": "/expressions/chicago/chicago-chairty.jpg"
       },
       {
-        "value": "",
+        "value": "30+",
         "label": "In attendance",
-        "image": null
+        "image": "/expressions/chicago/howj_chicago.jpg"
       }
     ],
     "numbers": [
@@ -355,7 +368,7 @@
         "label": "miracles documented"
       },
       {
-        "value": "",
+        "value": "1+",
         "label": "Impacted charity"
       },
       {
@@ -364,23 +377,32 @@
       }
     ],
     "documentary": {
-      "image": null,
+      "image": "/expressions/chicago/chicago-howj.jpg",
       "videoUrl": "#"
     },
     "ministers": [],
     "charity": {
-      "title": "",
-      "overview": "",
-      "images": []
+      "title": "Cornerstone Community Outreach",
+      "overview": "Cornerstone Community Outreach (CCO) is an Illinois-based nonprofit that provides care and shelter",
+      "images": [
+        "/expressions/chicago/chicago-charity.jpg"
+      ]
     },
     "partners": {
       "label": "Our Partners in United States",
-      "logos": []
+      "logos": [
+        {
+          "image": "/expressions/chicago/cornerstone_community_outreach.png"
+        }
+      ]
     },
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/chicago/chicago-ministration-02.jpg"
+        "/expressions/chicago/chicago-ministration-02.jpg",
+        "/expressions/chicago/howj_chicago-1.jpg",
+        "/expressions/chicago/img_6095.jpg",
+        "/expressions/chicago/chicago-chairty-1.jpg"
       ]
     }
   },
@@ -421,8 +443,8 @@
     "overview": "HOWJ Global arrived in Ghana with a mandate to serve and a heart to connect, and the nation responded with extraordinary warmth and unity. Outreach teams fanned out across communities to deliver essential resources while our flagship event brought thousands together in a celebration of hope and collective purpose. Ghana 2024 stands as a landmark moment in HOWJ's growing African legacy.",
     "featureStats": [
       {
-        "value": "500+",
-        "label": "Total souls impacted",
+        "value": "27+",
+        "label": "Souls saved",
         "image": "/expressions/ghana/ghana_charity-05.jpg"
       },
       {
@@ -534,7 +556,7 @@
     "featureStats": [
       {
         "value": "51+",
-        "label": "Total souls impacted",
+        "label": "Souls saved",
         "image": "/expressions/new-york/herorevival-1.jpg"
       },
       {
@@ -606,7 +628,9 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/new-york/newyork-ministration-04.jpg"
+        "/expressions/new-york/newyork-ministration-04.jpg",
+        "/expressions/new-york/ny_outreach-20.23.47.jpg",
+        "/expressions/new-york/ny_outreach_at-19.41.58.jpg"
       ]
     }
   },
@@ -647,8 +671,8 @@
     "overview": "HOWJ Global brought its passion for community transformation to South America for the first time, landing in Brazil with a mission to serve the vulnerable in one of the continent's most densely populated nations. Across favela communities and city centers, our teams distributed essential relief while our signature event gathered thousands in a powerful demonstration of unity and faith. Brazil 2026 opens an entirely new chapter in HOWJ's global impact story.",
     "featureStats": [
       {
-        "value": "200+",
-        "label": "Total souls impacted",
+        "value": "186+",
+        "label": "Souls saved",
         "image": "/expressions/brazil/brazil-charity-04.jpg"
       },
       {
@@ -753,9 +777,9 @@
     "overview": "The power of God penetrated the streets of Nakuru, Kenya, even into the market places and thousands of lives were impacted.\n\nFrom the outreach at Kambi Turkana village to the revival night with Ministers Theophilus Sunday and Abbey Ojomu, the presence of God was heavy and palpable!  HOWJ Global brought hope and practical support to thousands of Kenyan families facing daily hardship. Our 2024 Kenya activation combined wide-scale food relief with a high-energy community event that drew participants from across the region. This chapter reinforced our belief that transformed communities begin with people who dare to show up.",
     "featureStats": [
       {
-        "value": "10000+",
-        "label": "Total souls impacted",
-        "image": "/expressions/kenya/kenya-featured2-1.png"
+        "value": "107+",
+        "label": "Souls saved",
+        "image": "/expressions/kenya/kenya-featured2.png"
       },
       {
         "value": "12000+",
@@ -799,9 +823,9 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg",
+        "/expressions/kenya/kenya-arrival-02.jpg",
         "/expressions/kenya/kenya-charity.png",
-        "/expressions/kenya/kenya-featured2.png",
+        "/expressions/kenya/kenya-featured2-1.png",
         "/expressions/kenya/kenyagallery03.png"
       ]
     },
@@ -812,7 +836,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg"
+        "/expressions/kenya/kenya-arrival-02-1.jpg"
       ]
     }
   },
@@ -853,8 +877,8 @@
     "overview": "Crossing into East Asia for the first time, HOWJ Global brought its message of hope and community transformation to the streets of South Korea, engaging with both local residents and underserved migrant communities. Our Seoul-based activation combined structured outreach with a landmark gathering that bridged cultural divides through shared generosity. South Korea 2025 marked a bold new frontier in HOWJ's global story.",
     "featureStats": [
       {
-        "value": "20+",
-        "label": "Total souls impacted",
+        "value": "16+",
+        "label": "Souls saved",
         "image": "/expressions/south-korea/korea-orphanagentrance.jpg"
       },
       {
@@ -910,7 +934,16 @@
     },
     "gallery": {
       "title": "Gallery",
-      "images": []
+      "images": [
+        "/expressions/south-korea/howj-korea-pdaniel_-img_0277-2.jpg",
+        "/expressions/south-korea/howj-k-revival5.jpg",
+        "/expressions/south-korea/howj-k-revival53.jpg",
+        "/expressions/south-korea/howj-k-revival.jpg",
+        "/expressions/south-korea/howj-k-revival9.jpg",
+        "/expressions/south-korea/howj-k-revival-7.jpg",
+        "/expressions/south-korea/howj-k-revival-9.jpg",
+        "/expressions/south-korea/howj-k-revival-10.jpg"
+      ]
     }
   },
   "india": {
@@ -929,8 +962,8 @@
     "overview": "Stepping into the world's most populous nation, HOWJ Global launched its most ambitious activation to date, serving communities across multiple Indian cities with targeted relief, outreach programs, and a unifying community celebration. From urban slums to rural villages, our teams carried the HOWJ heartbeat into places where hope is desperately needed and profoundly felt. India 2026 is the culmination of four years of global momentum — and the beginning of our deepest impact yet.",
     "featureStats": [
       {
-        "value": "700+",
-        "label": "Total souls impacted",
+        "value": "70+",
+        "label": "Souls saved",
         "image": "/expressions/india/india-charity-15.jpg"
       },
       {

@@ -1,5 +1,15 @@
 [
   {
+    "name": "Daniel",
+    "role": "Pastor",
+    "photo": "/ministers/daniel.jpeg"
+  },
+  {
+    "name": "Sinmidele",
+    "role": "Minister",
+    "photo": "/ministers/sinmidele.jpeg"
+  },
+  {
     "name": "Fadel James",
     "role": "Pastor",
     "photo": "/ministers/fadel-james.png"

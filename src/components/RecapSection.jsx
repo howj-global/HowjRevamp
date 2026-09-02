@@ -14,16 +14,16 @@ const REVIVALS = [
     poster: posterBangladesh,
     stats: [
       ['Attendance', '2,500'],
-      ['Souls Saved', '50'],
+      ['Souls Saved', '479'],
     ],
-    watchUrl: 'https://www.youtube.com/watch?v=YdK6r2_HOFU',
+    watchUrl: 'https://www.youtube.com/watch?v=ejFWOKgYVVY',
   },
   {
     name: 'India',
     poster: posterIndia,
     stats: [
       ['Attendance', '2,200'],
-      ['Souls Saved', '24'],
+      ['Souls Saved', '70'],
     ],
     watchUrl: 'https://www.youtube.com/watch?v=JML2kI0Vqto',
   },
