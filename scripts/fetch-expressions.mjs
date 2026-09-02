@@ -205,6 +205,10 @@ function buildStats(pages) {
       .replace(/^(the\s+)?(uk|u\.k\.|united kingdom|england|britain)$/, 'united kingdom')
   const countries = new Set(pages.map((p) => readText(p, 'Country')).filter(Boolean).map(canonical))
 
+  const cities = new Set(
+    pages.map((p) => readText(p, 'City')).filter(Boolean).map((c) => c.trim().toLowerCase()),
+  )
+
   const charityOutreaches = pages.filter(
     (p) => readText(p, 'Charity Title') || readFileUrls(p, 'Charity Images').length,
   ).length
@@ -214,6 +218,7 @@ function buildStats(pages) {
     years: years.length ? new Date().getUTCFullYear() - Math.min(...years) : null,
     revivals: pages.length,
     countries: countries.size,
+    cities: cities.size,
     souls: sum('Souls Impacted'),
     attendance: sum('In Attendance'),
     miracles: sum('Miracles Documented'),
@@ -397,8 +402,17 @@ async function main() {
   // the ones related to an expression. Photos download to public/ministers/
   // named after the minister so the manifest stays readable.
   const ministersSeen = new Set()
+  // Display order is controlled from Notion's `Order` number on each minister:
+  // lowest first, blanks last. Name is the tiebreaker so rows sharing an Order
+  // (or all blank, as they are today) stay in a stable, predictable sequence
+  // instead of whatever the API happens to return.
   const ministersOut = []
-  for (const m of [...ministers].sort((a, b) => (readNumber(a, 'Order') ?? 99) - (readNumber(b, 'Order') ?? 99))) {
+  const byOrder = [...ministers].sort((a, b) => {
+    const ao = readNumber(a, 'Order') ?? Number.POSITIVE_INFINITY
+    const bo = readNumber(b, 'Order') ?? Number.POSITIVE_INFINITY
+    return ao - bo || readText(a, 'Name').localeCompare(readText(b, 'Name'))
+  })
+  for (const m of byOrder) {
     const name = readText(m, 'Name')
     const photoUrl = readFileUrls(m, 'Photo')[0]
     if (!name || !photoUrl) {
@@ -413,7 +427,12 @@ async function main() {
       name.toLowerCase().replace(/\s+/g, '-'),
     )
     if (!photo) continue
-    ministersOut.push({ name, role: readText(m, 'Role') || 'Guest Minister', photo })
+    ministersOut.push({
+      name,
+      role: readText(m, 'Role') || 'Guest Minister',
+      photo,
+      order: readNumber(m, 'Order'), // surfaced so the running order is inspectable
+    })
   }
   await writeFile(MINISTERS_OUTPUT_PATH, JSON.stringify(ministersOut, null, 2) + '\n')
   console.log(`[expressions:fetch] Wrote ${ministersOut.length} minister(s) to src/content/ministers.json`)

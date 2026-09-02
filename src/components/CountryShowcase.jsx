@@ -15,7 +15,7 @@ const slides = (() => {
   return [...byCountry.values()].map((p) => ({
     src: base + p.src.replace(/^\//, ''),
     title: `${p.country} ${cap(p.category)}`,
-    subtitle: `Hangout With Jesus ${p.country}`,
+    subtitle: `Hang Out With Jesus ${p.country}`,
     alt: p.alt,
   }))
 })()

@@ -11,15 +11,17 @@ import posterIndia from '../assets/recap/poster-india.webp'
 const REVIVALS = [
   {
     name: 'Bangladesh',
+    date: 'March 27, 2026',
     poster: posterBangladesh,
     stats: [
-      ['Attendance', '2,500'],
+      ['Attendance', '3,000'],
       ['Souls Saved', '479'],
     ],
     watchUrl: 'https://www.youtube.com/watch?v=ejFWOKgYVVY',
   },
   {
     name: 'India',
+    date: 'April 4, 2026',
     poster: posterIndia,
     stats: [
       ['Attendance', '2,200'],
@@ -29,9 +31,16 @@ const REVIVALS = [
   },
 ]
 
-function RevivalCard({ name, poster, stats, watchUrl }) {
+function RevivalCard({ name, date, poster, stats, watchUrl }) {
   return (
     <article className="flex flex-col items-center gap-lg">
+      {/* One label per card — country and date together, rather than a date on
+          one side of the section and a city on the other with nothing tying
+          them to a particular revival. */}
+      <p className="font-body text-lg text-text-inverse sm:text-xl lg:text-2xl">
+        {name} <span aria-hidden="true">–</span> {date}
+      </p>
+
       <img
         src={poster}
         alt={`Hang Out With Jesus ${name} revival poster`}
@@ -72,11 +81,11 @@ function RevivalCard({ name, poster, stats, watchUrl }) {
 }
 
 // Latest-revivals recap: full-bleed photo whose TOP gradient starts solid black
-// (blending down from StatsSection) and eases open, a meta row, then the two
-// most recent revival posters with their headline numbers.
+// (blending down from StatsSection) and eases open, then the two most recent
+// revival posters with their headline numbers. Each card carries its own
+// "Country – Date" label; the section no longer has a split date/place row,
+// which left it ambiguous which revival either half referred to.
 export default function RecapSection({
-  date = 'March 26 2026',
-  place = 'Kerala',
   image = `${import.meta.env.BASE_URL}gallery/India-charity-01.jpg`,
   revivals = REVIVALS,
 }) {
@@ -91,13 +100,7 @@ export default function RecapSection({
       />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col px-6 py-2xl lg:py-3xl">
-        {/* meta row */}
-        <div className="flex items-center justify-between text-base text-text-inverse sm:text-lg">
-          <span>{date}</span>
-          <span>{place}</span>
-        </div>
-
-        <div className="mt-2xl grid flex-1 items-start gap-3xl md:grid-cols-2 md:gap-xl lg:mt-3xl">
+        <div className="grid flex-1 items-start gap-3xl md:grid-cols-2 md:gap-xl">
           {revivals.map((r) => (
             <div key={r.name} className="flex justify-center">
               <RevivalCard {...r} />

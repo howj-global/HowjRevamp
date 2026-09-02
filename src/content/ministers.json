@@ -1,162 +1,200 @@
 [
   {
-    "name": "Daniel",
-    "role": "Pastor",
-    "photo": "/ministers/daniel.jpeg"
-  },
-  {
-    "name": "Sinmidele",
+    "name": "Jhonas Serra",
     "role": "Minister",
-    "photo": "/ministers/sinmidele.jpeg"
-  },
-  {
-    "name": "Fadel James",
-    "role": "Pastor",
-    "photo": "/ministers/fadel-james.png"
-  },
-  {
-    "name": "Leke Adeboye",
-    "role": "Pastor",
-    "photo": "/ministers/leke-adeboye.jpeg"
-  },
-  {
-    "name": "Folu Adeboye",
-    "role": "Pastor",
-    "photo": "/ministers/folu-adeboye.png"
-  },
-  {
-    "name": "EA Adeboye",
-    "role": "Pastor",
-    "photo": "/ministers/ea-adeboye.png"
-  },
-  {
-    "name": "Colby Maier",
-    "role": "Guest Minister",
-    "photo": "/ministers/colby-maier.jpeg"
-  },
-  {
-    "name": "John Santiago",
-    "role": "Minister",
-    "photo": "/ministers/john-santiago.jpeg"
-  },
-  {
-    "name": "Kingsley Manuel",
-    "role": "Minister",
-    "photo": "/ministers/kingsley-manuel.png"
-  },
-  {
-    "name": "Healing Couple",
-    "role": "Minister",
-    "photo": "/ministers/healing-couple.jpeg"
-  },
-  {
-    "name": "Frank Imani",
-    "role": "Minister",
-    "photo": "/ministers/frank-imani.jpeg"
-  },
-  {
-    "name": "Jumbo aniebiet",
-    "role": "Minister",
-    "photo": "/ministers/jumbo-aniebiet.jpeg"
-  },
-  {
-    "name": "Victoria Orenze",
-    "role": "Guest Minister",
-    "photo": "/ministers/victoria-orenze.jpeg"
-  },
-  {
-    "name": "Freke Umoh",
-    "role": "Minister",
-    "photo": "/ministers/freke-umoh.jpeg"
-  },
-  {
-    "name": "kingsley okonkwo",
-    "role": "Minister",
-    "photo": "/ministers/kingsley-okonkwo.jpeg"
-  },
-  {
-    "name": "Tomi Favored",
-    "role": "Minister",
-    "photo": "/ministers/tomi-favored.jpeg"
-  },
-  {
-    "name": "Paul Tomisin",
-    "role": "Minister",
-    "photo": "/ministers/paul-tomisin.jpeg"
-  },
-  {
-    "name": "Ohemaa Mercy",
-    "role": "Minister",
-    "photo": "/ministers/ohemaa-mercy.jpeg"
-  },
-  {
-    "name": "Nosa",
-    "role": "Minister",
-    "photo": "/ministers/nosa.jpeg"
-  },
-  {
-    "name": "Ebuka Songz",
-    "role": "Guest Minister",
-    "photo": "/ministers/ebuka-songz.jpeg"
-  },
-  {
-    "name": "Tia",
-    "role": "Minister",
-    "photo": "/ministers/tia.jpeg"
-  },
-  {
-    "name": "MOG",
-    "role": "Minister",
-    "photo": "/ministers/mog.jpeg"
-  },
-  {
-    "name": "Blessing Lopez",
-    "role": "Minister",
-    "photo": "/ministers/blessing-lopez.png"
-  },
-  {
-    "name": "kunle ajayi",
-    "role": "Minister",
-    "photo": "/ministers/kunle-ajayi.png"
-  },
-  {
-    "name": "Dolapo Lawal",
-    "role": "Minister",
-    "photo": "/ministers/dolapo-lawal.png"
-  },
-  {
-    "name": "Abbey Ojomu",
-    "role": "Minister",
-    "photo": "/ministers/abbey-ojomu.png"
-  },
-  {
-    "name": "Theophilus Sunday",
-    "role": "Minister",
-    "photo": "/ministers/theophilus-sunday.png"
-  },
-  {
-    "name": "Pastor Abiodun Opeyemi Ojesina",
-    "role": "Minister",
-    "photo": "/ministers/pastor-abiodun-opeyemi-ojesina.jpeg"
-  },
-  {
-    "name": "Chevelle franklyn",
-    "role": "Minister",
-    "photo": "/ministers/chevelle-franklyn.png"
-  },
-  {
-    "name": "Bishop Mauricio",
-    "role": "Minister",
-    "photo": "/ministers/bishop-mauricio.jpeg"
+    "photo": "/ministers/jhonas-serra.jpeg",
+    "order": 1
   },
   {
     "name": "Israel Salazar",
     "role": "Minister",
-    "photo": "/ministers/israel-salazar.jpeg"
+    "photo": "/ministers/israel-salazar.jpeg",
+    "order": 2
   },
   {
-    "name": "Jhonas Serra",
+    "name": "Bishop Mauricio",
     "role": "Minister",
-    "photo": "/ministers/jhonas-serra.jpeg"
+    "photo": "/ministers/bishop-mauricio.jpeg",
+    "order": 3
+  },
+  {
+    "name": "Tia",
+    "role": "Minister",
+    "photo": "/ministers/tia.jpeg",
+    "order": 4
+  },
+  {
+    "name": "John Santiago",
+    "role": "Minister",
+    "photo": "/ministers/john-santiago.jpeg",
+    "order": 5
+  },
+  {
+    "name": "Colby Maier",
+    "role": "Guest Minister",
+    "photo": "/ministers/colby-maier.jpeg",
+    "order": 6
+  },
+  {
+    "name": "Healing Couple",
+    "role": "Minister",
+    "photo": "/ministers/healing-couple.jpeg",
+    "order": 7
+  },
+  {
+    "name": "Abbey Ojomu",
+    "role": "Minister",
+    "photo": "/ministers/abbey-ojomu.png",
+    "order": null
+  },
+  {
+    "name": "Alvin p Bhakata",
+    "role": "Guest Minister",
+    "photo": "/ministers/alvin-p-bhakata.jpeg",
+    "order": null
+  },
+  {
+    "name": "Blessing Lopez",
+    "role": "Minister",
+    "photo": "/ministers/blessing-lopez.png",
+    "order": null
+  },
+  {
+    "name": "Chevelle franklyn",
+    "role": "Minister",
+    "photo": "/ministers/chevelle-franklyn.png",
+    "order": null
+  },
+  {
+    "name": "Daniel",
+    "role": "Pastor",
+    "photo": "/ministers/daniel.jpeg",
+    "order": null
+  },
+  {
+    "name": "Dolapo Lawal",
+    "role": "Minister",
+    "photo": "/ministers/dolapo-lawal.png",
+    "order": null
+  },
+  {
+    "name": "EA Adeboye",
+    "role": "Pastor",
+    "photo": "/ministers/ea-adeboye.png",
+    "order": null
+  },
+  {
+    "name": "Ebuka Songz",
+    "role": "Guest Minister",
+    "photo": "/ministers/ebuka-songz.jpeg",
+    "order": null
+  },
+  {
+    "name": "Fadel James",
+    "role": "Pastor",
+    "photo": "/ministers/fadel-james.png",
+    "order": null
+  },
+  {
+    "name": "Frank Imani",
+    "role": "Minister",
+    "photo": "/ministers/frank-imani.jpeg",
+    "order": null
+  },
+  {
+    "name": "Freke Umoh",
+    "role": "Minister",
+    "photo": "/ministers/freke-umoh.jpeg",
+    "order": null
+  },
+  {
+    "name": "Jumbo aniebiet",
+    "role": "Minister",
+    "photo": "/ministers/jumbo-aniebiet.jpeg",
+    "order": null
+  },
+  {
+    "name": "Kingsley Manuel",
+    "role": "Minister",
+    "photo": "/ministers/kingsley-manuel.png",
+    "order": null
+  },
+  {
+    "name": "kingsley okonkwo",
+    "role": "Minister",
+    "photo": "/ministers/kingsley-okonkwo.jpeg",
+    "order": null
+  },
+  {
+    "name": "kunle ajayi",
+    "role": "Minister",
+    "photo": "/ministers/kunle-ajayi.png",
+    "order": null
+  },
+  {
+    "name": "Leke Adeboye",
+    "role": "Pastor",
+    "photo": "/ministers/leke-adeboye.jpeg",
+    "order": null
+  },
+  {
+    "name": "MOG",
+    "role": "Minister",
+    "photo": "/ministers/mog.jpeg",
+    "order": null
+  },
+  {
+    "name": "Nosa",
+    "role": "Minister",
+    "photo": "/ministers/nosa.jpeg",
+    "order": null
+  },
+  {
+    "name": "Ohemaa Mercy",
+    "role": "Minister",
+    "photo": "/ministers/ohemaa-mercy.jpeg",
+    "order": null
+  },
+  {
+    "name": "Pastor Abiodun Opeyemi Ojesina",
+    "role": "Minister",
+    "photo": "/ministers/pastor-abiodun-opeyemi-ojesina.jpeg",
+    "order": null
+  },
+  {
+    "name": "Paul Tomisin",
+    "role": "Minister",
+    "photo": "/ministers/paul-tomisin.jpeg",
+    "order": null
+  },
+  {
+    "name": "Paul Tomisin",
+    "role": "Minister",
+    "photo": "/ministers/paul-tomisin-1.jpeg",
+    "order": null
+  },
+  {
+    "name": "Sinmidele",
+    "role": "Minister",
+    "photo": "/ministers/sinmidele.jpeg",
+    "order": null
+  },
+  {
+    "name": "Theophilus Sunday",
+    "role": "Minister",
+    "photo": "/ministers/theophilus-sunday.png",
+    "order": null
+  },
+  {
+    "name": "Tomi Favored",
+    "role": "Minister",
+    "photo": "/ministers/tomi-favored.jpeg",
+    "order": null
+  },
+  {
+    "name": "Victoria Orenze",
+    "role": "Guest Minister",
+    "photo": "/ministers/victoria-orenze.jpeg",
+    "order": null
   }
 ]

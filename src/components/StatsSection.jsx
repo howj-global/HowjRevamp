@@ -5,6 +5,7 @@ import { PLANE_PATH, PLANE_CENTER } from './PlaneIcon.jsx'
 import photos from '../content/gallery.json'
 import expressions from '../content/expressions.json'
 import stats from '../content/stats.json'
+import site from '../content/site.json'
 import logo from '../assets/brand/howj-logo-white.svg'
 
 // Charity photos drive the background slideshow. Sourced from BOTH the tagged
@@ -31,21 +32,31 @@ const charitySlides = [
 // Notion updates this band on the next deploy — no second place to edit. The
 // hardcoded values these replaced had drifted badly: 450k souls against an
 // actual 1,102, and 1,500 attendees against 28,350.
-const fmt = (n) => (typeof n === 'number' ? n.toLocaleString('en-US') : n)
+// Published figure for a stat: an override from site.json if one is set,
+// otherwise the value computed from Notion. Overrides exist because several
+// headline numbers are editorial rather than raw sums — charity outreaches
+// aren't all recorded as expressions, and attendance is quoted rounded down.
+const overrides = site.statsOverrides ?? {}
+const fmt = (key) => {
+  const override = overrides[key]
+  if (override != null && override !== '') return override
+  const derived = stats[key]
+  return typeof derived === 'number' ? derived.toLocaleString('en-US') : derived
+}
 
 // Years since the first revival, so the eyebrow ages by itself each January
 // rather than quietly going stale (it read "In 4 years" into year five).
 const yearsLabel = stats.years ? `In ${stats.years} year${stats.years === 1 ? '' : 's'}` : 'So far'
 
 const leftColumn = [
-  { number: fmt(stats.countries), label: 'countries sent to' },
-  { number: fmt(stats.revivals), label: 'Revivals completed' },
-  { number: fmt(stats.souls), label: 'souls documented for christ in person' },
+  { number: fmt('countries'), label: 'countries sent to' },
+  { number: fmt('revivals'), label: 'Missions completed' },
+  { number: fmt('souls'), label: 'souls saved' },
 ]
 const rightColumn = [
-  { number: fmt(stats.charityOutreaches), label: 'Charity welfare outreaches to the poor and forgotten' },
+  { number: fmt('charityOutreaches'), label: 'Charity welfare outreaches to the poor and forgotten' },
   { text: 'Countless healings, testimonies and deliverance' },
-  { number: fmt(stats.attendance), label: 'people combined have assembled to experience jesus christ' },
+  { number: fmt('attendance'), label: 'people combined have assembled to experience jesus christ' },
 ]
 
 function StatItem({ stat }) {

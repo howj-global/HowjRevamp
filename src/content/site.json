@@ -40,11 +40,11 @@
   },
   "about": {
     "heading": "About HOWJ",
-    "body": "Hangout with Jesus is more than an event — it's a divine mandate to bring people together across nations to experience the love, power, and presence of Jesus Christ.",
+    "body": "Hang Out With Jesus is more than an event — it's a divine mandate to bring people together across nations to experience the love, power, and presence of Jesus Christ.",
     "hero": {
       "eyebrow": "About us",
       "title": "Hang Out With Jesus",
-      "body": "Hangout with Jesus (HOWJ) is more than an event; it's a divine mandate inspired by the words of Matthew 28:19 — “Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost.” Our mission is to bring people together across nations to experience the love, power, and presence of Jesus Christ.",
+      "body": "Hang Out With Jesus (HOWJ) is more than an event; it's a divine mandate inspired by the words of Matthew 28:19 — “Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost.” Our mission is to bring people together across nations to experience the love, power, and presence of Jesus Christ.",
       "ctaLabel": "Watch video",
       "videoUrl": "https://www.youtube.com/watch?v=mcVmJSB05GA",
       "videoImage": "/about/about-video.jpg"
@@ -283,5 +283,13 @@
       "Disciples Made",
       "Souls Saved"
     ]
+  },
+  "statsOverrides": {
+    "_comment": "Published figures for the homepage stats band. Anything set here wins over the value computed from Notion (src/content/stats.json); delete a key to fall back to the computed one. Use strings to control formatting, e.g. \"20,000+\".",
+    "countries": "10",
+    "revivals": "12",
+    "souls": "1,104",
+    "charityOutreaches": "20",
+    "attendance": "20,000+"
   }
 }

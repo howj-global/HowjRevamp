@@ -88,7 +88,7 @@ export default function Footer() {
                 className="w-full border-b border-neutral-gray-500 bg-neutral-white px-4 py-3 text-neutral-black placeholder:text-neutral-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-primary-500"
               />
               <p className="mt-4 text-[0.7rem] leading-relaxed text-neutral-gray-500">
-                I agree to receive marketing emails about Hangout With Jesus events and related
+                I agree to receive marketing emails about Hang Out With Jesus events and related
                 updates.
               </p>
               <p className="mt-2 text-[0.7rem] leading-relaxed text-neutral-gray-500">
@@ -143,7 +143,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 pb-8 text-xs text-neutral-gray-500">
-        © {year} Hangout With Jesus. All rights reserved.
+        © {year} Hang Out With Jesus. All rights reserved.
       </div>
     </footer>
   )

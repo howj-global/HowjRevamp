@@ -66,6 +66,14 @@
     },
     "ministers": [
       {
+        "name": "John Santiago",
+        "image": "/expressions/atlanta/john_santiago.jpeg"
+      },
+      {
+        "name": "Colby Maier",
+        "image": "/expressions/atlanta/colby-maier.jpg"
+      },
+      {
         "name": "Fadel James",
         "image": "/expressions/atlanta/james_fadel2.png"
       },
@@ -74,20 +82,8 @@
         "image": "/expressions/atlanta/leke_adeboye.jpeg"
       },
       {
-        "name": "Folu Adeboye",
-        "image": "/expressions/atlanta/folu_adeboye.png"
-      },
-      {
         "name": "EA Adeboye",
         "image": "/expressions/atlanta/e_a_adeboye.png"
-      },
-      {
-        "name": "Colby Maier",
-        "image": "/expressions/atlanta/colby-maier.jpg"
-      },
-      {
-        "name": "John Santiago",
-        "image": "/expressions/atlanta/john_santiago.jpeg"
       },
       {
         "name": "Tomi Favored",
@@ -96,6 +92,10 @@
       {
         "name": "Ebuka Songz",
         "image": "/expressions/atlanta/ebukasongs-nigeria.jpg"
+      },
+      {
+        "name": "Blessing Lopez",
+        "image": "/expressions/atlanta/blessinglopez.png"
       },
       {
         "name": "kunle ajayi",
@@ -171,12 +171,12 @@
       {
         "value": "7+",
         "label": "Souls saved",
-        "image": "/expressions/dubai/dubai-06.jpg"
+        "image": "/expressions/dubai/dubai-06-1.jpg"
       },
       {
         "value": "20+",
         "label": "In attendance",
-        "image": "/expressions/dubai/dubai-05-1.jpg"
+        "image": "/expressions/dubai/dubai-05.jpg"
       }
     ],
     "numbers": [
@@ -205,8 +205,8 @@
         "/expressions/dubai/dubai-02.jpg",
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
-        "/expressions/dubai/dubai-05.jpg",
-        "/expressions/dubai/dubai-06-1.jpg"
+        "/expressions/dubai/dubai-05-1.jpg",
+        "/expressions/dubai/dubai-06.jpg"
       ]
     },
     "partners": {
@@ -359,7 +359,7 @@
       {
         "value": "30+",
         "label": "In attendance",
-        "image": "/expressions/chicago/howj_chicago.jpg"
+        "image": "/expressions/chicago/howj_chicago-1.jpg"
       }
     ],
     "numbers": [
@@ -400,7 +400,7 @@
       "title": "Gallery",
       "images": [
         "/expressions/chicago/chicago-ministration-02.jpg",
-        "/expressions/chicago/howj_chicago-1.jpg",
+        "/expressions/chicago/howj_chicago.jpg",
         "/expressions/chicago/img_6095.jpg",
         "/expressions/chicago/chicago-chairty.jpg"
       ]
@@ -450,7 +450,7 @@
       {
         "value": "1000+",
         "label": "In attendance",
-        "image": "/expressions/ghana/ghana_charity-.jpg"
+        "image": "/expressions/ghana/ghana_charity--1.jpg"
       }
     ],
     "numbers": [
@@ -472,6 +472,10 @@
       "videoUrl": "#"
     },
     "ministers": [
+      {
+        "name": "Paul Tomisin",
+        "image": "/expressions/ghana/paul_tomisin.jpg"
+      },
       {
         "name": "Kingsley Manuel",
         "image": "/expressions/ghana/kingsley_manuel.png"
@@ -497,7 +501,7 @@
         "/expressions/ghana/ghana-charity-01.jpg",
         "/expressions/ghana/ghana-charity-06-1.jpg",
         "/expressions/ghana/ghana-charity-07-1.jpg",
-        "/expressions/ghana/ghana_charity--1.jpg",
+        "/expressions/ghana/ghana_charity-.jpg",
         "/expressions/ghana/ghana_charity-05.jpg",
         "/expressions/ghana/ghana_charity-08.jpg",
         "/expressions/ghana/ghana-charity-prison.jpg"
@@ -701,16 +705,16 @@
     },
     "ministers": [
       {
-        "name": "Bishop Mauricio",
-        "image": "/expressions/brazil/bishop-mauricio-brazil.jpg"
+        "name": "Jhonas Serra",
+        "image": "/expressions/brazil/jhonas-serra-brazil.jpg"
       },
       {
         "name": "Israel Salazar",
         "image": "/expressions/brazil/israel-salazar-brazil.jpg"
       },
       {
-        "name": "Jhonas Serra",
-        "image": "/expressions/brazil/jhonas-serra-brazil.jpg"
+        "name": "Bishop Mauricio",
+        "image": "/expressions/brazil/bishop-mauricio-brazil.jpg"
       }
     ],
     "charity": {
@@ -779,7 +783,7 @@
       {
         "value": "107+",
         "label": "Souls saved",
-        "image": "/expressions/kenya/kenya-featured2.png"
+        "image": "/expressions/kenya/kenya-featured2-1.png"
       },
       {
         "value": "12000+",
@@ -823,9 +827,9 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg",
+        "/expressions/kenya/kenya-arrival-02.jpg",
         "/expressions/kenya/kenya-charity.png",
-        "/expressions/kenya/kenya-featured2-1.png",
+        "/expressions/kenya/kenya-featured2.png",
         "/expressions/kenya/kenyagallery03.png"
       ]
     },
@@ -836,7 +840,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg"
+        "/expressions/kenya/kenya-arrival-02-1.jpg"
       ]
     }
   },
@@ -907,16 +911,16 @@
     },
     "ministers": [
       {
+        "name": "Tia",
+        "image": "/expressions/south-korea/tia-korea.jpg"
+      },
+      {
         "name": "Healing Couple",
         "image": "/expressions/south-korea/healingcouple01.jpg"
       },
       {
         "name": "Frank Imani",
         "image": "/expressions/south-korea/fran_imani.jpg"
-      },
-      {
-        "name": "Tia",
-        "image": "/expressions/south-korea/tia-korea.jpg"
       }
     ],
     "charity": {
