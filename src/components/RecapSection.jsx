@@ -11,7 +11,8 @@ import posterIndia from '../assets/recap/poster-india.webp'
 const REVIVALS = [
   {
     name: 'Bangladesh',
-    date: 'March 27, 2026',
+    date: 'March 26 & 27, 2026',
+    location: 'Dhaka, Bangladesh',
     poster: posterBangladesh,
     stats: [
       ['Attendance', '3,000'],
@@ -21,7 +22,8 @@ const REVIVALS = [
   },
   {
     name: 'India',
-    date: 'April 4, 2026',
+    date: 'April 04, 2026',
+    location: 'Kerala, India',
     poster: posterIndia,
     stats: [
       ['Attendance', '2,200'],
@@ -31,15 +33,15 @@ const REVIVALS = [
   },
 ]
 
-function RevivalCard({ name, date, poster, stats, watchUrl }) {
+function RevivalCard({ name, date, location, poster, stats, watchUrl }) {
   return (
     <article className="flex flex-col items-center gap-lg">
-      {/* One label per card — country and date together, rather than a date on
-          one side of the section and a city on the other with nothing tying
-          them to a particular revival. */}
-      <p className="font-body text-lg text-text-inverse sm:text-xl lg:text-2xl">
-        {name} <span aria-hidden="true">–</span> {date}
-      </p>
+      {/* Date and place sit on one row per card, so each pair reads as a single
+          revival rather than floating at opposite ends of the whole section. */}
+      <div className="flex w-full max-w-[28rem] items-baseline justify-between gap-md text-text-inverse">
+        <span className="font-body text-base sm:text-lg">{date}</span>
+        <span className="font-body text-base sm:text-lg">{location}</span>
+      </div>
 
       <img
         src={poster}
@@ -68,12 +70,12 @@ function RevivalCard({ name, date, poster, stats, watchUrl }) {
           rel="noopener noreferrer"
           className="font-body text-lg font-bold text-text-inverse underline decoration-1 underline-offset-4 transition hover:opacity-70 lg:text-3xl"
         >
-          Watch the Revival
+          Watch the Documentary
         </a>
       ) : (
         // No documentary link yet — keep the slot so both cards stay aligned.
         <span className="font-body text-lg font-bold text-text-inverse/50 lg:text-3xl">
-          Watch the Revival
+          Watch the Documentary
         </span>
       )}
     </article>
@@ -83,8 +85,8 @@ function RevivalCard({ name, date, poster, stats, watchUrl }) {
 // Latest-revivals recap: full-bleed photo whose TOP gradient starts solid black
 // (blending down from StatsSection) and eases open, then the two most recent
 // revival posters with their headline numbers. Each card carries its own
-// "Country – Date" label; the section no longer has a split date/place row,
-// which left it ambiguous which revival either half referred to.
+// date/place row, so both halves clearly belong to one revival — the section
+// used to split them across its full width with nothing tying them together.
 export default function RecapSection({
   image = `${import.meta.env.BASE_URL}gallery/India-charity-01.jpg`,
   revivals = REVIVALS,
