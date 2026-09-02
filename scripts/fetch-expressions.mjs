@@ -249,7 +249,7 @@ function buildUpcoming(expressions) {
     dateLabel: formatDateLabel(next.date),
     targetDate: next.date,
     flag: flagEmoji(next.countryCode),
-    marqueeText: ['HANGOUT WITH JESUS', country, city].filter(Boolean).join(' '),
+    marqueeText: ['HANG OUT WITH JESUS', country, city].filter(Boolean).join(' '),
   }
 }
 

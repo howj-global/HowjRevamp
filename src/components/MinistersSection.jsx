@@ -34,8 +34,8 @@ export default function MinistersSection() {
             Guest Ministers
           </h2>
           <p className="mt-lg max-w-[28rem] text-lg leading-snug text-neutral-gray-300 sm:text-xl">
-            Over 50 anointed servants of God have partnered with Hang Out With Jesus, carrying His
-            word to the nations.
+            Over 50 anointed servants of God have partnered with Hang Out With Jesus, carrying God’s
+            Word to the nations.
           </p>
         </div>
 

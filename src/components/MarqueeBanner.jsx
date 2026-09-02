@@ -22,7 +22,7 @@ function MarqueeItem({ text }) {
 // Infinite right-to-left scroll, pure CSS (keyframes in index.css), pauses on hover.
 // The track holds two identical halves so translateX(-50%) loops seamlessly; each
 // half repeats the item enough times to cover ultrawide viewports.
-export default function MarqueeBanner({ text = 'HANGOUT WITH JESUS JAMAICA MONTEGO BAY' }) {
+export default function MarqueeBanner({ text = 'HANG OUT WITH JESUS JAMAICA MONTEGO BAY' }) {
   return (
     <div className="marquee bg-brand-primary-900 py-xs sm:py-sm">
       <div className="marquee-track">
