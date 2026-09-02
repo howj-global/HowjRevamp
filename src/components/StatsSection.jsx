@@ -4,6 +4,7 @@ import StatBlock from './StatBlock.jsx'
 import { PLANE_PATH, PLANE_CENTER } from './PlaneIcon.jsx'
 import photos from '../content/gallery.json'
 import expressions from '../content/expressions.json'
+import stats from '../content/stats.json'
 import logo from '../assets/brand/howj-logo-white.svg'
 
 // Charity photos drive the background slideshow. Sourced from BOTH the tagged
@@ -20,19 +21,31 @@ const charitySlides = [
 ].map(withBase)
 
 // Symmetric grid from Figma (node 158:5433): left / center-logo / right columns,
-// three rows. The logo sits in the middle cell; "In 4 years" is an eyebrow above.
-//   12+            18
-//   13+   [logo]   Countless
-//   450k           1500+
+// three rows. The logo sits in the middle cell; "In N years" is an eyebrow above.
+//   countries      charity outreaches
+//   revivals  [logo]   Countless
+//   souls          attendance
+//
+// Every figure is derived at build time from the Published rows in HOWJ Global
+// (see buildStats in scripts/fetch-expressions.mjs), so adding a revival in
+// Notion updates this band on the next deploy — no second place to edit. The
+// hardcoded values these replaced had drifted badly: 450k souls against an
+// actual 1,102, and 1,500 attendees against 28,350.
+const fmt = (n) => (typeof n === 'number' ? n.toLocaleString('en-US') : n)
+
+// Years since the first revival, so the eyebrow ages by itself each January
+// rather than quietly going stale (it read "In 4 years" into year five).
+const yearsLabel = stats.years ? `In ${stats.years} year${stats.years === 1 ? '' : 's'}` : 'So far'
+
 const leftColumn = [
-  { number: '12+', label: 'countries sent to' },
-  { number: '13+', label: 'Mission Completed' },
-  { number: '450k', label: 'souls documented for christ in person' },
+  { number: fmt(stats.countries), label: 'countries sent to' },
+  { number: fmt(stats.revivals), label: 'Revivals completed' },
+  { number: fmt(stats.souls), label: 'souls documented for christ in person' },
 ]
 const rightColumn = [
-  { number: '18', label: 'Charity welfare outreaches to the poor and forgotten' },
+  { number: fmt(stats.charityOutreaches), label: 'Charity welfare outreaches to the poor and forgotten' },
   { text: 'Countless healings, testimonies and deliverance' },
-  { number: '1500+', label: 'people combined have assembled to experience jesus christ' },
+  { number: fmt(stats.attendance), label: 'people combined have assembled to experience jesus christ' },
 ]
 
 function StatItem({ stat }) {
@@ -222,7 +235,7 @@ export default function StatsSection() {
 
       {/* Desktop (lg+): symmetric 3-row grid with the logo dead-center. */}
       <div className="relative z-20 hidden w-full max-w-[60rem] px-6 lg:block">
-        <p className="mb-10 text-lg text-text-inverse/80">In 4 years</p>
+        <p className="mb-10 text-lg text-text-inverse/80">{yearsLabel}</p>
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-x-8 gap-y-12 xl:gap-x-16">
           {[0, 1, 2].map((row) => (
             <Fragment key={row}>
@@ -246,7 +259,7 @@ export default function StatsSection() {
           md up so tablets/iPads fill the width instead of running one long row. */}
       <div className="relative z-20 flex w-full flex-col items-center gap-2xl px-6 py-2xl lg:hidden">
         <img src={logo} alt="Hang Out With Jesus" className="w-44 md:w-52" />
-        <p className="text-lg text-text-inverse/80">In 4 years</p>
+        <p className="text-lg text-text-inverse/80">{yearsLabel}</p>
         <div className="grid w-full max-w-[44rem] grid-cols-1 justify-items-center gap-2xl md:grid-cols-2">
           {[...leftColumn, ...rightColumn].map((stat, i) => (
             <StatItem key={i} stat={stat} />

@@ -171,7 +171,7 @@
       {
         "value": "7+",
         "label": "Souls saved",
-        "image": "/expressions/dubai/dubai-06-1.jpg"
+        "image": "/expressions/dubai/dubai-06.jpg"
       },
       {
         "value": "20+",
@@ -206,7 +206,7 @@
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
         "/expressions/dubai/dubai-05.jpg",
-        "/expressions/dubai/dubai-06.jpg"
+        "/expressions/dubai/dubai-06-1.jpg"
       ]
     },
     "partners": {
@@ -354,7 +354,7 @@
       {
         "value": "1+",
         "label": "Souls saved",
-        "image": "/expressions/chicago/chicago-chairty.jpg"
+        "image": "/expressions/chicago/chicago-chairty-1.jpg"
       },
       {
         "value": "30+",
@@ -402,7 +402,7 @@
         "/expressions/chicago/chicago-ministration-02.jpg",
         "/expressions/chicago/howj_chicago-1.jpg",
         "/expressions/chicago/img_6095.jpg",
-        "/expressions/chicago/chicago-chairty-1.jpg"
+        "/expressions/chicago/chicago-chairty.jpg"
       ]
     }
   },
@@ -445,7 +445,7 @@
       {
         "value": "27+",
         "label": "Souls saved",
-        "image": "/expressions/ghana/ghana_charity-05.jpg"
+        "image": "/expressions/ghana/ghana_charity-05-1.jpg"
       },
       {
         "value": "1000+",
@@ -498,7 +498,7 @@
         "/expressions/ghana/ghana-charity-06-1.jpg",
         "/expressions/ghana/ghana-charity-07-1.jpg",
         "/expressions/ghana/ghana_charity--1.jpg",
-        "/expressions/ghana/ghana_charity-05-1.jpg",
+        "/expressions/ghana/ghana_charity-05.jpg",
         "/expressions/ghana/ghana_charity-08.jpg",
         "/expressions/ghana/ghana-charity-prison.jpg"
       ]
@@ -823,7 +823,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg",
+        "/expressions/kenya/kenya-arrival-02-1.jpg",
         "/expressions/kenya/kenya-charity.png",
         "/expressions/kenya/kenya-featured2-1.png",
         "/expressions/kenya/kenyagallery03.png"
@@ -836,7 +836,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg"
+        "/expressions/kenya/kenya-arrival-02.jpg"
       ]
     }
   },

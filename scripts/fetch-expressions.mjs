@@ -65,6 +65,7 @@ const OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'expressions.json')
 const UPCOMING_OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'upcoming.json')
 const MINISTERS_OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'ministers.json')
 const MINISTERS_IMAGE_DIR = path.join(ROOT, 'public', 'ministers')
+const STATS_OUTPUT_PATH = path.join(ROOT, 'src', 'content', 'stats.json')
 const IMAGE_DIR = path.join(ROOT, 'public', 'expressions')
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN
@@ -178,6 +179,48 @@ function formatDateLabel(isoDate) {
   const day = d.getUTCDate()
   const month = d.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' }).toUpperCase()
   return `${day} ${month}, ${d.getUTCFullYear()}`
+}
+
+// Homepage stats band ("In N years…"), computed from the Published rows so the
+// figures can never drift from the expressions themselves. Derived rather than
+// hand-entered: the hardcoded values this replaced had gone badly stale — 450k
+// souls against an actual 1,102, and 1,500 attendees against 28,350.
+function buildStats(pages) {
+  const n = (p, prop) => p.properties?.[prop]?.number ?? 0
+  const sum = (prop) => pages.reduce((a, p) => a + n(p, prop), 0)
+
+  const years = pages
+    .map((p) => p.properties?.['Event Date']?.date?.start)
+    .filter(Boolean)
+    .map((d) => new Date(d).getUTCFullYear())
+
+  // Country is free text, so fold the obvious variants together before counting
+  // (the data currently holds both "USA" and "United States").
+  const canonical = (c) =>
+    c
+      .trim()
+      .toLowerCase()
+      .replace(/^(the\s+)?(u\.?s\.?a?\.?|united states(\s+of\s+america)?)$/, 'united states')
+      .replace(/^(the\s+)?(uae|u\.a\.e\.|united arab emirates)$/, 'united arab emirates')
+      .replace(/^(the\s+)?(uk|u\.k\.|united kingdom|england|britain)$/, 'united kingdom')
+  const countries = new Set(pages.map((p) => readText(p, 'Country')).filter(Boolean).map(canonical))
+
+  const charityOutreaches = pages.filter(
+    (p) => readText(p, 'Charity Title') || readFileUrls(p, 'Charity Images').length,
+  ).length
+
+  return {
+    // Elapsed years since the first revival, so the eyebrow ages by itself.
+    years: years.length ? new Date().getUTCFullYear() - Math.min(...years) : null,
+    revivals: pages.length,
+    countries: countries.size,
+    souls: sum('Souls Impacted'),
+    attendance: sum('In Attendance'),
+    miracles: sum('Miracles Documented'),
+    charityOutreaches,
+    charityImpacted: sum('Charity Impacted'),
+    soulsThroughCharity: sum('Souls Through Charity'),
+  }
 }
 
 // Homepage "upcoming expression" — the soonest Published row with a future
@@ -389,6 +432,13 @@ async function main() {
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
   await writeFile(OUTPUT_PATH, JSON.stringify(out, null, 2) + '\n')
   console.log(`[expressions:fetch] Wrote ${Object.keys(out).length} expression(s) to src/content/expressions.json`)
+
+  const stats = buildStats(expressions)
+  await writeFile(STATS_OUTPUT_PATH, JSON.stringify(stats, null, 2) + '\n')
+  console.log(
+    `[expressions:fetch] Stats: ${stats.revivals} revivals, ${stats.countries} countries, ` +
+      `${stats.souls} souls, ${stats.attendance} attendance, ${stats.years} years`,
+  )
 
   const upcoming = buildUpcoming(out)
   await writeFile(UPCOMING_OUTPUT_PATH, JSON.stringify(upcoming, null, 2) + '\n')
