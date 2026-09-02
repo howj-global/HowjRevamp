@@ -1,5 +1,4 @@
 import CircleFlag, { FLAG_ACCENTS, normalizeCountry } from './CircleFlag.jsx'
-import PlaneIcon from './PlaneIcon.jsx'
 
 // Pick black or white text for a given background so the stub stays legible
 // whatever flag colour it's sampled from (e.g. saffron → black, navy → white).
@@ -13,8 +12,8 @@ function readableText(hex) {
 
 // Figma: Country card (node 132:3329). Feature image with a circular country
 // flag top-right, and a dashed-top "boarding pass stub" footer holding the host
-// church, city, and airport code beside the airliner. Fixed proportions from the
-// design (394×581) expressed fluidly so it tiles in a responsive grid.
+// church, city, and airport code. Fixed proportions from the design (394×581)
+// expressed fluidly so it tiles in a responsive grid.
 // Two sizes: the full destination card, and a `compact` variant for the small
 // cards that float in the MissionSection.
 const SIZES = {
@@ -24,7 +23,6 @@ const SIZES = {
     stub: 'gap-sm px-sm py-md',
     church: 'text-lg',
     title: 'text-5xl',
-    plane: 'w-28 sm:w-32',
   },
   // Small floating MissionSection cards — scaled down a further 20%.
   compact: {
@@ -33,7 +31,6 @@ const SIZES = {
     stub: 'gap-1 px-2 py-2',
     church: 'text-[0.45rem]',
     title: 'text-[0.95rem]',
-    plane: 'w-9',
   },
 }
 
@@ -54,7 +51,7 @@ export default function CountryCard({
   className = '',
 }) {
   // Stub colour: explicit `accent` prop, else the country's flag accent, else the
-  // brand green. Text/plane and the dashed perforation adapt to stay legible.
+  // brand green. Text and the dashed perforation adapt to stay legible.
   const bg = accent ?? FLAG_ACCENTS[normalizeCountry(country)] ?? '#0e6537'
   const fg = readableText(bg)
   const border = fg === '#ffffff' ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.35)'
@@ -79,13 +76,10 @@ export default function CountryCard({
           />
         ) : (
           <div
-            className="absolute inset-0 flex items-center justify-center"
-            style={{ backgroundColor: bg, color: fg }}
+            className="absolute inset-0"
+            style={{ backgroundColor: bg }}
             aria-hidden="true"
-          >
-            {/* PlaneIcon tints from currentColor, so the colour is set above */}
-            <PlaneIcon className="w-1/3 opacity-30" />
-          </div>
+          />
         )}
         <div className={`absolute ${s.flag}`}>
           {flag ?? <CircleFlag country={country} className="size-full" />}
@@ -103,7 +97,6 @@ export default function CountryCard({
           <p className={`${s.title} leading-[1]`}>{city}</p>
           {code && <p className={`${s.title} leading-[1]`}>{code}</p>}
         </div>
-        <PlaneIcon className={`${s.plane} shrink-0`} />
       </div>
     </article>
   )
