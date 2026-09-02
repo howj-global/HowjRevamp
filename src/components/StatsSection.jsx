@@ -24,7 +24,7 @@ const charitySlides = [
 // Symmetric grid from Figma (node 158:5433): left / center-logo / right columns,
 // three rows. The logo sits in the middle cell; "In N years" is an eyebrow above.
 //   countries      charity outreaches
-//   revivals  [logo]   Countless
+//   missions  [logo]   cities
 //   souls          attendance
 //
 // Every figure is derived at build time from the Published rows in HOWJ Global
@@ -49,13 +49,13 @@ const fmt = (key) => {
 const yearsLabel = stats.years ? `In ${stats.years} year${stats.years === 1 ? '' : 's'}` : 'So far'
 
 const leftColumn = [
-  { number: fmt('countries'), label: 'countries sent to' },
+  { number: fmt('countries'), label: 'countries visited' },
   { number: fmt('revivals'), label: 'Missions completed' },
   { number: fmt('souls'), label: 'souls saved' },
 ]
 const rightColumn = [
   { number: fmt('charityOutreaches'), label: 'Charity welfare outreaches to the poor and forgotten' },
-  { text: 'Countless healings, testimonies and deliverance' },
+  { number: fmt('cities'), label: 'cities' },
   { number: fmt('attendance'), label: 'people combined have assembled to experience jesus christ' },
 ]
 

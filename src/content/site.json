@@ -286,7 +286,8 @@
   },
   "statsOverrides": {
     "_comment": "Published figures for the homepage stats band. Anything set here wins over the value computed from Notion (src/content/stats.json); delete a key to fall back to the computed one. Use strings to control formatting, e.g. \"20,000+\".",
-    "countries": "10",
+    "countries": "9",
+    "cities": "3",
     "revivals": "12",
     "souls": "1,104",
     "charityOutreaches": "20",
