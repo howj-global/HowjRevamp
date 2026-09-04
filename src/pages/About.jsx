@@ -126,21 +126,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* ---- Our people ---- */}
-          <div className="mt-3xl">
-            <h2 className="font-heading text-2xl font-bold text-text-inverse">{a.people.heading}</h2>
-            <p className="mt-xs max-w-[34rem] text-sm leading-relaxed text-neutral-gray-400">{a.people.body}</p>
-            {/* Names only — no portraits. The page keeps the focus on Jesus
-                rather than on the team, so the face/initial tiles are gone. */}
-            <ul className="mt-lg flex flex-wrap gap-x-2xl gap-y-md">
-              {a.people.members.map((m) => (
-                <li key={m.name}>
-                  <p className="font-heading text-base font-semibold text-text-inverse">{m.name}</p>
-                  <p className="text-xs uppercase tracking-wide text-neutral-gray-500">{m.role}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* "Our people make HOWJ" section removed along with its data in
+              site.json — the page stays on Jesus rather than the team. */}
         </div>
       </section>
 
