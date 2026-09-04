@@ -4,12 +4,6 @@ import { REGISTER_URL, externalLinkProps } from '../lib/links.js'
 
 const base = import.meta.env.BASE_URL
 const src = (p) => base + String(p).replace(/^\//, '')
-const initials = (name) =>
-  name
-    .split(' ')
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join('')
 
 // About page (Figma 129:1424, HOWJ Global revamp) — Mews-style editorial layout:
 // light hero + video, stats row, dark story timeline, people rail, values list,
@@ -91,13 +85,19 @@ export default function About() {
           </Reveal>
 
           <div className="mt-2xl grid gap-2xl lg:grid-cols-[1fr_2fr]">
-            {/* left rail notes */}
-            <div className="flex flex-col gap-2xl">
-              {a.story.notes.map((note, i) => (
-                <Reveal key={i} as="p" className="max-w-[18rem] text-base leading-relaxed text-neutral-gray-300 lg:sticky lg:top-40">
-                  {note}
-                </Reveal>
-              ))}
+            {/* Left rail notes. The rail sticks as ONE block: previously each
+                note was individually `sticky top-40`, so on scroll every one
+                pinned to the same offset and they piled up on top of each
+                other. self-start stops the grid stretching the item, which
+                would otherwise leave nothing to scroll against. */}
+            <div className="lg:sticky lg:top-40 lg:self-start">
+              <div className="flex flex-col gap-2xl">
+                {a.story.notes.map((note, i) => (
+                  <Reveal key={i} as="p" className="max-w-[18rem] text-base leading-relaxed text-neutral-gray-300">
+                    {note}
+                  </Reveal>
+                ))}
+              </div>
             </div>
 
             {/* timeline */}
@@ -130,18 +130,16 @@ export default function About() {
           <div className="mt-3xl">
             <h2 className="font-heading text-2xl font-bold text-text-inverse">{a.people.heading}</h2>
             <p className="mt-xs max-w-[34rem] text-sm leading-relaxed text-neutral-gray-400">{a.people.body}</p>
-            <div className="mt-lg flex gap-md overflow-x-auto pb-md">
+            {/* Names only — no portraits. The page keeps the focus on Jesus
+                rather than on the team, so the face/initial tiles are gone. */}
+            <ul className="mt-lg flex flex-wrap gap-x-2xl gap-y-md">
               {a.people.members.map((m) => (
-                <div key={m.name} className="w-52 shrink-0">
-                  {/* placeholder portrait — swap for a real photo when available */}
-                  <div className="flex aspect-[3/4] items-center justify-center rounded-sm bg-brand-primary-900">
-                    <span className="font-condensed text-6xl font-bold text-brand-primary-300">{initials(m.name)}</span>
-                  </div>
-                  <p className="mt-sm font-heading text-base font-semibold text-text-inverse">{m.name}</p>
+                <li key={m.name}>
+                  <p className="font-heading text-base font-semibold text-text-inverse">{m.name}</p>
                   <p className="text-xs uppercase tracking-wide text-neutral-gray-500">{m.role}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>

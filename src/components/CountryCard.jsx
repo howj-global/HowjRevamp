@@ -93,8 +93,13 @@ export default function CountryCard({
       >
         <div className="flex min-w-0 flex-1 flex-col font-heading font-semibold">
           {church && <p className={`${s.church} leading-snug`}>{church}</p>}
+          {/* Always "City, Country" so a card never reads as a bare city name
+              that means nothing to someone who doesn't know it (Nakuru, Accra).
+              Falls back to whichever half exists. */}
           {/* leading-[1] not leading-none: --spacing-none shadows it to line-height 0 */}
-          <p className={`${s.title} leading-[1]`}>{city}</p>
+          <p className={`${s.title} leading-[1]`}>
+            {[city, country].filter(Boolean).join(', ')}
+          </p>
           {code && <p className={`${s.title} leading-[1]`}>{code}</p>}
         </div>
       </div>

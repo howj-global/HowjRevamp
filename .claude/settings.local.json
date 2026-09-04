@@ -127,7 +127,8 @@
       "Bash(npm run *)",
       "Bash(/private/tmp/claude-501/-Users-olalekan-Documents-Howj-Website-Revamp/4d53661e-88ab-4f37-96d2-a1fc4055c550/scratchpad/node_modules/ffmpeg-static/ffmpeg -y -loglevel error -i /tmp/poster-bd.png -vf scale=900:-1 -quality 82 src/assets/recap/poster-bangladesh.webp)",
       "Bash(/private/tmp/claude-501/-Users-olalekan-Documents-Howj-Website-Revamp/4d53661e-88ab-4f37-96d2-a1fc4055c550/scratchpad/node_modules/ffmpeg-static/ffmpeg -y -loglevel error -i /tmp/poster-in.png -vf scale=900:-1 -quality 82 src/assets/recap/poster-india.webp)",
-      "Bash(node --env-file=.env \"/private/tmp/claude-501/-Users-olalekan-Documents-Howj-Website-Revamp/4d53661e-88ab-4f37-96d2-a1fc4055c550/scratchpad/update-souls.mjs\")"
+      "Bash(node --env-file=.env \"/private/tmp/claude-501/-Users-olalekan-Documents-Howj-Website-Revamp/4d53661e-88ab-4f37-96d2-a1fc4055c550/scratchpad/update-souls.mjs\")",
+      "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./src/content/site.json'\\).mission,null,1\\)\\)\")"
     ]
   }
 }

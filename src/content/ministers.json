@@ -42,15 +42,39 @@
     "order": 7
   },
   {
+    "name": "Alvin P Bhakata",
+    "role": "Guest Minister",
+    "photo": "/ministers/alvin-p-bhakata.jpeg",
+    "order": 8
+  },
+  {
+    "name": "Babu Biswas",
+    "role": "Minister",
+    "photo": "/ministers/babu-biswas.jpeg",
+    "order": 9
+  },
+  {
+    "name": "Khasama Damien",
+    "role": "Minister",
+    "photo": "/ministers/khasama-damien.jpeg",
+    "order": 10
+  },
+  {
+    "name": "Nehemiah Damien",
+    "role": "Minister",
+    "photo": "/ministers/nehemiah-damien.jpeg",
+    "order": 11
+  },
+  {
+    "name": "Sheldon Bangera",
+    "role": "Guest Minister",
+    "photo": "/ministers/sheldon-bangera.jpeg",
+    "order": 12
+  },
+  {
     "name": "Abbey Ojomu",
     "role": "Minister",
     "photo": "/ministers/abbey-ojomu.png",
-    "order": null
-  },
-  {
-    "name": "Alvin p Bhakata",
-    "role": "Guest Minister",
-    "photo": "/ministers/alvin-p-bhakata.jpeg",
     "order": null
   },
   {
@@ -60,15 +84,21 @@
     "order": null
   },
   {
-    "name": "Chevelle franklyn",
+    "name": "Chevelle Franklyn",
     "role": "Minister",
     "photo": "/ministers/chevelle-franklyn.png",
     "order": null
   },
   {
-    "name": "Daniel",
+    "name": "Daniel Olawande",
     "role": "Pastor",
-    "photo": "/ministers/daniel.jpeg",
+    "photo": "/ministers/daniel-olawande.jpeg",
+    "order": null
+  },
+  {
+    "name": "David Sola Oludoyi",
+    "role": "Pastor",
+    "photo": "/ministers/david-sola-oludoyi.jpeg",
     "order": null
   },
   {

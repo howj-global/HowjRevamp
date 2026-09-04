@@ -3,26 +3,24 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/brand/howj-logo-grey.svg'
 import { socialLinks } from '../lib/social.js'
 
+// Only links that actually go somewhere. "Articles", "Gifts" and
+// "Volunteering" were placeholders pointing at "#" (Volunteering effectively
+// landing back on About/Privacy), so they're gone rather than left as dead
+// ends — less is more. Merch replaces Articles once MERCH_URL is set below.
+const MERCH_URL = null // TODO: the separate Merch site's URL
+
 const columns = [
   {
     heading: 'Explore',
-    links: [
-      { label: 'Articles', href: '#' },
-      { label: 'Gifts', href: '#' },
-    ],
+    links: [...(MERCH_URL ? [{ label: 'Merch', href: MERCH_URL }] : [])],
   },
-  {
-    heading: 'About',
-    links: [
-      { label: 'Volunteering', href: '#' },
-      { label: 'Privacy', href: '#' },
-    ],
-  },
+  // "Privacy" also pointed at "#": there's no privacy page to link to yet.
+  // Worth restoring once one exists, rather than shipping a dead link.
   {
     heading: 'Social',
     links: socialLinks.map(({ label, href }) => ({ label, href })),
   },
-]
+].filter((col) => col.links.length > 0)
 
 const linkClass = 'text-neutral-gray-300 transition hover:text-neutral-white'
 

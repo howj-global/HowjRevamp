@@ -3,7 +3,7 @@
     "slug": "atlanta",
     "logo": "/expressions/atlanta/atlanta-logo.png",
     "heroImage": "/expressions/atlanta/atl_hero.jpg",
-    "country": "USA",
+    "country": "United States",
     "city": "Atlanta",
     "venue": "The Coca-Cola Roxy\n800 Battery Ave SE",
     "date": "2025-06-22",
@@ -38,7 +38,7 @@
       {
         "value": "84+",
         "label": "Souls saved",
-        "image": "/expressions/atlanta/atl_f1-1.jpg"
+        "image": "/expressions/atlanta/atl_f1.jpg"
       },
       {
         "value": "3000+",
@@ -115,7 +115,7 @@
       ]
     },
     "partners": {
-      "label": "Our Partners in USA",
+      "label": "Our Partners in United States",
       "logos": [
         {
           "image": "/expressions/atlanta/images.jpeg"
@@ -125,7 +125,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/atlanta/atl_f1.jpg",
+        "/expressions/atlanta/atl_f1-1.jpg",
         "/expressions/atlanta/cjarity_atl-1.jpg",
         "/expressions/atlanta/charity_atl.jpg",
         "/expressions/atlanta/atl-revival.jpg"
@@ -171,7 +171,7 @@
       {
         "value": "7+",
         "label": "Souls saved",
-        "image": "/expressions/dubai/dubai-06-1.jpg"
+        "image": "/expressions/dubai/dubai-06.jpg"
       },
       {
         "value": "20+",
@@ -206,7 +206,7 @@
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
         "/expressions/dubai/dubai-05-1.jpg",
-        "/expressions/dubai/dubai-06.jpg"
+        "/expressions/dubai/dubai-06-1.jpg"
       ]
     },
     "partners": {
@@ -287,7 +287,7 @@
     },
     "ministers": [
       {
-        "name": "Daniel",
+        "name": "Daniel Olawande",
         "image": "/expressions/lagos/pdaniel.jpeg"
       },
       {
@@ -359,7 +359,7 @@
       {
         "value": "30+",
         "label": "In attendance",
-        "image": "/expressions/chicago/howj_chicago-1.jpg"
+        "image": "/expressions/chicago/howj_chicago.jpg"
       }
     ],
     "numbers": [
@@ -400,7 +400,7 @@
       "title": "Gallery",
       "images": [
         "/expressions/chicago/chicago-ministration-02.jpg",
-        "/expressions/chicago/howj_chicago.jpg",
+        "/expressions/chicago/howj_chicago-1.jpg",
         "/expressions/chicago/img_6095.jpg",
         "/expressions/chicago/chicago-chairty.jpg"
       ]
@@ -411,7 +411,7 @@
     "logo": "/expressions/ghana/howj-6-ghana_logo.jpg",
     "heroImage": "/expressions/ghana/ghana_charity-07.jpg",
     "country": "Ghana",
-    "city": "Accra. Agbogba",
+    "city": "Accra",
     "venue": "Oil Dome Royal House Chapel",
     "date": "2023-11-24",
     "airportCode": "",
@@ -445,12 +445,12 @@
       {
         "value": "27+",
         "label": "Souls saved",
-        "image": "/expressions/ghana/ghana_charity-05-1.jpg"
+        "image": "/expressions/ghana/ghana_charity-05.jpg"
       },
       {
         "value": "1000+",
         "label": "In attendance",
-        "image": "/expressions/ghana/ghana_charity--1.jpg"
+        "image": "/expressions/ghana/ghana_charity-.jpg"
       }
     ],
     "numbers": [
@@ -501,8 +501,8 @@
         "/expressions/ghana/ghana-charity-01.jpg",
         "/expressions/ghana/ghana-charity-06-1.jpg",
         "/expressions/ghana/ghana-charity-07-1.jpg",
-        "/expressions/ghana/ghana_charity-.jpg",
-        "/expressions/ghana/ghana_charity-05.jpg",
+        "/expressions/ghana/ghana_charity--1.jpg",
+        "/expressions/ghana/ghana_charity-05-1.jpg",
         "/expressions/ghana/ghana_charity-08.jpg",
         "/expressions/ghana/ghana-charity-prison.jpg"
       ]
@@ -519,6 +519,105 @@
       "title": "Gallery",
       "images": [
         "/expressions/ghana/ghana-ministration-revival.jpg"
+      ]
+    }
+  },
+  "london": {
+    "slug": "london",
+    "logo": "/expressions/london/howj_gb_flier.png",
+    "heroImage": "/expressions/london/nsn_global-61.jpg",
+    "country": "United Kingdom",
+    "city": "London",
+    "venue": "Amazing Grace Worship Centre",
+    "date": "2021-10-08",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [
+      {
+        "label": "Revival",
+        "target": "revival"
+      },
+      {
+        "label": "Documentary",
+        "target": "documentary"
+      },
+      {
+        "label": "Minister",
+        "target": "minister"
+      },
+      {
+        "label": "Charity",
+        "target": "charity"
+      },
+      {
+        "label": "Gallery",
+        "target": "gallery"
+      }
+    ],
+    "theme": "Jesus Christ - The Way, The Truth, The Life",
+    "verse": "John 14:6",
+    "overview": "Presented by NSN Global (Nighttime Spiritual Nutrition), Hang Out with Jesus was born out of a profound online encounter. During a daily Zoom Bible study, a fellowship of believers studying Micah 4:1-2 felt deeply convicted by the Word, sparking the divine inspiration to bring their digital communion into a physical gathering.\nHosted from Friday, October 8 to Sunday, October 10, 2021, at the Amazing Grace Worship Centre (1st Floor Hall, 449 Kingsland Rd, London, E8 4AU), this landmark three-day event united believers for powerful times of worship, fellowship, and spiritual renewal. It laid the foundational stone for what would become a global movement, bridging online devotion with vibrant, in-person community impact.",
+    "featureStats": [
+      {
+        "value": "1+",
+        "label": "Souls saved",
+        "image": "/expressions/london/dsc_3347-118.jpg"
+      },
+      {
+        "value": "20+",
+        "label": "In attendance",
+        "image": "/expressions/london/dsc_3348-119.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "",
+        "label": "miracles documented"
+      },
+      {
+        "value": "5+",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/london/nsn_global-61.jpg",
+      "videoUrl": "#"
+    },
+    "ministers": [
+      {
+        "name": "David Sola Oludoyi",
+        "image": "/expressions/london/pdso.jpeg"
+      }
+    ],
+    "charity": {
+      "title": "Saint bartholomew’s hospital Visit",
+      "overview": "During their time in London, the team extended their ministry beyond the walls of the venue to visit patients at Saint Bartholomew’s Hospital. Embodying the true spirit of compassionate outreach, they spent time comforting the sick, offering words of encouragement, and lifting them up in prayer.",
+      "images": [
+        "/expressions/london/1.jpg"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in United Kingdom",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/london/london-ministration-01.jpg",
+        "/expressions/london/dsc_3415-183.jpg",
+        "/expressions/london/dsc_3484-246.jpg",
+        "/expressions/london/howj_london-01.jpg",
+        "/expressions/london/nsn_global-15.jpg",
+        "/expressions/london/nsn_global-28.jpg",
+        "/expressions/london/nsn_global-42.jpg",
+        "/expressions/london/nsn_global-45_coopy.jpg",
+        "/expressions/london/nsn_global-58.jpg",
+        "/expressions/london/nsn_global-61-1.jpg",
+        "/expressions/london/nsn_global-62.jpg"
       ]
     }
   },
@@ -783,7 +882,7 @@
       {
         "value": "107+",
         "label": "Souls saved",
-        "image": "/expressions/kenya/kenya-featured2-1.png"
+        "image": "/expressions/kenya/kenya-featured2.png"
       },
       {
         "value": "12000+",
@@ -827,9 +926,9 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg",
+        "/expressions/kenya/kenya-arrival-02-1.jpg",
         "/expressions/kenya/kenya-charity.png",
-        "/expressions/kenya/kenya-featured2.png",
+        "/expressions/kenya/kenya-featured2-1.png",
         "/expressions/kenya/kenyagallery03.png"
       ]
     },
@@ -840,7 +939,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg"
+        "/expressions/kenya/kenya-arrival-02.jpg"
       ]
     }
   },
@@ -996,11 +1095,19 @@
     },
     "ministers": [
       {
+        "name": "Nehemiah Damien",
+        "image": "/expressions/india/nehemiah_damien.jpg"
+      },
+      {
+        "name": "Sheldon Bangera",
+        "image": "/expressions/india/sheldon_bangera.jpg"
+      },
+      {
         "name": "Pastor Abiodun Opeyemi Ojesina",
         "image": "/expressions/india/pastor_abidoun-bangladesh.jpg"
       },
       {
-        "name": "Chevelle franklyn",
+        "name": "Chevelle Franklyn",
         "image": "/expressions/india/chevelle-franklyn-jamaica.png"
       }
     ],
