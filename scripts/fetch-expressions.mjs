@@ -354,7 +354,13 @@ async function buildExpression(page, ministersByExpr, slug) {
       { value: plus(readNumber(page, 'Charity Impacted')), label: 'Impacted charity' },
       { value: plus(readNumber(page, 'Souls Through Charity')), label: 'Souls impacted through charity' },
     ],
-    documentary: { image: documentaryImage || heroImage, videoUrl: videoUrl || '#' },
+    documentary: {
+      image: documentaryImage || heroImage,
+      videoUrl: videoUrl || '#',
+      // Optional per-expression CTA wording (e.g. Chicago: "Watch Full
+      // Revival"); blank falls back to the component's default.
+      label: readText(page, 'Documentary Label'),
+    },
     ministers: await Promise.all(ministers),
     charity: {
       title: readText(page, 'Charity Title'),

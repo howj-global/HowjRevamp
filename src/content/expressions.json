@@ -38,12 +38,12 @@
       {
         "value": "84+",
         "label": "Souls saved",
-        "image": "/expressions/atlanta/atl_f1.jpg"
+        "image": "/expressions/atlanta/atl_f1-1.jpg"
       },
       {
         "value": "3000+",
         "label": "In attendance",
-        "image": "/expressions/atlanta/charity_atl-1-2.jpg"
+        "image": "/expressions/atlanta/charity_atl-1.jpg"
       }
     ],
     "numbers": [
@@ -62,7 +62,8 @@
     ],
     "documentary": {
       "image": "/expressions/atlanta/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=vkObtd3M9NE&t=34s"
+      "videoUrl": "https://www.youtube.com/watch?v=vkObtd3M9NE&t=34s",
+      "label": ""
     },
     "ministers": [
       {
@@ -110,7 +111,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/atlanta/charity_atl-1.jpg",
+        "/expressions/atlanta/charity_atl-1-2.jpg",
         "/expressions/atlanta/charity-atl-3.jpg"
       ]
     },
@@ -125,7 +126,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/atlanta/atl_f1-1.jpg",
+        "/expressions/atlanta/atl_f1.jpg",
         "/expressions/atlanta/cjarity_atl-1.jpg",
         "/expressions/atlanta/charity_atl.jpg",
         "/expressions/atlanta/atl-revival.jpg"
@@ -171,12 +172,12 @@
       {
         "value": "7+",
         "label": "Souls saved",
-        "image": "/expressions/dubai/dubai-06.jpg"
+        "image": "/expressions/dubai/dubai-06-1.jpg"
       },
       {
         "value": "20+",
         "label": "In attendance",
-        "image": "/expressions/dubai/dubai-05.jpg"
+        "image": "/expressions/dubai/dubai-05-1.jpg"
       }
     ],
     "numbers": [
@@ -195,7 +196,8 @@
     ],
     "documentary": {
       "image": "/expressions/dubai/uaecover.jpg",
-      "videoUrl": "#"
+      "videoUrl": "#",
+      "label": ""
     },
     "ministers": [],
     "charity": {
@@ -205,8 +207,8 @@
         "/expressions/dubai/dubai-02.jpg",
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
-        "/expressions/dubai/dubai-05-1.jpg",
-        "/expressions/dubai/dubai-06-1.jpg"
+        "/expressions/dubai/dubai-05.jpg",
+        "/expressions/dubai/dubai-06.jpg"
       ]
     },
     "partners": {
@@ -283,7 +285,8 @@
     ],
     "documentary": {
       "image": "/expressions/lagos/lagos-revival2.jpg",
-      "videoUrl": "#"
+      "videoUrl": "#",
+      "label": ""
     },
     "ministers": [
       {
@@ -377,8 +380,9 @@
       }
     ],
     "documentary": {
-      "image": "/expressions/chicago/chicago-howj.jpg",
-      "videoUrl": "#"
+      "image": "/expressions/chicago/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=reFuCUGEU4Y&t=9398s",
+      "label": "Watch Full Revival"
     },
     "ministers": [],
     "charity": {
@@ -403,6 +407,102 @@
         "/expressions/chicago/howj_chicago-1.jpg",
         "/expressions/chicago/img_6095.jpg",
         "/expressions/chicago/chicago-chairty.jpg"
+      ]
+    }
+  },
+  "bangladesh": {
+    "slug": "bangladesh",
+    "logo": "/expressions/bangladesh/bang.png",
+    "heroImage": "/expressions/bangladesh/bang-outreach-08.jpg",
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "venue": "",
+    "date": "2026-03-27",
+    "airportCode": "",
+    "countryCode": "",
+    "tags": [],
+    "theme": "Jesus Christ Lord of Lords",
+    "verse": "1 Timothy 6:15",
+    "overview": "In one of the world's most densely populated countries, HOWJ Global deployed its largest South Asian outreach to date, reaching communities across Dhaka and surrounding regions with food aid, hygiene kits, and a message of unstoppable hope. Our Bangladesh event drew massive crowds and inspired local leaders to sustain the movement long after our teams departed. Bangladesh 2026 is proof that hope, when planted with intention, takes deep and lasting root.",
+    "featureStats": [
+      {
+        "value": "2500+",
+        "label": "Souls saved",
+        "image": "/expressions/bangladesh/bang-outreach-3.jpg"
+      },
+      {
+        "value": "2500+",
+        "label": "In attendance",
+        "image": "/expressions/bangladesh/bang-outreach-07-1.jpg"
+      }
+    ],
+    "numbers": [
+      {
+        "value": "",
+        "label": "miracles documented"
+      },
+      {
+        "value": "",
+        "label": "Impacted charity"
+      },
+      {
+        "value": "",
+        "label": "Souls impacted through charity"
+      }
+    ],
+    "documentary": {
+      "image": "/expressions/bangladesh/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=ejFWOKgYVVY",
+      "label": ""
+    },
+    "ministers": [
+      {
+        "name": "Alvin P Bhakata",
+        "image": "/expressions/bangladesh/alvin_p_bhakata.jpg"
+      },
+      {
+        "name": "Babu Biswas",
+        "image": "/expressions/bangladesh/babu_biswas.jpg"
+      },
+      {
+        "name": "Khasama Damien",
+        "image": "/expressions/bangladesh/khasama_damien.jpg"
+      },
+      {
+        "name": "Andrew Mulero",
+        "image": "/expressions/bangladesh/andrew_mulero.jpg"
+      },
+      {
+        "name": "Pastor Abiodun Opeyemi Ojesina",
+        "image": "/expressions/bangladesh/pastor_abidoun-bangladesh.jpg"
+      },
+      {
+        "name": "Chevelle Franklyn",
+        "image": "/expressions/bangladesh/chevelle-franklyn-jamaica.png"
+      }
+    ],
+    "charity": {
+      "title": "",
+      "overview": "Medical Outreach",
+      "images": [
+        "/expressions/bangladesh/bang-outreach-07.jpg",
+        "/expressions/bangladesh/bang-outreach-09.jpg",
+        "/expressions/bangladesh/bang-outreach-10.jpg",
+        "/expressions/bangladesh/bang-outreach-05.jpg",
+        "/expressions/bangladesh/bang-outreach-04.jpg",
+        "/expressions/bangladesh/bang-outreach-3-1.jpg",
+        "/expressions/bangladesh/bang-outreach-01.jpg",
+        "/expressions/bangladesh/bang-outreach-07-1-2.jpg"
+      ]
+    },
+    "partners": {
+      "label": "Our Partners in Bangladesh",
+      "logos": []
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        "/expressions/bangladesh/bang2.png"
       ]
     }
   },
@@ -445,7 +545,7 @@
       {
         "value": "27+",
         "label": "Souls saved",
-        "image": "/expressions/ghana/ghana_charity-05.jpg"
+        "image": "/expressions/ghana/ghana_charity-05-1.jpg"
       },
       {
         "value": "1000+",
@@ -469,7 +569,8 @@
     ],
     "documentary": {
       "image": "/expressions/ghana/ghana_charity-07.jpg",
-      "videoUrl": "#"
+      "videoUrl": "#",
+      "label": ""
     },
     "ministers": [
       {
@@ -502,7 +603,7 @@
         "/expressions/ghana/ghana-charity-06-1.jpg",
         "/expressions/ghana/ghana-charity-07-1.jpg",
         "/expressions/ghana/ghana_charity--1.jpg",
-        "/expressions/ghana/ghana_charity-05-1.jpg",
+        "/expressions/ghana/ghana_charity-05.jpg",
         "/expressions/ghana/ghana_charity-08.jpg",
         "/expressions/ghana/ghana-charity-prison.jpg"
       ]
@@ -525,7 +626,7 @@
   "london": {
     "slug": "london",
     "logo": "/expressions/london/howj_gb_flier.png",
-    "heroImage": "/expressions/london/nsn_global-61.jpg",
+    "heroImage": "/expressions/london/nsn_global-61-1.jpg",
     "country": "United Kingdom",
     "city": "London",
     "venue": "Amazing Grace Worship Centre",
@@ -556,7 +657,7 @@
     ],
     "theme": "Jesus Christ - The Way, The Truth, The Life",
     "verse": "John 14:6",
-    "overview": "Presented by NSN Global (Nighttime Spiritual Nutrition), Hang Out with Jesus was born out of a profound online encounter. During a daily Zoom Bible study, a fellowship of believers studying Micah 4:1-2 felt deeply convicted by the Word, sparking the divine inspiration to bring their digital communion into a physical gathering.\nHosted from Friday, October 8 to Sunday, October 10, 2021, at the Amazing Grace Worship Centre (1st Floor Hall, 449 Kingsland Rd, London, E8 4AU), this landmark three-day event united believers for powerful times of worship, fellowship, and spiritual renewal. It laid the foundational stone for what would become a global movement, bridging online devotion with vibrant, in-person community impact.",
+    "overview": "Presented by NSN Global (Nighttime Spiritual Nutrition), Hang Out with Jesus was born out of a profound online encounter. During a daily Zoom Bible study, a fellowship of believers studying Micah 4:1-2 felt deeply convicted by God’s Word, sparking the divine inspiration to bring their digital communion into a physical gathering.\nHosted from Friday, October 8 to Sunday, October 10, 2021, at the Amazing Grace Worship Centre (1st Floor Hall, 449 Kingsland Rd, London, E8 4AU), this landmark three-day event united believers for powerful times of worship, fellowship, and spiritual renewal. It laid the foundational stone for what would become a global movement, bridging online devotion with vibrant, in-person community impact.",
     "featureStats": [
       {
         "value": "1+",
@@ -584,8 +685,9 @@
       }
     ],
     "documentary": {
-      "image": "/expressions/london/nsn_global-61.jpg",
-      "videoUrl": "#"
+      "image": "/expressions/london/nsn_global-61-1.jpg",
+      "videoUrl": "#",
+      "label": ""
     },
     "ministers": [
       {
@@ -616,15 +718,18 @@
         "/expressions/london/nsn_global-42.jpg",
         "/expressions/london/nsn_global-45_coopy.jpg",
         "/expressions/london/nsn_global-58.jpg",
-        "/expressions/london/nsn_global-61-1.jpg",
-        "/expressions/london/nsn_global-62.jpg"
+        "/expressions/london/nsn_global-61.jpg",
+        "/expressions/london/nsn_global-62.jpg",
+        "/expressions/london/howj-london-2.jpeg",
+        "/expressions/london/howj-london-3.jpeg",
+        "/expressions/london/howj-london.jpeg"
       ]
     }
   },
   "new-york": {
     "slug": "new-york",
     "logo": "/expressions/new-york/newyork-logo-.png",
-    "heroImage": "/expressions/new-york/herorevival.jpg",
+    "heroImage": "/expressions/new-york/herorevival-1.jpg",
     "country": "United States",
     "city": "New York",
     "venue": "Times Square",
@@ -660,7 +765,7 @@
       {
         "value": "51+",
         "label": "Souls saved",
-        "image": "/expressions/new-york/herorevival-1.jpg"
+        "image": "/expressions/new-york/herorevival.jpg"
       },
       {
         "value": "1500+",
@@ -684,7 +789,8 @@
     ],
     "documentary": {
       "image": "/expressions/new-york/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=PdVcv0Yx6zg&t=363s"
+      "videoUrl": "https://www.youtube.com/watch?v=PdVcv0Yx6zg&t=363s",
+      "label": ""
     },
     "ministers": [
       {
@@ -800,7 +906,8 @@
     ],
     "documentary": {
       "image": "/expressions/brazil/maxresdefault.jpg",
-      "videoUrl": "https://youtu.be/Q-ohhuFptrY?si=JdkcZexQKljNks5A"
+      "videoUrl": "https://youtu.be/Q-ohhuFptrY?si=JdkcZexQKljNks5A",
+      "label": ""
     },
     "ministers": [
       {
@@ -882,7 +989,7 @@
       {
         "value": "107+",
         "label": "Souls saved",
-        "image": "/expressions/kenya/kenya-featured2.png"
+        "image": "/expressions/kenya/kenya-featured2-1.png"
       },
       {
         "value": "12000+",
@@ -906,7 +1013,8 @@
     ],
     "documentary": {
       "image": "/expressions/kenya/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=kaKo1rjDji0"
+      "videoUrl": "https://www.youtube.com/watch?v=kaKo1rjDji0",
+      "label": ""
     },
     "ministers": [
       {
@@ -928,7 +1036,7 @@
       "images": [
         "/expressions/kenya/kenya-arrival-02-1.jpg",
         "/expressions/kenya/kenya-charity.png",
-        "/expressions/kenya/kenya-featured2-1.png",
+        "/expressions/kenya/kenya-featured2.png",
         "/expressions/kenya/kenyagallery03.png"
       ]
     },
@@ -1006,7 +1114,8 @@
     ],
     "documentary": {
       "image": "/expressions/south-korea/kore-charity.jpg",
-      "videoUrl": "#"
+      "videoUrl": "#",
+      "label": ""
     },
     "ministers": [
       {
@@ -1091,7 +1200,8 @@
     ],
     "documentary": {
       "image": "/expressions/india/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=JML2kI0Vqto"
+      "videoUrl": "https://www.youtube.com/watch?v=JML2kI0Vqto",
+      "label": ""
     },
     "ministers": [
       {
