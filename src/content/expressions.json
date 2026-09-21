@@ -38,7 +38,7 @@
       {
         "value": "84+",
         "label": "Souls saved",
-        "image": "/expressions/atlanta/atl_f1-1.jpg"
+        "image": "/expressions/atlanta/atl_f1.jpg"
       },
       {
         "value": "3000+",
@@ -126,7 +126,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/atlanta/atl_f1.jpg",
+        "/expressions/atlanta/atl_f1-1.jpg",
         "/expressions/atlanta/cjarity_atl-1.jpg",
         "/expressions/atlanta/charity_atl.jpg",
         "/expressions/atlanta/atl-revival.jpg"
@@ -136,7 +136,7 @@
   "dubai": {
     "slug": "dubai",
     "logo": "/expressions/dubai/screenshot_2026-07-24_at_5.18.23_pm.png",
-    "heroImage": "/expressions/dubai/uaecover.jpg",
+    "heroImage": "/expressions/dubai/howj-dubai.jpg",
     "country": "United Arab Emirates",
     "city": "Dubai",
     "venue": "—-",
@@ -175,9 +175,9 @@
         "image": "/expressions/dubai/dubai-06-1.jpg"
       },
       {
-        "value": "20+",
+        "value": "25+",
         "label": "In attendance",
-        "image": "/expressions/dubai/dubai-05-1.jpg"
+        "image": "/expressions/dubai/dubai-05.jpg"
       }
     ],
     "numbers": [
@@ -190,13 +190,13 @@
         "label": "Impacted charity"
       },
       {
-        "value": "5+",
+        "value": "10+",
         "label": "Souls impacted through charity"
       }
     ],
     "documentary": {
-      "image": "/expressions/dubai/uaecover.jpg",
-      "videoUrl": "#",
+      "image": "/expressions/dubai/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=t5R-P7fN_sE",
       "label": ""
     },
     "ministers": [],
@@ -207,7 +207,7 @@
         "/expressions/dubai/dubai-02.jpg",
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
-        "/expressions/dubai/dubai-05.jpg",
+        "/expressions/dubai/dubai-05-1.jpg",
         "/expressions/dubai/dubai-06.jpg"
       ]
     },
@@ -362,7 +362,7 @@
       {
         "value": "30+",
         "label": "In attendance",
-        "image": "/expressions/chicago/howj_chicago.jpg"
+        "image": "/expressions/chicago/howj_chicago-1.jpg"
       }
     ],
     "numbers": [
@@ -404,7 +404,7 @@
       "title": "Gallery",
       "images": [
         "/expressions/chicago/chicago-ministration-02.jpg",
-        "/expressions/chicago/howj_chicago-1.jpg",
+        "/expressions/chicago/howj_chicago.jpg",
         "/expressions/chicago/img_6095.jpg",
         "/expressions/chicago/chicago-chairty.jpg"
       ]
@@ -428,12 +428,12 @@
       {
         "value": "2500+",
         "label": "Souls saved",
-        "image": "/expressions/bangladesh/bang-outreach-3.jpg"
+        "image": "/expressions/bangladesh/bang-outreach-3-1.jpg"
       },
       {
         "value": "2500+",
         "label": "In attendance",
-        "image": "/expressions/bangladesh/bang-outreach-07-1.jpg"
+        "image": "/expressions/bangladesh/bang-outreach-07.jpg"
       }
     ],
     "numbers": [
@@ -485,12 +485,12 @@
       "title": "",
       "overview": "Medical Outreach",
       "images": [
-        "/expressions/bangladesh/bang-outreach-07.jpg",
+        "/expressions/bangladesh/bang-outreach-07-1.jpg",
         "/expressions/bangladesh/bang-outreach-09.jpg",
         "/expressions/bangladesh/bang-outreach-10.jpg",
         "/expressions/bangladesh/bang-outreach-05.jpg",
         "/expressions/bangladesh/bang-outreach-04.jpg",
-        "/expressions/bangladesh/bang-outreach-3-1.jpg",
+        "/expressions/bangladesh/bang-outreach-3.jpg",
         "/expressions/bangladesh/bang-outreach-01.jpg",
         "/expressions/bangladesh/bang-outreach-07-1-2.jpg"
       ]
