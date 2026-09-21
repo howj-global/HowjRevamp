@@ -22,7 +22,13 @@ function MarqueeItem({ text }) {
 // Infinite right-to-left scroll, pure CSS (keyframes in index.css), pauses on hover.
 // The track holds two identical halves so translateX(-50%) loops seamlessly; each
 // half repeats the item enough times to cover ultrawide viewports.
-export default function MarqueeBanner({ text = 'HANG OUT WITH JESUS JAMAICA MONTEGO BAY' }) {
+// Default carries the Jamaica venue details from the flyer. Once a Jamaica row
+// exists in Notion with a future date, Hero.jsx passes upcoming.marqueeText
+// instead — that's generated from Country/City, so the venue would need a
+// field of its own to survive the switch.
+export default function MarqueeBanner({
+  text = 'HANG OUT WITH JESUS — HARMONY BEACH PARK, HOWARD COOKE BOULEVARD, MONTEGO BAY, JAMAICA — 4PM LOCAL TIME',
+}) {
   return (
     <div className="marquee bg-brand-primary-900 py-xs sm:py-sm">
       <div className="marquee-track">
