@@ -26,7 +26,7 @@ import http from 'node:http'
 // Minimal fetch replacement over node:https. The global fetch (undici) gets its
 // TLS connection reset on some networks (VPN/proxy/security software) where the
 // OpenSSL stack curl/https use is fine — this keeps the build working there.
-function httpFetch(url, options = {}, redirects = 5) {
+function httpFetchOnce(url, options = {}, redirects = 5) {
   return new Promise((resolve, reject) => {
     const lib = new URL(url).protocol === 'http:' ? http : https
     const req = lib.request(
@@ -35,7 +35,7 @@ function httpFetch(url, options = {}, redirects = 5) {
       (res) => {
         if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location && redirects) {
           res.resume()
-          resolve(httpFetch(new URL(res.headers.location, url).toString(), options, redirects - 1))
+          resolve(httpFetchOnce(new URL(res.headers.location, url).toString(), options, redirects - 1))
           return
         }
         const chunks = []
@@ -57,6 +57,25 @@ function httpFetch(url, options = {}, redirects = 5) {
     if (options.body) req.write(options.body)
     req.end()
   })
+}
+
+// Notion's signed S3 URLs drop connections intermittently ("socket hang up"),
+// and one dead image used to abort the whole run — locally and, worse, in the
+// Netlify build. Retry transient failures with a short backoff; a genuine 4xx
+// still comes straight back so real problems aren't silently retried away.
+async function httpFetch(url, options = {}, redirects = 5) {
+  const attempts = 4
+  for (let i = 1; ; i++) {
+    try {
+      const res = await httpFetchOnce(url, options, redirects)
+      if (i < attempts && (res.status === 429 || res.status >= 500)) throw new Error(`HTTP ${res.status}`)
+      return res
+    } catch (err) {
+      if (i >= attempts) throw err
+      console.warn(`[expressions:fetch] retry ${i}/${attempts - 1} after ${err.message}`)
+      await new Promise((r) => setTimeout(r, 500 * 2 ** (i - 1)))
+    }
+  }
 }
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
