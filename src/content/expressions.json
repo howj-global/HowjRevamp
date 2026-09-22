@@ -38,12 +38,12 @@
       {
         "value": "84+",
         "label": "Souls saved",
-        "image": "/expressions/atlanta/atl_f1.jpg"
+        "image": "/expressions/atlanta/atl_f1-1.jpg"
       },
       {
         "value": "3000+",
         "label": "In attendance",
-        "image": "/expressions/atlanta/charity_atl-1.jpg"
+        "image": "/expressions/atlanta/charity_atl-1-2.jpg"
       }
     ],
     "numbers": [
@@ -111,7 +111,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/atlanta/charity_atl-1-2.jpg",
+        "/expressions/atlanta/charity_atl-1.jpg",
         "/expressions/atlanta/charity-atl-3.jpg"
       ]
     },
@@ -126,7 +126,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/atlanta/atl_f1-1.jpg",
+        "/expressions/atlanta/atl_f1.jpg",
         "/expressions/atlanta/cjarity_atl-1.jpg",
         "/expressions/atlanta/charity_atl.jpg",
         "/expressions/atlanta/atl-revival.jpg"
@@ -177,7 +177,7 @@
       {
         "value": "25+",
         "label": "In attendance",
-        "image": "/expressions/dubai/dubai-05.jpg"
+        "image": "/expressions/dubai/dubai-05-1.jpg"
       }
     ],
     "numbers": [
@@ -207,7 +207,7 @@
         "/expressions/dubai/dubai-02.jpg",
         "/expressions/dubai/dubai-03.jpg",
         "/expressions/dubai/dubai-04.jpg",
-        "/expressions/dubai/dubai-05-1.jpg",
+        "/expressions/dubai/dubai-05.jpg",
         "/expressions/dubai/dubai-06.jpg"
       ]
     },
@@ -217,9 +217,7 @@
     },
     "gallery": {
       "title": "Gallery",
-      "images": [
-        "/expressions/dubai/dubairevival.jpg"
-      ]
+      "images": []
     }
   },
   "lagos": {
@@ -362,7 +360,7 @@
       {
         "value": "30+",
         "label": "In attendance",
-        "image": "/expressions/chicago/howj_chicago-1.jpg"
+        "image": "/expressions/chicago/howj_chicago.jpg"
       }
     ],
     "numbers": [
@@ -404,7 +402,7 @@
       "title": "Gallery",
       "images": [
         "/expressions/chicago/chicago-ministration-02.jpg",
-        "/expressions/chicago/howj_chicago.jpg",
+        "/expressions/chicago/howj_chicago-1.jpg",
         "/expressions/chicago/img_6095.jpg",
         "/expressions/chicago/chicago-chairty.jpg"
       ]
@@ -426,14 +424,14 @@
     "overview": "In one of the world's most densely populated countries, HOWJ Global deployed its largest South Asian outreach to date, reaching communities across Dhaka and surrounding regions with food aid, hygiene kits, and a message of unstoppable hope. Our Bangladesh event drew massive crowds and inspired local leaders to sustain the movement long after our teams departed. Bangladesh 2026 is proof that hope, when planted with intention, takes deep and lasting root.",
     "featureStats": [
       {
-        "value": "2500+",
+        "value": "479+",
         "label": "Souls saved",
         "image": "/expressions/bangladesh/bang-outreach-3-1.jpg"
       },
       {
         "value": "2500+",
         "label": "In attendance",
-        "image": "/expressions/bangladesh/bang-outreach-07.jpg"
+        "image": "/expressions/bangladesh/bang-outreach-07-1.jpg"
       }
     ],
     "numbers": [
@@ -485,7 +483,7 @@
       "title": "",
       "overview": "Medical Outreach",
       "images": [
-        "/expressions/bangladesh/bang-outreach-07-1.jpg",
+        "/expressions/bangladesh/bang-outreach-07.jpg",
         "/expressions/bangladesh/bang-outreach-09.jpg",
         "/expressions/bangladesh/bang-outreach-10.jpg",
         "/expressions/bangladesh/bang-outreach-05.jpg",
@@ -545,12 +543,12 @@
       {
         "value": "27+",
         "label": "Souls saved",
-        "image": "/expressions/ghana/ghana_charity-05-1.jpg"
+        "image": "/expressions/ghana/ghana_charity-05.jpg"
       },
       {
         "value": "1000+",
         "label": "In attendance",
-        "image": "/expressions/ghana/ghana_charity-.jpg"
+        "image": "/expressions/ghana/ghana_charity--1.jpg"
       }
     ],
     "numbers": [
@@ -602,8 +600,8 @@
         "/expressions/ghana/ghana-charity-01.jpg",
         "/expressions/ghana/ghana-charity-06-1.jpg",
         "/expressions/ghana/ghana-charity-07-1.jpg",
-        "/expressions/ghana/ghana_charity--1.jpg",
-        "/expressions/ghana/ghana_charity-05.jpg",
+        "/expressions/ghana/ghana_charity-.jpg",
+        "/expressions/ghana/ghana_charity-05-1.jpg",
         "/expressions/ghana/ghana_charity-08.jpg",
         "/expressions/ghana/ghana-charity-prison.jpg"
       ]
@@ -626,7 +624,7 @@
   "london": {
     "slug": "london",
     "logo": "/expressions/london/howj_gb_flier.png",
-    "heroImage": "/expressions/london/nsn_global-61-1.jpg",
+    "heroImage": "/expressions/london/nsn_global-61.jpg",
     "country": "United Kingdom",
     "city": "London",
     "venue": "Amazing Grace Worship Centre",
@@ -685,7 +683,7 @@
       }
     ],
     "documentary": {
-      "image": "/expressions/london/nsn_global-61-1.jpg",
+      "image": "/expressions/london/nsn_global-61.jpg",
       "videoUrl": "#",
       "label": ""
     },
@@ -718,7 +716,7 @@
         "/expressions/london/nsn_global-42.jpg",
         "/expressions/london/nsn_global-45_coopy.jpg",
         "/expressions/london/nsn_global-58.jpg",
-        "/expressions/london/nsn_global-61.jpg",
+        "/expressions/london/nsn_global-61-1.jpg",
         "/expressions/london/nsn_global-62.jpg",
         "/expressions/london/howj-london-2.jpeg",
         "/expressions/london/howj-london-3.jpeg",
@@ -729,7 +727,7 @@
   "new-york": {
     "slug": "new-york",
     "logo": "/expressions/new-york/newyork-logo-.png",
-    "heroImage": "/expressions/new-york/herorevival-1.jpg",
+    "heroImage": "/expressions/new-york/herorevival.jpg",
     "country": "United States",
     "city": "New York",
     "venue": "Times Square",
@@ -765,7 +763,7 @@
       {
         "value": "51+",
         "label": "Souls saved",
-        "image": "/expressions/new-york/herorevival.jpg"
+        "image": "/expressions/new-york/herorevival-1.jpg"
       },
       {
         "value": "1500+",
@@ -1034,7 +1032,7 @@
       "title": "",
       "overview": "",
       "images": [
-        "/expressions/kenya/kenya-arrival-02-1.jpg",
+        "/expressions/kenya/kenya-arrival-02.jpg",
         "/expressions/kenya/kenya-charity.png",
         "/expressions/kenya/kenya-featured2.png",
         "/expressions/kenya/kenyagallery03.png"
@@ -1047,7 +1045,7 @@
     "gallery": {
       "title": "Gallery",
       "images": [
-        "/expressions/kenya/kenya-arrival-02.jpg"
+        "/expressions/kenya/kenya-arrival-02-1.jpg"
       ]
     }
   },

@@ -15,7 +15,7 @@ const REVIVALS = [
     location: 'Dhaka, Bangladesh',
     poster: posterBangladesh,
     stats: [
-      ['Attendance', '3,000'],
+      ['Attendance', '2,500'],
       ['Souls Saved', '479'],
     ],
     watchUrl: 'https://www.youtube.com/watch?v=ejFWOKgYVVY',
