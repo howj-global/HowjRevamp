@@ -3,6 +3,10 @@ import FeatureStatCard from './FeatureStatCard.jsx'
 // Theme + bible verse + overview copy on the left; two feature-stat image cards
 // on the right. `items-stretch` keeps the two cards the same height.
 export default function ExpressionOverview({ theme, verse, overview, featureStats = [] }) {
+  // Glue the last two words with a non-breaking space so the heading never ends
+  // on a lone word, e.g. "…THE TRUTH, / THE LIFE" instead of "THE / LIFE".
+  const heading = String(theme ?? '').replace(/\s+(\S+)\s*$/, '\u00A0$1')
+
   return (
     <section className="mx-auto max-w-[90rem] px-6 py-2xl lg:px-4xl">
       {/* min-h + items-end reproduces the Figma's tall stage: content bottom-aligns,
@@ -10,7 +14,7 @@ export default function ExpressionOverview({ theme, verse, overview, featureStat
       <div className="flex flex-col gap-2xl lg:min-h-[37.5rem] lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-[30rem]">
           <h2 className="font-condensed text-5xl font-bold uppercase leading-[0.95] text-neutral-black sm:text-6xl lg:text-7xl">
-            {theme}
+            {heading}
           </h2>
           <p className="mt-md font-body text-lg font-light text-neutral-black">{verse}</p>
           <p className="mt-lg font-body text-lg leading-relaxed text-neutral-black">{overview}</p>
