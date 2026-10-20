@@ -48,6 +48,11 @@ export default function CountryShowcase() {
       aria-roledescription="carousel"
       aria-label="HOWJ around the world"
     >
+      {/* Section heading, pinned to the top so the centered carousel is unaffected */}
+      <h2 className="absolute inset-x-0 top-2xl z-30 px-6 text-center font-heading text-6xl font-bold leading-[1.05] text-text-inverse sm:text-7xl lg:text-8xl">
+        Gallery
+      </h2>
+
       {/* sliding blurred image strip; the centered one is hidden behind the card */}
       <div className="absolute inset-0 flex items-center justify-center">
         {slides.map((s, i) => {
