@@ -22,8 +22,15 @@ const yearOf = (exp) => Number(String(exp.date ?? '').slice(0, 4)) || null
 // (src/content/expressions.json, written by scripts/fetch-expressions.mjs).
 // Only Published rows with a real Slug make it into that file, so this list
 // grows automatically as more expressions go live — no hardcoding here.
+// Ordered by full event date (not just year) so expressions in the same year
+// run chronologically, e.g. London (Oct 2021) before Dubai (Dec 2021). Slug is
+// only the tiebreaker for identical or missing dates.
+const timeOf = (exp) => {
+  const t = new Date(exp.date ?? '').getTime()
+  return Number.isNaN(t) ? 0 : t
+}
 const cards = Object.values(expressions).sort(
-  (a, b) => (yearOf(a) ?? 0) - (yearOf(b) ?? 0) || a.slug.localeCompare(b.slug),
+  (a, b) => timeOf(a) - timeOf(b) || a.slug.localeCompare(b.slug),
 )
 
 export default function Expressions() {
